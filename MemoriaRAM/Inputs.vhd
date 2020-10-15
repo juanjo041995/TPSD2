@@ -31,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Inputs is
     Port ( SWAddress : in  STD_LOGIC_VECTOR (2 downto 0);
-			  memReadSW4: in STD_LOGIC;
+			  --memReadSW4: in STD_LOGIC;
            memWriteSW5 : in  STD_LOGIC;
 			  dirMemPinta : in STD_LOGIC_VECTOR (2 downto 0);
 			  dirFinal: out STD_LOGIC_VECTOR (2 downto 0)
@@ -41,14 +41,14 @@ end Inputs;
 architecture Behavioral of Inputs is
 signal address : STD_LOGIC_VECTOR(2 downto 0) := "000";
 begin
-		process(SWAddress,memReadSW4,memWriteSW5,dirMemPinta)
+		process(SWAddress,memWriteSW5,dirMemPinta)--memread excluido
 		begin
-		if(memReadSW4 ='1') then
-			address <= dirMemPinta;
-		elsif(memWriteSW5 ='0') then
+		--if(memReadSW4 ='1') then
+		--	address <= dirMemPinta;
+		if(memWriteSW5 ='0') then --elsif
 			address <= SWAddress;
 		else
-			address <= "000";
+			address <= dirMemPinta; --"000"
 		end if;
 		end process;
 	dirFinal <= address;

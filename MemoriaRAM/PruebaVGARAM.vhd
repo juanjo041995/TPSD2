@@ -34,7 +34,8 @@ entity PruebaVGARAM is
 				clk, rst_n 					: in STD_LOGIC;
 				SWAddress						: in STD_LOGIC_VECTOR(2 downto 0);
 				dataSWColor					: in STD_LOGIC_VECTOR(7 downto 0);
-				memReadSW4,memWriteSW5	: in STD_LOGIC;
+				--memReadSW4,
+				memWriteSW5	: in STD_LOGIC;
 				Red,Green 					: out STD_LOGIC_VECTOR(2 downto 0);
 				Blue							: out STD_LOGIC_VECTOR(1 downto 0);
 				HSync,VSync					: out STD_LOGIC
@@ -63,7 +64,7 @@ COMPONENT RAM
 	PORT(
 				clk		: in STD_LOGIC;
 				memWrite	: in STD_LOGIC;
-				memRead	: in STD_LOGIC;
+			--	memRead	: in STD_LOGIC;
 				address	: in STD_LOGIC_VECTOR(2 downto 0); -- se ignoran FFFF debido al decodificador
 				dataIn	: in STD_LOGIC_VECTOR(7 downto 0);
 				dataOut	: out STD_LOGIC_VECTOR(7 downto 0)
@@ -85,7 +86,7 @@ END COMPONENT;
 COMPONENT Inputs
 	PORT (
 			  SWAddress : in  STD_LOGIC_VECTOR (2 downto 0);
-			  memReadSW4: in STD_LOGIC;
+			--  memReadSW4: in STD_LOGIC;
            memWriteSW5 : in  STD_LOGIC;
 			  dirMemPinta : in STD_LOGIC_VECTOR (2 downto 0);
 			  dirFinal: out STD_LOGIC_VECTOR (2 downto 0)
@@ -97,7 +98,8 @@ signal dirM: STD_LOGIC_VECTOR(2 downto 0);
 signal datM: STD_LOGIC_VECTOR(7 downto 0);
 signal dataSW: STD_LOGIC_VECTOR(7 downto 0);
 signal addrF: STD_LOGIC_VECTOR(2 downto 0);
-signal memRD, memWR: STD_LOGIC;
+--signal memRD, 
+signal memWR: STD_LOGIC;
 signal temp25: STD_LOGIC;
 begin
 Inst_Clock_divider : Clock_divider
@@ -119,7 +121,7 @@ Inst_RAM : RAM
 PORT MAP (
 				clk	=>	 temp25,
 				memWrite	=> memWR, 
-				memRead	 => memRD,
+				--memRead	 => memRD,
 				address	 => addrF,
 				dataIn	 => dataSW,
 				dataOut	 => datM
@@ -139,13 +141,13 @@ PORT MAP(
 Inst_Inputs : Inputs
 PORT MAP(
 			  SWAddress =>  SWAddress,
-			  memReadSW4 => memRD,
+			 -- memReadSW4 => memRD,
 			  memWriteSW5 => memWR,
 			  dirMemPinta => dirM ,
 			  dirFinal => addrF
 
 );
-memRD <= memReadSW4;
+--memRD <= memReadSW4;
 memWR <= memWriteSW5;
 dataSW <= dataSWColor;
 

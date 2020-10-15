@@ -115,7 +115,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1602792920" xil_pn:in_ck="2430658955404766946" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5675067147976183651" xil_pn:start_ts="1602792912">
+    <transform xil_pn:end_ts="1602802200" xil_pn:in_ck="2430658955404766946" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5675067147976183651" xil_pn:start_ts="1602802192">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -133,11 +133,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1602793227" xil_pn:in_ck="957540654587596611" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6816997796515721589" xil_pn:start_ts="1602793227">
+    <transform xil_pn:end_ts="1602801472" xil_pn:in_ck="957540654587596611" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6816997796515721589" xil_pn:start_ts="1602801472">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1602793232" xil_pn:in_ck="654378216903097868" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6138333351064982997" xil_pn:start_ts="1602793227">
+    <transform xil_pn:end_ts="1602802210" xil_pn:in_ck="654378216903097868" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6138333351064982997" xil_pn:start_ts="1602802206">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="PruebaVGARAM.bld"/>
@@ -146,7 +146,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1602793247" xil_pn:in_ck="6126624114271464263" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="7232372357056160366" xil_pn:start_ts="1602793232">
+    <transform xil_pn:end_ts="1602802218" xil_pn:in_ck="6126624114271464263" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="7232372357056160366" xil_pn:start_ts="1602802210">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="PruebaVGARAM.pcf"/>
@@ -159,7 +159,7 @@
       <outfile xil_pn:name="PruebaVGARAM_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1602793261" xil_pn:in_ck="3064666651097283200" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="7044443079611515937" xil_pn:start_ts="1602793247">
+    <transform xil_pn:end_ts="1602802231" xil_pn:in_ck="3064666651097283200" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="7044443079611515937" xil_pn:start_ts="1602802218">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="PruebaVGARAM.ncd"/>
@@ -173,7 +173,7 @@
       <outfile xil_pn:name="PruebaVGARAM_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1602793281" xil_pn:in_ck="1657572418541625088" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-6270489860592267034" xil_pn:start_ts="1602793270">
+    <transform xil_pn:end_ts="1602802244" xil_pn:in_ck="1657572418541625088" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-6270489860592267034" xil_pn:start_ts="1602802234">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="PruebaVGARAM.ut"/>
@@ -186,7 +186,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1602793261" xil_pn:in_ck="-5885118671879549373" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1602793257">
+    <transform xil_pn:end_ts="1602802231" xil_pn:in_ck="-5885118671879549373" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1602802227">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="PruebaVGARAM.twr"/>

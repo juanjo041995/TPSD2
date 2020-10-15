@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAPTOP-4CP9TB8L::  Thu Oct 15 17:20:48 2020
+LAPTOP-4CP9TB8L::  Thu Oct 15 19:50:19 2020
 
 par -w -intstyle ise -ol high -mt off PruebaVGARAM_map.ncd PruebaVGARAM.ncd
 PruebaVGARAM.pcf 
@@ -42,7 +42,7 @@ Slice Logic Utilization:
       Number used as Shift Register:             0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    35 out of   1,430    2%
+  Number of occupied Slices:                    36 out of   1,430    2%
   Number of MUXCYs used:                         0 out of   2,860    0%
   Number of LUT Flip Flop pairs used:           89
     Number with an unused Flip Flop:            45 out of      89   50%
@@ -58,8 +58,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        25 out of     200   12%
-    Number of LOCed IOBs:                       25 out of      25  100%
+  Number of bonded IOBs:                        24 out of     200   12%
+    Number of LOCed IOBs:                       24 out of      24  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -90,34 +90,34 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 5 secs 
-Finished initial Timing Analysis.  REAL time: 5 secs 
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
 
 Starting Router
 
 
-Phase  1  : 492 unrouted;      REAL time: 5 secs 
+Phase  1  : 490 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 451 unrouted;      REAL time: 5 secs 
+Phase  2  : 448 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 215 unrouted;      REAL time: 5 secs 
+Phase  3  : 192 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 215 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  4  : 192 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
 Updating file: PruebaVGARAM.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
-Total REAL time to Router completion: 6 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Total REAL time to Router completion: 5 secs 
 Total CPU time to Router completion: 4 secs 
 
 Partition Implementation Status
@@ -139,7 +139,7 @@ Generating Clock Report
 |           clk_BUFGP | BUFGMUX_X3Y13| No   |    1 |  0.000     |  1.402      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_Clock_divider/c |              |      |      |            |             |
-|         ount_1_BUFG |  BUFGMUX_X2Y3| No   |   19 |  0.072     |  1.463      |
+|         ount_1_BUFG |  BUFGMUX_X2Y3| No   |   20 |  0.065     |  1.455      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -175,7 +175,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 6 secs 
 Total CPU time to PAR completion: 4 secs 
 
-Peak Memory Usage:  4516 MB
+Peak Memory Usage:  4514 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -36,7 +36,7 @@ entity RAM is
 	PORT (
 				clk		: in STD_LOGIC;
 				memWrite	: in STD_LOGIC;
-				memRead	: in STD_LOGIC;
+				--memRead	: in STD_LOGIC;
 				address	: in STD_LOGIC_VECTOR(2 downto 0); -- se ignoran FFFF debido al decodificador
 				dataIn	: in STD_LOGIC_VECTOR(7 downto 0);
 				dataOut	: out STD_LOGIC_VECTOR(7 downto 0)
@@ -65,12 +65,12 @@ begin
 		end if;
 	end if;
 end process;
-read_memory: process(memRead,address,memRW,EN,memWrite)
+read_memory: process(address,memRW,EN,memWrite) --exlcuido memread
 begin
-		if (EN='1' and memRead ='1') then
+	if (EN='1' and memWrite ='1') then -- write por read 
 			dataOut <= memRW(TO_INTEGER(unsigned(address)));
-		elsif (memWrite = '0') then
-			dataOut <= X"00";
+		--elsif (memWrite = '0') then
+		--	dataOut <= X"00";
 		else
 			dataOut <= X"00";
 		end if;

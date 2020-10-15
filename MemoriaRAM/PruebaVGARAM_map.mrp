@@ -11,7 +11,7 @@ Target Device  : xa6slx9
 Target Package : csg324
 Target Speed   : -2
 Mapper Version : aspartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 15 17:20:34 2020
+Mapped Date    : Thu Oct 15 19:50:11 2020
 
 Design Summary
 --------------
@@ -38,7 +38,7 @@ Slice Logic Utilization:
       Number used as Shift Register:             0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    35 out of   1,430    2%
+  Number of occupied Slices:                    36 out of   1,430    2%
   Number of MUXCYs used:                         0 out of   2,860    0%
   Number of LUT Flip Flop pairs used:           89
     Number with an unused Flip Flop:            45 out of      89   50%
@@ -55,8 +55,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        25 out of     200   12%
-    Number of LOCed IOBs:                       25 out of      25  100%
+  Number of bonded IOBs:                        24 out of     200   12%
+    Number of LOCed IOBs:                       24 out of      24  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -85,8 +85,8 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.85
 
-Peak Memory Usage:  4545 MB
-Total REAL time to MAP completion:  11 secs 
+Peak Memory Usage:  4554 MB
+Total REAL time to MAP completion:  5 secs 
 Total CPU time to MAP completion:   5 secs 
 
 Table of Contents
@@ -174,7 +174,6 @@ Section 6 - IOB Properties
 | dataSWColor<5>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 | dataSWColor<6>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 | dataSWColor<7>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
-| memReadSW4                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 | memWriteSW5                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 | rst_n                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
