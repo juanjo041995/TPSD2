@@ -39,9 +39,6 @@ entity md_io is
            clk       : in  STD_LOGIC;
 			  clk50mhz  : in STD_LOGIC;
 			  reset     : in STD_LOGIC;
-			  north     : in STD_LOGIC;
-			  south     : in STD_LOGIC;
-			  sw        : in STD_LOGIC_VECTOR (3 downto 0);
            dataout   : out  STD_LOGIC_VECTOR (31 downto 0);
 			  salida    : out std_logic_vector(7 downto 0);
 			  LCD_E     : out std_logic;
@@ -51,13 +48,6 @@ entity md_io is
 end md_io;
 
 architecture Behavioral of md_io is
-	COMPONENT entrada
-    Port ( north  : in  STD_LOGIC;
-           south  : in  STD_LOGIC;
-           sw     : in  STD_LOGIC_VECTOR (3 downto 0);
-           alMIPS : out  STD_LOGIC_VECTOR (5 downto 0)
-			 );
-	END COMPONENT;
 
 	COMPONENT decodificador
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
@@ -106,7 +96,6 @@ architecture Behavioral of md_io is
 	signal csMem       : STD_LOGIC;
 	signal csSalidaPar : STD_LOGIC;
 	signal csLCD       : STD_LOGIC;
-	signal csEntrada   : STD_LOGIC;
 	signal datosMem    : STD_LOGIC_VECTOR (31 downto 0);
 	signal datosEntrada: STD_LOGIC_VECTOR (5 downto 0);
 	
@@ -114,22 +103,13 @@ begin
 
 	-- Multiplexor de salida
 	dataout <= datosMem                                    when csMem = '1'     else
-			     "00000000000000000000000000" & datosEntrada when csEntrada = '1' else
 			     (others => '0');
-
-	Inst_entrada: entrada PORT MAP (
-		north  => north,
-		south  => south,
-		sw     => sw,
-		alMIPS => datosEntrada
-	);
 	
 	Inst_decodificador: decodificador PORT MAP(
 		ent       => dir(31 downto 0),
       csMem     => csMem,
 		csParPort => csSalidaPar,
-      csLCD     => csLCD,
-		csEntrada => csEntrada
+      csLCD     => csLCD
 	);
 
 	Inst_md: md PORT MAP(
