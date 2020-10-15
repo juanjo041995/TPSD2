@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: Universidad Catolica
--- Engineer: Vicente González
+-- Engineer: Vicente Gonzï¿½lez
 -- 
 -- Create Date:    17:23:17 04/08/2010 
 -- Design Name: MIPS
@@ -15,8 +15,8 @@
 -- Revision: 13/6/2016
 -- Revision 0.01 - File Created
 -- Additional Comments: 
--- Se modificó este archivo para que la constante declarada en general.vhd, que define el tamaño de la 
--- ROM de instrucciones, afecte también aquí. Lo mismo se hizo para la memoria de datos. 
+-- Se modificï¿½ este archivo para que la constante declarada en general.vhd, que define el tamaï¿½o de la 
+-- ROM de instrucciones, afecte tambiï¿½n aquï¿½. Lo mismo se hizo para la memoria de datos. 
 -- 
 --
 -- ERRORES CONOCIDOS:
@@ -142,7 +142,7 @@ architecture Behavioral of mips is
 		datain   : in  STD_LOGIC_VECTOR (31 downto 0);
 		memwrite : in  STD_LOGIC;
 		memread  : in  STD_LOGIC;
-  	   tipoAcc  : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operación a realizar, cargar bytes, half word y word
+  	   tipoAcc  : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operaciï¿½n a realizar, cargar bytes, half word y word
 		clk      : in  STD_LOGIC;
 		clk50mhz : in STD_LOGIC;
 		dataout  : out  STD_LOGIC_VECTOR (31 downto 0)
@@ -217,7 +217,7 @@ architecture Behavioral of mips is
 	END COMPONENT;
 
 
-	-- Definimos señales para interconexión
+	-- Definimos seï¿½ales para interconexiï¿½n
 	signal nuevo_pc : std_logic_vector(31 downto 0);
 	signal dir_ins : std_logic_vector(31 downto 0);
 	signal instruccion : std_logic_vector(31 downto 0);
@@ -244,7 +244,7 @@ architecture Behavioral of mips is
 	
 	signal sal_mult_alu : std_logic_vector(31 downto 0);
 
-	-- señales de control
+	-- seï¿½ales de control
 	signal regdst : STD_LOGIC_VECTOR (1 downto 0);
 	signal branch : std_logic;
 	signal bne : std_logic;

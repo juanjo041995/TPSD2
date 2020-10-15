@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
--- Company: Universidad Católica
--- Engineer: Vicente González
+-- Company: Universidad Catï¿½lica
+-- Engineer: Vicente Gonzï¿½lez
 -- 
 -- Create Date:    14:44:35 06/14/2017 
 -- Design Name: 
@@ -35,7 +35,7 @@ entity md_io is
            datain    : in  STD_LOGIC_VECTOR (31 downto 0);
            memwrite  : in  STD_LOGIC;
            memread   : in  STD_LOGIC;
-			  tipoAcc   : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operación a realizar, cargar bytes, half word y word
+			  tipoAcc   : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operaciï¿½n a realizar, cargar bytes, half word y word
            clk       : in  STD_LOGIC;
 			  clk50mhz  : in STD_LOGIC;
            dataout   : out  STD_LOGIC_VECTOR (31 downto 0);
@@ -45,8 +45,7 @@ architecture Behavioral of md_io is
 
 	COMPONENT decodificador
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
-           csMem     : out  STD_LOGIC;
-           csParPort : out  STD_LOGIC
+           csMem     : out  STD_LOGIC
 			);
 	END COMPONENT;
 
@@ -62,19 +61,10 @@ architecture Behavioral of md_io is
 			);
 	END COMPONENT;
 
-	COMPONENT salida_par
-    Port ( sel        : in  STD_LOGIC;
-           write_cntl : in  STD_LOGIC;
-           clk        : in  STD_LOGIC;
-           data       : in  STD_LOGIC_VECTOR (7 downto 0);
-           salida     : out  STD_LOGIC_VECTOR (7 downto 0)
-			);
-	END COMPONENT;
 
 
--- Definimos señales para interconexión interna en este módulo
+-- Definimos seï¿½ales para interconexiï¿½n interna en este mï¿½dulo
 	signal csMem       : STD_LOGIC;
-	signal csSalidaPar : STD_LOGIC;
 	signal datosMem    : STD_LOGIC_VECTOR (31 downto 0);
 	
 begin
@@ -85,8 +75,7 @@ begin
 	
 	Inst_decodificador: decodificador PORT MAP(
 		ent       => dir(31 downto 0),
-      csMem     => csMem,
-		csParPort => csSalidaPar
+      csMem     => csMem
 	);
 
 	Inst_md: md PORT MAP(
@@ -98,14 +87,6 @@ begin
 		tipoAcc  => tipoAcc,
       clk      => clk,
       dataout  => datosMem
-	);
-
-	Inst_salida_par: salida_par PORT MAP(
-		sel => csSalidaPar,
-      write_cntl => memwrite,
-      clk => clk,
-      data=> datain(7 downto 0),
-      salida => salida
 	);
 
 

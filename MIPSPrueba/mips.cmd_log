@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/GitHubRepos/TPSD2/MIPSPrueba/mips.xst" -ofn "D:/GitHubRepos/TPSD2/MIPSPrueba/mips.syr" 
