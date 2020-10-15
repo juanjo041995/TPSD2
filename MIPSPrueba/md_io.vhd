@@ -40,7 +40,6 @@ entity md_io is
 			  clk50mhz  : in STD_LOGIC;
 			  reset     : in STD_LOGIC;
            dataout   : out  STD_LOGIC_VECTOR (31 downto 0);
-			  salida    : out std_logic_vector(7 downto 0);
 			  LCD_E     : out std_logic;
 			  LCD_RS    : out std_logic;
 			  LCD_RW    : out std_logic;
@@ -53,8 +52,7 @@ architecture Behavioral of md_io is
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
            csMem     : out  STD_LOGIC;
            csParPort : out  STD_LOGIC;
-           csLCD     : out  STD_LOGIC;
-			  csEntrada : out STD_LOGIC
+           csLCD     : out  STD_LOGIC
 			);
 	END COMPONENT;
 
@@ -67,15 +65,6 @@ architecture Behavioral of md_io is
 			  tipoAcc  : in STD_LOGIC_VECTOR (2 downto 0);
            clk      : in  STD_LOGIC;
            dataout  : out  STD_LOGIC_VECTOR (31 downto 0)
-			);
-	END COMPONENT;
-
-	COMPONENT salida_par
-    Port ( sel        : in  STD_LOGIC;
-           write_cntl : in  STD_LOGIC;
-           clk        : in  STD_LOGIC;
-           data       : in  STD_LOGIC_VECTOR (7 downto 0);
-           salida     : out  STD_LOGIC_VECTOR (7 downto 0)
 			);
 	END COMPONENT;
 
@@ -94,7 +83,6 @@ architecture Behavioral of md_io is
 
 -- Definimos señales para interconexión interna en este módulo
 	signal csMem       : STD_LOGIC;
-	signal csSalidaPar : STD_LOGIC;
 	signal csLCD       : STD_LOGIC;
 	signal datosMem    : STD_LOGIC_VECTOR (31 downto 0);
 	signal datosEntrada: STD_LOGIC_VECTOR (5 downto 0);
@@ -108,7 +96,6 @@ begin
 	Inst_decodificador: decodificador PORT MAP(
 		ent       => dir(31 downto 0),
       csMem     => csMem,
-		csParPort => csSalidaPar,
       csLCD     => csLCD
 	);
 
@@ -121,14 +108,6 @@ begin
 		tipoAcc  => tipoAcc,
       clk      => clk,
       dataout  => datosMem
-	);
-
-	Inst_salida_par: salida_par PORT MAP(
-		sel => csSalidaPar,
-      write_cntl => memwrite,
-      clk => clk,
-      data=> datain(7 downto 0),
-      salida => salida
 	);
 
 	Inst_lcd: lcd PORT MAP(

@@ -154,11 +154,7 @@ architecture Behavioral of mips is
 		clk      : in  STD_LOGIC;
 		clk50mhz : in STD_LOGIC;
 		reset    : in STD_LOGIC;
-		north    : in STD_LOGIC;
-		south    : in STD_LOGIC;
-		sw       : in STD_LOGIC_VECTOR (3 downto 0);
 		dataout  : out  STD_LOGIC_VECTOR (31 downto 0);
-		salida   : out std_logic_vector(7 downto 0);
 		LCD_E    : out std_logic;
 		LCD_RS   : out std_logic;
 		LCD_RW   : out std_logic;
@@ -357,11 +353,7 @@ begin
 		clk      => clk,
 		clk50mhz => clk50mhz,
 		reset    => reset,
-		north    => north,
-		south    => south,
-		sw       => sw,
 		dataout  => salida_mem,
-		salida   => salida,
 		LCD_E    => LCD_E,
 		LCD_RS   => LCD_RS,
 		LCD_RW   => LCD_RW,
