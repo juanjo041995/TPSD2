@@ -1,0 +1,5 @@
+vhdl work "VGA_Sync.vhd"
+vhdl work "RAM.vhd"
+vhdl work "PINTA_BARRAS.vhd"
+vhdl work "Clock_divider.vhd"
+vhdl work "ROMVGA.vhd"

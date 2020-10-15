@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Sync_Test_isim_beh.exe" -prj "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Sync_Test_beh.prj" "work.VGA_Sync_Test" 

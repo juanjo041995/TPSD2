@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Simple.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Simple.syr" 
+xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Simple.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Simple.syr" 
+xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Simple.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Simple.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "User Constraints File.ucf" -p xc6slx9-csg324-2 "VGA_Simple.ngc" VGA_Simple.ngd  
+map -intstyle ise -p xc6slx9-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o VGA_Simple_map.ncd VGA_Simple.ngd VGA_Simple.pcf 
+par -w -intstyle ise -ol high -mt off VGA_Simple_map.ncd VGA_Simple.ncd VGA_Simple.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml VGA_Simple.twx VGA_Simple.ncd -o VGA_Simple.twr VGA_Simple.pcf -ucf {User Constraints File.ucf} 
+bitgen -intstyle ise -f VGA_Simple.ut VGA_Simple.ncd 

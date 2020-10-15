@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Sync.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Sync.syr" 
+xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Sync.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/VGA_Sync.syr" 
