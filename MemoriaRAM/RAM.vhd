@@ -37,20 +37,20 @@ entity RAM is
 				clk		: in STD_LOGIC;
 				memWrite	: in STD_LOGIC;
 				memRead	: in STD_LOGIC;
-				address	: in STD_LOGIC_VECTOR(10 downto 0); -- se ignoran FFFF debido al decodificador
+				address	: in STD_LOGIC_VECTOR(2 downto 0); -- se ignoran FFFF debido al decodificador
 				dataIn	: in STD_LOGIC_VECTOR(7 downto 0);
 				dataOut	: out STD_LOGIC_VECTOR(7 downto 0)
 	);
 end RAM;
 
 architecture Behavioral of RAM is
-type rw_type is array (0 to (2**11 -1)) of STD_LOGIC_VECTOR(7 downto 0);
+type rw_type is array (0 to 7) of STD_LOGIC_VECTOR(7 downto 0);
 signal memRW: rw_type;
 signal EN: STD_LOGIC := '0';
 begin
 enable: process(address)
 begin
-	if ((TO_INTEGER(unsigned(address)) >= 0) and (TO_INTEGER(unsigned(address))<= (2**11 -1))) then
+	if ((TO_INTEGER(unsigned(address)) >= 0) and (TO_INTEGER(unsigned(address))<= 7)) then
 		EN <= '1';
 	else
 		EN <= '0';
@@ -60,15 +60,17 @@ end process;
 write_memory: process(clk)
 begin
 	if (clk'event and clk = '1') then
-		if (EN ='1' and memWrite = '1') then
+		if (EN ='1' and memWrite = '0') then
 			memRW(TO_INTEGER(unsigned(address))) <= dataIn;
 		end if;
 	end if;
 end process;
-read_memory: process(memRead,address,memRW,EN)
+read_memory: process(memRead,address,memRW,EN,memWrite)
 begin
 		if (EN='1' and memRead ='1') then
 			dataOut <= memRW(TO_INTEGER(unsigned(address)));
+		elsif (memWrite = '0') then
+			dataOut <= X"00";
 		else
 			dataOut <= X"00";
 		end if;

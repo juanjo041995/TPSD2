@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-10-15T14:29:25</DateModified>
+  <DateModified>2020-10-15T15:06:45</DateModified>
   <ModuleName>ROMVGA</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/PruebaROMVGA/iseconfig/ROMVGA.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/PruebaROMVGA</ImplementationReportsDirectory>
+  <SavedFilePath>D:/GitHubRepos/TPSD2/PruebaROMVGA/iseconfig/ROMVGA.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/GitHubRepos/TPSD2/PruebaROMVGA\</ImplementationReportsDirectory>
   <DateInitialized>2020-10-15T14:29:25</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
