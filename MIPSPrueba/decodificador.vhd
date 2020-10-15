@@ -33,7 +33,6 @@ entity decodificador is
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
            csMem     : out  STD_LOGIC;
            csParPort : out  STD_LOGIC;
-           csLCD     : out  STD_LOGIC
 			  );
 end decodificador;
 
@@ -48,10 +47,6 @@ begin
 	csParPort <= '1' when ent = X"FFFF8000" else
 	             '0';
 
-	-- controlador del LCD
-	csLCD     <= '1' when ent = X"FFFFC000" else
-	             '0';
-	
 					 
 end Behavioral;
 

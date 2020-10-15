@@ -39,14 +39,6 @@ entity mips is
 		clk50mhz : in std_logic;
 		reset1   : in std_logic;
 		reset0   : in std_logic;
-		north    : in std_logic;
-		south    : in std_logic;
-		sw       : in std_logic_vector (3 downto 0);
-		salida   : out std_logic_vector(7 downto 0);
-		LCD_E    : out std_logic;
-		LCD_RS   : out std_logic;
-		LCD_RW   : out std_logic;
-		LCD_DB   : inout std_logic_vector(7 downto 0));
 end mips;
 
 architecture Behavioral of mips is
@@ -153,16 +145,7 @@ architecture Behavioral of mips is
   	   tipoAcc  : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operación a realizar, cargar bytes, half word y word
 		clk      : in  STD_LOGIC;
 		clk50mhz : in STD_LOGIC;
-		reset    : in STD_LOGIC;
-		north    : in STD_LOGIC;
-		south    : in STD_LOGIC;
-		sw       : in STD_LOGIC_VECTOR (3 downto 0);
-		dataout  : out  STD_LOGIC_VECTOR (31 downto 0);
-		salida   : out std_logic_vector(7 downto 0);
-		LCD_E    : out std_logic;
-		LCD_RS   : out std_logic;
-		LCD_RW   : out std_logic;
-		LCD_DB   : inout std_logic_vector(7 downto 0)
+		dataout  : out  STD_LOGIC_VECTOR (31 downto 0)
 		 );
 	END COMPONENT;
 	COMPONENT mux32
@@ -357,15 +340,7 @@ begin
 		clk      => clk,
 		clk50mhz => clk50mhz,
 		reset    => reset,
-		north    => north,
-		south    => south,
-		sw       => sw,
-		dataout  => salida_mem,
-		salida   => salida,
-		LCD_E    => LCD_E,
-		LCD_RS   => LCD_RS,
-		LCD_RW   => LCD_RW,
-		LCD_DB   => LCD_DB
+		dataout  => salida_mem
 	);
 	Inst_mux32_branch: mux32 PORT MAP(
 		e0  => pc_mas_4,

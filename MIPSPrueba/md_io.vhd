@@ -38,13 +38,7 @@ entity md_io is
 			  tipoAcc   : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operación a realizar, cargar bytes, half word y word
            clk       : in  STD_LOGIC;
 			  clk50mhz  : in STD_LOGIC;
-			  reset     : in STD_LOGIC;
            dataout   : out  STD_LOGIC_VECTOR (31 downto 0);
-			  salida    : out std_logic_vector(7 downto 0);
-			  LCD_E     : out std_logic;
-			  LCD_RS    : out std_logic;
-			  LCD_RW    : out std_logic;
-		     LCD_DB    : inout std_logic_vector(7 downto 0));
 end md_io;
 
 architecture Behavioral of md_io is
@@ -52,9 +46,7 @@ architecture Behavioral of md_io is
 	COMPONENT decodificador
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
            csMem     : out  STD_LOGIC;
-           csParPort : out  STD_LOGIC;
-           csLCD     : out  STD_LOGIC;
-			  csEntrada : out STD_LOGIC
+           csParPort : out  STD_LOGIC
 			);
 	END COMPONENT;
 
@@ -79,25 +71,11 @@ architecture Behavioral of md_io is
 			);
 	END COMPONENT;
 
-	COMPONENT lcd
-    Port ( dataOut  : in  STD_LOGIC_VECTOR (8 downto 0);
-           memWrite : in  STD_LOGIC;
-           cs       : in  STD_LOGIC;
-           clk      : in  STD_LOGIC;
-           reset    : in  STD_LOGIC;
-           E        : out  STD_LOGIC;
-           RS       : out  STD_LOGIC;
-           RW       : out  STD_LOGIC;
-           DB       : out  STD_LOGIC_VECTOR (7 downto 0)
-			);
-	END COMPONENT;
 
 -- Definimos señales para interconexión interna en este módulo
 	signal csMem       : STD_LOGIC;
 	signal csSalidaPar : STD_LOGIC;
-	signal csLCD       : STD_LOGIC;
 	signal datosMem    : STD_LOGIC_VECTOR (31 downto 0);
-	signal datosEntrada: STD_LOGIC_VECTOR (5 downto 0);
 	
 begin
 
@@ -108,8 +86,7 @@ begin
 	Inst_decodificador: decodificador PORT MAP(
 		ent       => dir(31 downto 0),
       csMem     => csMem,
-		csParPort => csSalidaPar,
-      csLCD     => csLCD
+		csParPort => csSalidaPar
 	);
 
 	Inst_md: md PORT MAP(
@@ -131,17 +108,6 @@ begin
       salida => salida
 	);
 
-	Inst_lcd: lcd PORT MAP(
-		dataOut => datain(8 downto 0),
-		memWrite => memwrite,
-		cs => csLCD,
-		clk => clk50mhz,
-		reset => reset,
-		E => LCD_E,
-		RS => LCD_RS,
-		RW => LCD_RW,
-		DB => LCD_DB
-	);
 
 end Behavioral;
 
