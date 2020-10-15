@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: mips.prj
@@ -108,21 +108,328 @@ Slice Utilization Ratio Delta      : 5
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\general.vhd" into library work
 Parsing package <general>.
 Parsing package body <general>.
-Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\salida_par.vhd" into library work
-Parsing entity <salida_par>.
-Parsing architecture <Behavioral> of entity <salida_par>.
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" into library work
 Parsing entity <md>.
 Parsing architecture <Behavioral> of entity <md>.
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\decodificador.vhd" into library work
 Parsing entity <decodificador>.
-ERROR:HDLCompiler:806 - "D:\GitHubRepos\TPSD2\MIPSPrueba\decodificador.vhd" Line 36: Syntax error near ")".
-VHDL file D:\GitHubRepos\TPSD2\MIPSPrueba\decodificador.vhd ignored due to errors
+Parsing architecture <Behavioral> of entity <decodificador>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\barrel_shifter.vhd" into library work
+Parsing entity <barrel_shifter>.
+Parsing architecture <RTL> of entity <barrel_shifter>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\alu_parcial.vhd" into library work
+Parsing entity <alu_parcial>.
+Parsing architecture <Behavioral> of entity <alu_parcial>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\suma_4.vhd" into library work
+Parsing entity <suma_4>.
+Parsing architecture <Behavioral> of entity <suma_4>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\sumador32.vhd" into library work
+Parsing entity <sumador32>.
+Parsing architecture <Behavioral> of entity <sumador32>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\shift_left_j.vhd" into library work
+Parsing entity <shift_left_j>.
+Parsing architecture <Behavioral> of entity <shift_left_j>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\shift_left16.vhd" into library work
+Parsing entity <shift_left16>.
+Parsing architecture <Behavioral> of entity <shift_left16>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\shift_left.vhd" into library work
+Parsing entity <shift_left>.
+Parsing architecture <Behavioral> of entity <shift_left>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\reg.vhd" into library work
+Parsing entity <reg>.
+Parsing architecture <Behavioral> of entity <reg>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\pc.vhd" into library work
+Parsing entity <pc>.
+Parsing architecture <Behavioral> of entity <pc>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\mux5_4a1.vhd" into library work
+Parsing entity <mux5_4a1>.
+Parsing architecture <Behavioral> of entity <mux5_4a1>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\mux32_4a1.vhd" into library work
+Parsing entity <mux32_4a1>.
+Parsing architecture <Behavioral> of entity <mux32_4a1>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\mux32.vhd" into library work
+Parsing entity <mux32>.
+Parsing architecture <Behavioral> of entity <mux32>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\mi.vhd" into library work
+Parsing entity <mi>.
+Parsing architecture <Behavioral> of entity <mi>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\md_io.vhd" into library work
+Parsing entity <md_io>.
+Parsing architecture <Behavioral> of entity <md_io>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\JR_detect.vhd" into library work
+Parsing entity <JR_detect>.
+Parsing architecture <Behavioral> of entity <jr_detect>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\exten_signo_cero.vhd" into library work
+Parsing entity <exten_signo_cero>.
+Parsing architecture <Behavioral> of entity <exten_signo_cero>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\divisorCLK.vhd" into library work
+Parsing entity <divisorCLK>.
+Parsing architecture <Behavioral> of entity <divisorclk>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\control_branch.vhd" into library work
+Parsing entity <control_branch>.
+Parsing architecture <Behavioral> of entity <control_branch>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\control1.vhd" into library work
+Parsing entity <control1>.
+Parsing architecture <Behavioral> of entity <control1>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\antirebote.vhd" into library work
+Parsing entity <antirebote>.
+Parsing architecture <Behavioral> of entity <antirebote>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\alu_control.vhd" into library work
+Parsing entity <alu_control>.
+Parsing architecture <Behavioral> of entity <alu_control>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\alu.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" into library work
+Parsing entity <mips>.
+Parsing architecture <Behavioral> of entity <mips>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <mips> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <divisorCLK> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <antirebote> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <pc> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <suma_4> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mi> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux5_4a1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <reg> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shift_left16> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <alu> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <alu_parcial> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <barrel_shifter> (architecture <RTL>) from library <work>.
+
+Elaborating entity <exten_signo_cero> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <control_branch> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <md_io> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <decodificador> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <md> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 95. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 101: hwtemp1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 103: hwtemp2 should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 117. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 159. Case statement is complete. others clause is never selected
+
+Elaborating entity <mux32> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux32_4a1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shift_left> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shift_left_j> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sumador32> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <alu_control> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <JR_detect> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <control1> (architecture <Behavioral>) from library <work>.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 267. All outputs of instance <Inst_divisorCLK> of block <divisorCLK> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 272. All outputs of instance <Inst_antirebote> of block <antirebote> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 278. All outputs of instance <Inst_pc> of block <pc> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 284. All outputs of instance <Inst_suma_4> of block <suma_4> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 288. All outputs of instance <Inst_mi> of block <mi> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 292. All outputs of instance <Inst_mux5_4a1> of block <mux5_4a1> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 300. All outputs of instance <Inst_reg> of block <reg> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 311. All outputs of instance <Inst_shift_left16> of block <shift_left16> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 315. All outputs of instance <Inst_alu> of block <alu> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 323. All outputs of instance <Inst_exten_signo_cero> of block <exten_signo_cero> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 328. All outputs of instance <Inst_control_branch> of block <control_branch> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 334. All outputs of instance <Inst_md_io> of block <md_io> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 344. All outputs of instance <Inst_mux32_branch> of block <mux32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 350. All outputs of instance <Inst_mux32_4a1_jump> of block <mux32_4a1> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 358. All outputs of instance <Inst_mux32_4a1_mem> of block <mux32_4a1> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 366. All outputs of instance <Inst_mux32_lui> of block <mux32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 372. All outputs of instance <Inst_mux32_ALU> of block <mux32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 378. All outputs of instance <Inst_shift_left> of block <shift_left> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 382. All outputs of instance <Inst_shift_left_jump> of block <shift_left_j> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 387. All outputs of instance <Inst_sumador32> of block <sumador32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 392. All outputs of instance <Inst_alu_control> of block <alu_control> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 397. All outputs of instance <Inst_jr_detect> of block <JR_detect> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 401. All outputs of instance <Inst_control1> of block <control1> are unconnected in block <mips>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mips>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd".
+    Summary:
+	no macro.
+Unit <mips> synthesized.
+
+Synthesizing Unit <alu_parcial>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\alu_parcial.vhd".
+    Summary:
+	no macro.
+Unit <alu_parcial> synthesized.
+
+Synthesizing Unit <barrel_shifter>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\barrel_shifter.vhd".
+    Summary:
+	no macro.
+Unit <barrel_shifter> synthesized.
+
+Synthesizing Unit <decodificador>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\decodificador.vhd".
+WARNING:Xst:647 - Input <ent<15:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <decodificador> synthesized.
+
+Synthesizing Unit <md>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd".
+    Summary:
+	no macro.
+Unit <md> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mips> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mips.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-2 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   0  out of    200     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.73 secs
+ 
 --> 
 
-Total memory usage is 4465248 kilobytes
+Total memory usage is 4502248 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

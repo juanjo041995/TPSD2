@@ -38,7 +38,7 @@ entity mips is
 	port (
 		clk50mhz : in std_logic;
 		reset1   : in std_logic;
-		reset0   : in std_logic;
+		reset0   : in std_logic);
 end mips;
 
 architecture Behavioral of mips is
@@ -339,7 +339,6 @@ begin
 		tipoAcc  => tipoAcc,
 		clk      => clk,
 		clk50mhz => clk50mhz,
-		reset    => reset,
 		dataout  => salida_mem
 	);
 	Inst_mux32_branch: mux32 PORT MAP(

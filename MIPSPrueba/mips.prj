@@ -1,5 +1,4 @@
 vhdl work "general.vhd"
-vhdl work "salida_par.vhd"
 vhdl work "md.vhd"
 vhdl work "decodificador.vhd"
 vhdl work "barrel_shifter.vhd"
