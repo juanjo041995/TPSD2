@@ -118,7 +118,9 @@
     <transform xil_pn:end_ts="1602802200" xil_pn:in_ck="2430658955404766946" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5675067147976183651" xil_pn:start_ts="1602802192">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="PruebaVGARAM.lso"/>
       <outfile xil_pn:name="PruebaVGARAM.ngc"/>
@@ -140,6 +142,9 @@
     <transform xil_pn:end_ts="1602802210" xil_pn:in_ck="654378216903097868" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6138333351064982997" xil_pn:start_ts="1602802206">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="PruebaVGARAM.bld"/>
       <outfile xil_pn:name="PruebaVGARAM.ngd"/>
       <outfile xil_pn:name="PruebaVGARAM_ngdbuild.xrpt"/>
@@ -149,6 +154,9 @@
     <transform xil_pn:end_ts="1602802218" xil_pn:in_ck="6126624114271464263" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="7232372357056160366" xil_pn:start_ts="1602802210">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="PruebaVGARAM.pcf"/>
       <outfile xil_pn:name="PruebaVGARAM_map.map"/>
       <outfile xil_pn:name="PruebaVGARAM_map.mrp"/>
@@ -162,6 +170,7 @@
     <transform xil_pn:end_ts="1602802231" xil_pn:in_ck="3064666651097283200" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="7044443079611515937" xil_pn:start_ts="1602802218">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="PruebaVGARAM.ncd"/>
       <outfile xil_pn:name="PruebaVGARAM.pad"/>
       <outfile xil_pn:name="PruebaVGARAM.par"/>
@@ -176,6 +185,7 @@
     <transform xil_pn:end_ts="1602802244" xil_pn:in_ck="1657572418541625088" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-6270489860592267034" xil_pn:start_ts="1602802234">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="PruebaVGARAM.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="pruebavgaram.bgn"/>
@@ -189,6 +199,7 @@
     <transform xil_pn:end_ts="1602802231" xil_pn:in_ck="-5885118671879549373" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1602802227">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="PruebaVGARAM.twr"/>
       <outfile xil_pn:name="PruebaVGARAM.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
