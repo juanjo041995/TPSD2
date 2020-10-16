@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\GitHubRepos\TPSD2\MIPSPrueba\mips.ncd
+OUTFILE=D:\GitHubRepos\TPSD2\MIPSPrueba\mips.bit
+FAMILY=Spartan6
+PART=xc6slx9-2csg324
+WORKINGDIR=D:\GitHubRepos\TPSD2\MIPSPrueba
+LICENSE=WebPack
+USER_INFO=211777280_0_0_433

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\GitHubRepos\TPSD2\pruebaPULLDOWN\pulldowns.ncd
+OUTFILE=D:\GitHubRepos\TPSD2\pruebaPULLDOWN\pulldowns.bit
+FAMILY=Spartan6
+PART=xc6slx9-2csg324
+WORKINGDIR=D:\GitHubRepos\TPSD2\pruebaPULLDOWN
+LICENSE=WebPack
+USER_INFO=211777280_0_0_433

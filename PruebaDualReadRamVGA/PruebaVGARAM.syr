@@ -1,0 +1,641 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: PruebaVGARAM.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "PruebaVGARAM.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "PruebaVGARAM"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-csg324
+
+---- Source Options
+Top Module Name                    : PruebaVGARAM
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\VGA_Sync.vhd" into library work
+Parsing entity <VGA_Sync>.
+Parsing architecture <Behavioral> of entity <vga_sync>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\RAM.vhd" into library work
+Parsing entity <RAM>.
+Parsing architecture <Behavioral> of entity <ram>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\Pinta_IMG.vhd" into library work
+Parsing entity <Pinta_IMG>.
+Parsing architecture <behavioral> of entity <pinta_img>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\mmioVGA.vhd" into library work
+Parsing entity <mmioVGA>.
+Parsing architecture <Behavioral> of entity <mmiovga>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\Clock_divider.vhd" into library work
+Parsing entity <Clock_divider>.
+Parsing architecture <Behavioral> of entity <clock_divider>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\PruebaVGARAM.vhd" into library work
+Parsing entity <PruebaVGARAM>.
+Parsing architecture <Behavioral> of entity <pruebavgaram>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <PruebaVGARAM> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\PruebaVGARAM.vhd" Line 68: Using initial value '1' for cs since it is never assigned
+
+Elaborating entity <mmioVGA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Pinta_IMG> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <VGA_Sync> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RAM> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Clock_divider> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <PruebaVGARAM>.
+    Related source file is "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\PruebaVGARAM.vhd".
+INFO:Xst:3210 - "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\PruebaVGARAM.vhd" line 94: Output port <clk_50Mhz> of the instance <Inst_Clock_divider> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <PruebaVGARAM> synthesized.
+
+Synthesizing Unit <mmioVGA>.
+    Related source file is "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\mmioVGA.vhd".
+    Summary:
+	no macro.
+Unit <mmioVGA> synthesized.
+
+Synthesizing Unit <Pinta_IMG>.
+    Related source file is "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\Pinta_IMG.vhd".
+    Found 12-bit adder for signal <n0014> created at line 57.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <Pinta_IMG> synthesized.
+
+Synthesizing Unit <div_10u_8u>.
+    Related source file is "".
+    Found 18-bit adder for signal <n0385> created at line 0.
+    Found 18-bit adder for signal <GND_7_o_b[7]_add_1_OUT> created at line 0.
+    Found 17-bit adder for signal <n0389> created at line 0.
+    Found 17-bit adder for signal <GND_7_o_b[7]_add_3_OUT> created at line 0.
+    Found 16-bit adder for signal <n0393> created at line 0.
+    Found 16-bit adder for signal <GND_7_o_b[7]_add_5_OUT> created at line 0.
+    Found 15-bit adder for signal <n0397> created at line 0.
+    Found 15-bit adder for signal <GND_7_o_b[7]_add_7_OUT> created at line 0.
+    Found 14-bit adder for signal <n0401> created at line 0.
+    Found 14-bit adder for signal <GND_7_o_b[7]_add_9_OUT> created at line 0.
+    Found 13-bit adder for signal <n0405> created at line 0.
+    Found 13-bit adder for signal <GND_7_o_b[7]_add_11_OUT> created at line 0.
+    Found 12-bit adder for signal <n0409> created at line 0.
+    Found 12-bit adder for signal <GND_7_o_b[7]_add_13_OUT> created at line 0.
+    Found 11-bit adder for signal <n0413> created at line 0.
+    Found 11-bit adder for signal <GND_7_o_b[7]_add_15_OUT> created at line 0.
+    Found 10-bit adder for signal <n0417> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[7]_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <n0421> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_19_OUT[9:0]> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  20 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_8u> synthesized.
+
+Synthesizing Unit <VGA_Sync>.
+    Related source file is "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\VGA_Sync.vhd".
+    Found 10-bit register for signal <vCount>.
+    Found 10-bit register for signal <hCount>.
+    Found 10-bit register for signal <nextHCount>.
+    Found 10-bit register for signal <nextVCount>.
+    Found 1-bit register for signal <VSync>.
+    Found 1-bit register for signal <HSync>.
+    Found 1-bit register for signal <video_on>.
+    Found 10-bit adder for signal <vCount[9]_GND_8_o_add_2_OUT> created at line 69.
+    Found 10-bit adder for signal <hCount[9]_GND_8_o_add_11_OUT> created at line 83.
+    Found 10-bit comparator lessequal for signal <n0013> created at line 86
+    Found 10-bit comparator greater for signal <vCount[9]_GND_8_o_LessThan_16_o> created at line 86
+    Found 10-bit comparator lessequal for signal <n0018> created at line 92
+    Found 10-bit comparator greater for signal <hCount[9]_PWR_8_o_LessThan_18_o> created at line 92
+    Found 10-bit comparator greater for signal <hCount[9]_PWR_8_o_LessThan_19_o> created at line 98
+    Found 10-bit comparator greater for signal <vCount[9]_GND_8_o_LessThan_20_o> created at line 98
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <VGA_Sync> synthesized.
+
+Synthesizing Unit <RAM>.
+    Related source file is "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\RAM.vhd".
+    Found 8x8-bit dual-port RAM <Mram_memRW> for signal <memRW>.
+    Found 3-bit comparator not equal for signal <dir_match> created at line 55
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <RAM> synthesized.
+
+Synthesizing Unit <Clock_divider>.
+    Related source file is "D:\GitHubRepos\TPSD2\PruebaDualReadRamVGA\Clock_divider.vhd".
+    Found 2-bit register for signal <count>.
+    Found 2-bit adder for signal <count[1]_GND_11_o_add_1_OUT> created at line 51.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <Clock_divider> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x8-bit dual-port RAM                                 : 1
+# Adders/Subtractors                                   : 44
+ 10-bit adder                                          : 10
+ 11-bit adder                                          : 4
+ 12-bit adder                                          : 5
+ 13-bit adder                                          : 4
+ 14-bit adder                                          : 4
+ 15-bit adder                                          : 4
+ 16-bit adder                                          : 4
+ 17-bit adder                                          : 4
+ 18-bit adder                                          : 4
+ 2-bit adder                                           : 1
+# Registers                                            : 8
+ 1-bit register                                        : 3
+ 10-bit register                                       : 4
+ 2-bit register                                        : 1
+# Comparators                                          : 29
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 8
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator lessequal                           : 2
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator lessequal                           : 2
+ 18-bit comparator lessequal                           : 2
+ 3-bit comparator not equal                            : 1
+# Multiplexers                                         : 154
+ 1-bit 2-to-1 multiplexer                              : 140
+ 10-bit 2-to-1 multiplexer                             : 8
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Clock_divider>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Clock_divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RAM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memRW> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <memWrite>      | high     |
+    |     addrA          | connected to signal <addressMips>   |          |
+    |     diA            | connected to signal <dataIn>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <addressVGA>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RAM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x8-bit dual-port distributed RAM                     : 1
+# Adders/Subtractors                                   : 23
+ 10-bit adder                                          : 2
+ 10-bit adder carry in                                 : 20
+ 3-bit adder                                           : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 43
+ Flip-Flops                                            : 43
+# Comparators                                          : 29
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 8
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator lessequal                           : 2
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator lessequal                           : 2
+ 18-bit comparator lessequal                           : 2
+ 3-bit comparator not equal                            : 1
+# Multiplexers                                         : 154
+ 1-bit 2-to-1 multiplexer                              : 140
+ 10-bit 2-to-1 multiplexer                             : 8
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <PruebaVGARAM> ...
+
+Optimizing unit <mmioVGA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PruebaVGARAM, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 45
+ Flip-Flops                                            : 45
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : PruebaVGARAM.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 121
+#      GND                         : 1
+#      INV                         : 8
+#      LUT2                        : 19
+#      LUT3                        : 15
+#      LUT4                        : 19
+#      LUT5                        : 16
+#      LUT6                        : 41
+#      MUXF7                       : 2
+# FlipFlops/Latches                : 45
+#      FD                          : 19
+#      FDC                         : 8
+#      FDCE                        : 6
+#      FDE                         : 3
+#      FDP                         : 2
+#      FDPE                        : 4
+#      FDR                         : 3
+# RAMS                             : 8
+#      RAM16X1D                    : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 14
+#      OBUF                        : 18
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              45  out of  11440     0%  
+ Number of Slice LUTs:                  134  out of   5720     2%  
+    Number used as Logic:               118  out of   5720     2%  
+    Number used as Memory:               16  out of   1440     1%  
+       Number used as RAM:               16
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    134
+   Number with an unused Flip Flop:      89  out of    134    66%  
+   Number with an unused LUT:             0  out of    134     0%  
+   Number of fully used LUT-FF pairs:    45  out of    134    33%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    200    16%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 2     |
+Inst_Clock_divider/count_1         | BUFG                   | 51    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.037ns (Maximum Frequency: 198.531MHz)
+   Minimum input arrival time before clock: 6.294ns
+   Maximum output required time after clock: 9.549ns
+   Maximum combinational path delay: 8.951ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.833ns (frequency: 352.983MHz)
+  Total number of paths / destination ports: 7 / 4
+-------------------------------------------------------------------------
+Delay:               2.833ns (Levels of Logic = 1)
+  Source:            Inst_Clock_divider/count_0 (FF)
+  Destination:       Inst_Clock_divider/count_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Inst_Clock_divider/count_0 to Inst_Clock_divider/count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.525   0.874  Inst_Clock_divider/count_0 (Inst_Clock_divider/count_0)
+     LUT2:I0->O            2   0.250   0.725  Inst_Clock_divider/PWR_11_o_count[1]_equal_1_o<1>1 (Inst_Clock_divider/PWR_11_o_count[1]_equal_1_o)
+     FDR:R                     0.459          Inst_Clock_divider/count_0
+    ----------------------------------------
+    Total                      2.833ns (1.234ns logic, 1.599ns route)
+                                       (43.6% logic, 56.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_Clock_divider/count_1'
+  Clock period: 5.037ns (frequency: 198.531MHz)
+  Total number of paths / destination ports: 989 / 78
+-------------------------------------------------------------------------
+Delay:               5.037ns (Levels of Logic = 3)
+  Source:            Inst_mmioVGA/Inst_VGA/nextHCount_4 (FF)
+  Destination:       Inst_mmioVGA/Inst_VGA/nextHCount_2 (FF)
+  Source Clock:      Inst_Clock_divider/count_1 rising
+  Destination Clock: Inst_Clock_divider/count_1 rising
+
+  Data Path: Inst_mmioVGA/Inst_VGA/nextHCount_4 to Inst_mmioVGA/Inst_VGA/nextHCount_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   1.156  Inst_mmioVGA/Inst_VGA/nextHCount_4 (Inst_mmioVGA/Inst_VGA/nextHCount_4)
+     LUT6:I1->O            7   0.254   0.910  Inst_mmioVGA/Inst_VGA/_n00671_SW0 (N8)
+     LUT6:I5->O           15   0.254   1.610  Inst_mmioVGA/Inst_VGA/_n00671 (Inst_mmioVGA/Inst_VGA/_n00671)
+     LUT6:I0->O            1   0.254   0.000  Inst_mmioVGA/Inst_VGA/nextHCount_2_rstpot (Inst_mmioVGA/Inst_VGA/nextHCount_2_rstpot)
+     FD:D                      0.074          Inst_mmioVGA/Inst_VGA/nextHCount_2
+    ----------------------------------------
+    Total                      5.037ns (1.361ns logic, 3.676ns route)
+                                       (27.0% logic, 73.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_Clock_divider/count_1'
+  Total number of paths / destination ports: 103 / 84
+-------------------------------------------------------------------------
+Offset:              6.294ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       Inst_mmioVGA/Inst_VGA/nextHCount_2 (FF)
+  Destination Clock: Inst_Clock_divider/count_1 rising
+
+  Data Path: reset to Inst_mmioVGA/Inst_VGA/nextHCount_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   1.328   1.610  reset_IBUF (Inst_mmioVGA/res)
+     LUT6:I0->O            7   0.254   0.910  Inst_mmioVGA/Inst_VGA/_n00671_SW0 (N8)
+     LUT6:I5->O           15   0.254   1.610  Inst_mmioVGA/Inst_VGA/_n00671 (Inst_mmioVGA/Inst_VGA/_n00671)
+     LUT6:I0->O            1   0.254   0.000  Inst_mmioVGA/Inst_VGA/nextHCount_2_rstpot (Inst_mmioVGA/Inst_VGA/nextHCount_2_rstpot)
+     FD:D                      0.074          Inst_mmioVGA/Inst_VGA/nextHCount_2
+    ----------------------------------------
+    Total                      6.294ns (2.164ns logic, 4.130ns route)
+                                       (34.4% logic, 65.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_Clock_divider/count_1'
+  Total number of paths / destination ports: 474 / 18
+-------------------------------------------------------------------------
+Offset:              9.549ns (Levels of Logic = 5)
+  Source:            Inst_mmioVGA/Inst_VGA/nextHCount_7 (FF)
+  Destination:       Red<2> (PAD)
+  Source Clock:      Inst_Clock_divider/count_1 rising
+
+  Data Path: Inst_mmioVGA/Inst_VGA/nextHCount_7 to Red<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              15   0.525   1.585  Inst_mmioVGA/Inst_VGA/nextHCount_7 (Inst_mmioVGA/Inst_VGA/nextHCount_7)
+     LUT5:I0->O            1   0.254   0.910  Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o11 (Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o1)
+     LUT4:I1->O            1   0.235   0.910  Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o6 (Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o7)
+     LUT6:I3->O            8   0.235   1.052  Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o7 (Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o)
+     LUT3:I1->O            1   0.250   0.681  Inst_mmioVGA/Inst_Pinta_IMG/Mmux_blue17 (Blue_0_OBUF)
+     OBUF:I->O                 2.912          Blue_0_OBUF (Blue<0>)
+    ----------------------------------------
+    Total                      9.549ns (4.411ns logic, 5.138ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 88 / 16
+-------------------------------------------------------------------------
+Delay:               8.951ns (Levels of Logic = 6)
+  Source:            SWAddress<0> (PAD)
+  Destination:       Red<2> (PAD)
+
+  Data Path: SWAddress<0> to Red<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   1.259  SWAddress_0_IBUF (SWAddress_0_IBUF)
+     LUT6:I0->O            1   0.254   0.000  Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o4_G (N44)
+     MUXF7:I1->O           1   0.175   0.790  Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o4 (Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o5)
+     LUT6:I4->O            8   0.250   1.052  Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o7 (Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_12_o)
+     LUT3:I1->O            1   0.250   0.681  Inst_mmioVGA/Inst_Pinta_IMG/Mmux_blue17 (Blue_0_OBUF)
+     OBUF:I->O                 2.912          Blue_0_OBUF (Blue<0>)
+    ----------------------------------------
+    Total                      8.951ns (5.169ns logic, 3.782ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Inst_Clock_divider/count_1
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+Inst_Clock_divider/count_1|    5.037|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.833|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.94 secs
+ 
+--> 
+
+Total memory usage is 4502248 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

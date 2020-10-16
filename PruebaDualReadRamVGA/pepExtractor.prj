@@ -1,0 +1,6 @@
+work	"Clock_divider.vhd"
+work	"Pinta_IMG.vhd"
+work	"PruebaVGARAM.vhd"
+work	"RAM.vhd"
+work	"VGA_Sync.vhd"
+work	"mmioVGA.vhd"

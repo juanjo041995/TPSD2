@@ -1,0 +1,7 @@
+vhdl isim_temp "VGA_Sync.vhd"
+vhdl isim_temp "RAM.vhd"
+vhdl isim_temp "Pinta_IMG.vhd"
+vhdl isim_temp "mmioVGA.vhd"
+vhdl isim_temp "Clock_divider.vhd"
+vhdl isim_temp "PruebaVGARAM.vhd"
+vhdl isim_temp "test.vhd"

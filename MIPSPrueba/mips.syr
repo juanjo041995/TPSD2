@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: mips.prj
@@ -105,9 +105,21 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\VGA_Sync.vhd" into library work
+Parsing entity <VGA_Sync>.
+Parsing architecture <Behavioral> of entity <vga_sync>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\RAM.vhd" into library work
+Parsing entity <RAM>.
+Parsing architecture <Behavioral> of entity <ram>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\Pinta_IMG.vhd" into library work
+Parsing entity <Pinta_IMG>.
+Parsing architecture <behavioral> of entity <pinta_img>.
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\general.vhd" into library work
 Parsing package <general>.
 Parsing package body <general>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\mmioVGA.vhd" into library work
+Parsing entity <mmioVGA>.
+Parsing architecture <Behavioral> of entity <mmiovga>.
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" into library work
 Parsing entity <md>.
 Parsing architecture <Behavioral> of entity <md>.
@@ -225,6 +237,14 @@ INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 95. Case st
 INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 117. Case statement is complete. others clause is never selected
 INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 159. Case statement is complete. others clause is never selected
 
+Elaborating entity <mmioVGA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Pinta_IMG> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <VGA_Sync> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RAM> (architecture <Behavioral>) from library <work>.
+
 Elaborating entity <mux32> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <mux32_4a1> (architecture <Behavioral>) from library <work>.
@@ -240,29 +260,6 @@ Elaborating entity <alu_control> (architecture <Behavioral>) from library <work>
 Elaborating entity <JR_detect> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <control1> (architecture <Behavioral>) from library <work>.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 267. All outputs of instance <Inst_Clock_divider> of block <Clock_divider> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 273. All outputs of instance <Inst_antirebote> of block <antirebote> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 279. All outputs of instance <Inst_pc> of block <pc> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 285. All outputs of instance <Inst_suma_4> of block <suma_4> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 289. All outputs of instance <Inst_mi> of block <mi> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 293. All outputs of instance <Inst_mux5_4a1> of block <mux5_4a1> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 301. All outputs of instance <Inst_reg> of block <reg> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 312. All outputs of instance <Inst_shift_left16> of block <shift_left16> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 316. All outputs of instance <Inst_alu> of block <alu> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 324. All outputs of instance <Inst_exten_signo_cero> of block <exten_signo_cero> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 329. All outputs of instance <Inst_control_branch> of block <control_branch> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 335. All outputs of instance <Inst_md_io> of block <md_io> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 344. All outputs of instance <Inst_mux32_branch> of block <mux32> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 350. All outputs of instance <Inst_mux32_4a1_jump> of block <mux32_4a1> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 358. All outputs of instance <Inst_mux32_4a1_mem> of block <mux32_4a1> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 366. All outputs of instance <Inst_mux32_lui> of block <mux32> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 372. All outputs of instance <Inst_mux32_ALU> of block <mux32> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 378. All outputs of instance <Inst_shift_left> of block <shift_left> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 382. All outputs of instance <Inst_shift_left_jump> of block <shift_left_j> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 387. All outputs of instance <Inst_sumador32> of block <sumador32> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 392. All outputs of instance <Inst_alu_control> of block <alu_control> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 397. All outputs of instance <Inst_jr_detect> of block <JR_detect> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 401. All outputs of instance <Inst_control1> of block <control1> are unconnected in block <mips>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -270,22 +267,153 @@ WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 401. All outp
 
 Synthesizing Unit <mips>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd".
-INFO:Xst:3210 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 267: Output port <clk_50Mhz> of the instance <Inst_Clock_divider> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 279: Output port <clk_50Mhz> of the instance <Inst_Clock_divider> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <mips> synthesized.
 
-Synthesizing Unit <alu_parcial>.
-    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\alu_parcial.vhd".
+Synthesizing Unit <Clock_divider>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\Clock_divider.vhd".
+    Found 2-bit register for signal <count>.
+    Found 2-bit adder for signal <count[1]_GND_5_o_add_1_OUT> created at line 51.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <Clock_divider> synthesized.
+
+Synthesizing Unit <antirebote>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\antirebote.vhd".
+    Found 1-bit register for signal <reset>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <antirebote> synthesized.
+
+Synthesizing Unit <pc>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\pc.vhd".
+    Found 32-bit register for signal <s>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <pc> synthesized.
+
+Synthesizing Unit <suma_4>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\suma_4.vhd".
+    Found 32-bit adder for signal <s> created at line 38.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <suma_4> synthesized.
+
+Synthesizing Unit <mi>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\mi.vhd".
+WARNING:Xst:2999 - Signal 'mi', unconnected in block 'mi', is tied to its initial value.
+    Found 512x32-bit single-port Read Only RAM <Mram_mi> for signal <mi>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <mi> synthesized.
+
+Synthesizing Unit <mux5_4a1>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\mux5_4a1.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux5_4a1> synthesized.
+
+Synthesizing Unit <reg>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\reg.vhd".
+    Found 32-bit register for signal <reg<1>>.
+    Found 32-bit register for signal <reg<2>>.
+    Found 32-bit register for signal <reg<3>>.
+    Found 32-bit register for signal <reg<4>>.
+    Found 32-bit register for signal <reg<5>>.
+    Found 32-bit register for signal <reg<6>>.
+    Found 32-bit register for signal <reg<7>>.
+    Found 32-bit register for signal <reg<8>>.
+    Found 32-bit register for signal <reg<9>>.
+    Found 32-bit register for signal <reg<10>>.
+    Found 32-bit register for signal <reg<11>>.
+    Found 32-bit register for signal <reg<12>>.
+    Found 32-bit register for signal <reg<13>>.
+    Found 32-bit register for signal <reg<14>>.
+    Found 32-bit register for signal <reg<15>>.
+    Found 32-bit register for signal <reg<16>>.
+    Found 32-bit register for signal <reg<17>>.
+    Found 32-bit register for signal <reg<18>>.
+    Found 32-bit register for signal <reg<19>>.
+    Found 32-bit register for signal <reg<20>>.
+    Found 32-bit register for signal <reg<21>>.
+    Found 32-bit register for signal <reg<22>>.
+    Found 32-bit register for signal <reg<23>>.
+    Found 32-bit register for signal <reg<24>>.
+    Found 32-bit register for signal <reg<25>>.
+    Found 32-bit register for signal <reg<26>>.
+    Found 32-bit register for signal <reg<27>>.
+    Found 32-bit register for signal <reg<28>>.
+    Found 32-bit register for signal <reg<29>>.
+    Found 32-bit register for signal <reg<30>>.
+    Found 32-bit register for signal <reg<0>>.
+    Found 5-bit subtractor for signal <GND_16_o_GND_16_o_sub_2_OUT<4:0>> created at line 52.
+    Found 5-bit subtractor for signal <GND_16_o_GND_16_o_sub_6_OUT<4:0>> created at line 54.
+    Found 5-bit subtractor for signal <GND_16_o_GND_16_o_sub_10_OUT<4:0>> created at line 63.
+INFO:Xst:3019 - HDL ADVISOR - 1024 flip-flops were inferred for signal <reg>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 1024 flip-flops were inferred for signal <reg>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 32-bit 31-to-1 multiplexer for signal <GND_16_o_X_16_o_wide_mux_2_OUT> created at line 52.
+    Found 32-bit 31-to-1 multiplexer for signal <GND_16_o_X_16_o_wide_mux_6_OUT> created at line 54.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 992 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <reg> synthesized.
+
+Synthesizing Unit <shift_left16>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\shift_left16.vhd".
     Summary:
 	no macro.
+Unit <shift_left16> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\alu.vhd".
+    Summary:
+	inferred   5 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <alu_parcial>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\alu_parcial.vhd".
+    Found 32-bit adder for signal <n0037> created at line 55.
+    Found 32-bit adder for signal <suma> created at line 55.
+    Found 32-bit comparator greater for signal <op2[31]_op1[31]_LessThan_9_o> created at line 71
+    Found 32-bit comparator greater for signal <op1[31]_op2[31]_LessThan_11_o> created at line 79
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  11 Multiplexer(s).
 Unit <alu_parcial> synthesized.
 
 Synthesizing Unit <barrel_shifter>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\barrel_shifter.vhd".
+    Found 32-bit shifter arithmetic right for signal <e[31]_control[4]_shift_right_3_OUT> created at line 47
+    Found 32-bit shifter logical right for signal <e[31]_control[4]_shift_right_5_OUT> created at line 46
+    Found 32-bit shifter logical left for signal <e[31]_control[4]_shift_left_7_OUT> created at line 45
+    Found 32-bit 4-to-1 multiplexer for signal <s> created at line 38.
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <barrel_shifter> synthesized.
+
+Synthesizing Unit <exten_signo_cero>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\exten_signo_cero.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <exten_signo_cero> synthesized.
+
+Synthesizing Unit <control_branch>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\control_branch.vhd".
     Summary:
 	no macro.
-Unit <barrel_shifter> synthesized.
+Unit <control_branch> synthesized.
+
+Synthesizing Unit <md_io>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\md_io.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <md_io> synthesized.
 
 Synthesizing Unit <decodificador>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\decodificador.vhd".
@@ -296,14 +424,215 @@ Unit <decodificador> synthesized.
 
 Synthesizing Unit <md>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd".
+    Found 128x8-bit single-port RAM <Mram_mem01> for signal <mem01>.
+    Found 128x8-bit single-port RAM <Mram_mem00> for signal <mem00>.
+    Found 128x8-bit single-port RAM <Mram_mem11> for signal <mem11>.
+    Found 128x8-bit single-port RAM <Mram_mem10> for signal <mem10>.
+    Found 32-bit 4-to-1 multiplexer for signal <dir[1]_GND_25_o_wide_mux_12_OUT> created at line 75.
+    Found 32-bit 4-to-1 multiplexer for signal <dir[1]_GND_25_o_wide_mux_17_OUT> created at line 86.
+    Found 32-bit 4-to-1 multiplexer for signal <dir[1]_GND_25_o_wide_mux_18_OUT> created at line 99.
+    Found 32-bit 4-to-1 multiplexer for signal <dir[1]_BUS_0153_wide_mux_23_OUT> created at line 108.
+    Found 32-bit 7-to-1 multiplexer for signal <tipoAcc[2]_GND_25_o_wide_mux_24_OUT> created at line 68.
+    Summary:
+	inferred   4 RAM(s).
+	inferred  28 Multiplexer(s).
+Unit <md> synthesized.
+
+Synthesizing Unit <mmioVGA>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\mmioVGA.vhd".
     Summary:
 	no macro.
-Unit <md> synthesized.
+Unit <mmioVGA> synthesized.
+
+Synthesizing Unit <Pinta_IMG>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\Pinta_IMG.vhd".
+    Found 12-bit adder for signal <n0014> created at line 57.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <Pinta_IMG> synthesized.
+
+Synthesizing Unit <div_10u_8u>.
+    Related source file is "".
+    Found 18-bit adder for signal <n0385> created at line 0.
+    Found 18-bit adder for signal <GND_28_o_b[7]_add_1_OUT> created at line 0.
+    Found 17-bit adder for signal <n0389> created at line 0.
+    Found 17-bit adder for signal <GND_28_o_b[7]_add_3_OUT> created at line 0.
+    Found 16-bit adder for signal <n0393> created at line 0.
+    Found 16-bit adder for signal <GND_28_o_b[7]_add_5_OUT> created at line 0.
+    Found 15-bit adder for signal <n0397> created at line 0.
+    Found 15-bit adder for signal <GND_28_o_b[7]_add_7_OUT> created at line 0.
+    Found 14-bit adder for signal <n0401> created at line 0.
+    Found 14-bit adder for signal <GND_28_o_b[7]_add_9_OUT> created at line 0.
+    Found 13-bit adder for signal <n0405> created at line 0.
+    Found 13-bit adder for signal <GND_28_o_b[7]_add_11_OUT> created at line 0.
+    Found 12-bit adder for signal <n0409> created at line 0.
+    Found 12-bit adder for signal <GND_28_o_b[7]_add_13_OUT> created at line 0.
+    Found 11-bit adder for signal <n0413> created at line 0.
+    Found 11-bit adder for signal <GND_28_o_b[7]_add_15_OUT> created at line 0.
+    Found 10-bit adder for signal <n0417> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[7]_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <n0421> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_28_o_add_19_OUT[9:0]> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  20 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_8u> synthesized.
+
+Synthesizing Unit <VGA_Sync>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\VGA_Sync.vhd".
+    Found 10-bit register for signal <vCount>.
+    Found 10-bit register for signal <hCount>.
+    Found 10-bit register for signal <nextHCount>.
+    Found 10-bit register for signal <nextVCount>.
+    Found 1-bit register for signal <VSync>.
+    Found 1-bit register for signal <HSync>.
+    Found 1-bit register for signal <video_on>.
+    Found 10-bit adder for signal <vCount[9]_GND_29_o_add_2_OUT> created at line 69.
+    Found 10-bit adder for signal <hCount[9]_GND_29_o_add_11_OUT> created at line 83.
+    Found 10-bit comparator lessequal for signal <n0013> created at line 86
+    Found 10-bit comparator greater for signal <vCount[9]_GND_29_o_LessThan_16_o> created at line 86
+    Found 10-bit comparator lessequal for signal <n0018> created at line 92
+    Found 10-bit comparator greater for signal <hCount[9]_PWR_41_o_LessThan_18_o> created at line 92
+    Found 10-bit comparator greater for signal <hCount[9]_PWR_41_o_LessThan_19_o> created at line 98
+    Found 10-bit comparator greater for signal <vCount[9]_GND_29_o_LessThan_20_o> created at line 98
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <VGA_Sync> synthesized.
+
+Synthesizing Unit <RAM>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\RAM.vhd".
+    Found 8x8-bit dual-port RAM <Mram_memRW> for signal <memRW>.
+    Found 3-bit comparator not equal for signal <dir_match> created at line 55
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <RAM> synthesized.
+
+Synthesizing Unit <mux32>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\mux32.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux32> synthesized.
+
+Synthesizing Unit <mux32_4a1>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\mux32_4a1.vhd".
+    Found 32-bit 4-to-1 multiplexer for signal <s> created at line 38.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux32_4a1> synthesized.
+
+Synthesizing Unit <shift_left>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\shift_left.vhd".
+    Summary:
+	no macro.
+Unit <shift_left> synthesized.
+
+Synthesizing Unit <shift_left_j>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\shift_left_j.vhd".
+    Summary:
+	no macro.
+Unit <shift_left_j> synthesized.
+
+Synthesizing Unit <sumador32>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\sumador32.vhd".
+    Found 32-bit adder for signal <s> created at line 39.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <sumador32> synthesized.
+
+Synthesizing Unit <alu_control>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\alu_control.vhd".
+    Summary:
+	inferred  13 Multiplexer(s).
+Unit <alu_control> synthesized.
+
+Synthesizing Unit <JR_detect>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\JR_detect.vhd".
+    Summary:
+	no macro.
+Unit <JR_detect> synthesized.
+
+Synthesizing Unit <control1>.
+    Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\control1.vhd".
+    Summary:
+	inferred  15 Multiplexer(s).
+Unit <control1> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# RAMs                                                 : 6
+ 128x8-bit single-port RAM                             : 4
+ 512x32-bit single-port Read Only RAM                  : 1
+ 8x8-bit dual-port RAM                                 : 1
+# Adders/Subtractors                                   : 51
+ 10-bit adder                                          : 10
+ 11-bit adder                                          : 4
+ 12-bit adder                                          : 5
+ 13-bit adder                                          : 4
+ 14-bit adder                                          : 4
+ 15-bit adder                                          : 4
+ 16-bit adder                                          : 4
+ 17-bit adder                                          : 4
+ 18-bit adder                                          : 4
+ 2-bit adder                                           : 1
+ 32-bit adder                                          : 4
+ 5-bit subtractor                                      : 3
+# Registers                                            : 41
+ 1-bit register                                        : 4
+ 10-bit register                                       : 4
+ 2-bit register                                        : 1
+ 32-bit register                                       : 32
+# Comparators                                          : 31
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 8
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator lessequal                           : 2
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator lessequal                           : 2
+ 18-bit comparator lessequal                           : 2
+ 3-bit comparator not equal                            : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 242
+ 1-bit 2-to-1 multiplexer                              : 146
+ 10-bit 2-to-1 multiplexer                             : 8
+ 2-bit 2-to-1 multiplexer                              : 7
+ 3-bit 2-to-1 multiplexer                              : 14
+ 32-bit 2-to-1 multiplexer                             : 22
+ 32-bit 31-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 7
+ 32-bit 7-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 13
+ 5-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 19
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
 =========================================================================
 
 =========================================================================
@@ -311,28 +640,183 @@ Found no macro
 =========================================================================
 
 
+Synthesizing (advanced) Unit <Clock_divider>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Clock_divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RAM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memRW> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addressMips>   |          |
+    |     diA            | connected to signal <dataIn>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <addressVGA>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <md>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem01> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <dir<8:2>>      |          |
+    |     diA            | connected to signal <_n0150>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem00> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <dir<8:2>>      |          |
+    |     diA            | connected to signal <_n0158>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem11> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <dir<8:2>>      |          |
+    |     diA            | connected to signal <_n0166>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <dir<8:2>>      |          |
+    |     diA            | connected to signal <_n0174>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <md> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mi>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mi> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 32-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <dir>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <mi> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# RAMs                                                 : 6
+ 128x8-bit single-port distributed RAM                 : 4
+ 512x32-bit single-port distributed Read Only RAM      : 1
+ 8x8-bit dual-port distributed RAM                     : 1
+# Adders/Subtractors                                   : 29
+ 10-bit adder                                          : 2
+ 10-bit adder carry in                                 : 20
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 2
+ 32-bit adder carry in                                 : 1
+ 5-bit subtractor                                      : 3
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 1068
+ Flip-Flops                                            : 1068
+# Comparators                                          : 31
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 8
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator lessequal                           : 2
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator lessequal                           : 2
+ 18-bit comparator lessequal                           : 2
+ 3-bit comparator not equal                            : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 304
+ 1-bit 2-to-1 multiplexer                              : 146
+ 1-bit 31-to-1 multiplexer                             : 64
+ 10-bit 2-to-1 multiplexer                             : 8
+ 2-bit 2-to-1 multiplexer                              : 7
+ 3-bit 2-to-1 multiplexer                              : 14
+ 32-bit 2-to-1 multiplexer                             : 22
+ 32-bit 4-to-1 multiplexer                             : 7
+ 32-bit 7-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 13
+ 5-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 19
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
 
+Optimizing unit <pc> ...
+
 Optimizing unit <mips> ...
+
+Optimizing unit <reg> ...
+
+Optimizing unit <md> ...
+
+Optimizing unit <mmioVGA> ...
+
+Optimizing unit <RAM> ...
+
+Optimizing unit <control1> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <alu_parcial> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 43.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 1070
+ Flip-Flops                                            : 1070
+
 =========================================================================
 
 =========================================================================
@@ -354,6 +838,38 @@ Top Level Output File Name         : mips.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
+# BELS                             : 1837
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 28
+#      LUT2                        : 44
+#      LUT3                        : 97
+#      LUT4                        : 172
+#      LUT5                        : 278
+#      LUT6                        : 946
+#      MUXCY                       : 121
+#      MUXF7                       : 52
+#      VCC                         : 1
+#      XORCY                       : 92
+# FlipFlops/Latches                : 1070
+#      FD                          : 1
+#      FDC                         : 8
+#      FDCE                        : 6
+#      FDE                         : 963
+#      FDP                         : 2
+#      FDPE                        : 4
+#      FDR                         : 33
+#      FDRE                        : 52
+#      FDS                         : 1
+# RAMS                             : 40
+#      RAM128X1S                   : 32
+#      RAM16X1D                    : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 2
+#      OBUF                        : 10
 
 Device utilization summary:
 ---------------------------
@@ -362,19 +878,25 @@ Selected Device : 6slx9csg324-2
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:            1070  out of  11440     9%  
+ Number of Slice LUTs:                 1650  out of   5720    28%  
+    Number used as Logic:              1570  out of   5720    27%  
+    Number used as Memory:               80  out of   1440     5%  
+       Number used as RAM:               80
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:   2554
+   Number with an unused Flip Flop:    1484  out of   2554    58%  
+   Number with an unused LUT:           904  out of   2554    35%  
+   Number of fully used LUT-FF pairs:   166  out of   2554     6%  
+   Number of unique control sets:        39
 
 IO Utilization: 
- Number of IOs:                           3
- Number of bonded IOBs:                   0  out of    200     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    200     6%  
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -394,7 +916,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk100Mhz                          | BUFGP                  | 2     |
+Inst_Clock_divider/count_1         | BUFG                   | 1108  |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -404,9 +931,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum period: 20.521ns (Maximum Frequency: 48.731MHz)
+   Minimum input arrival time before clock: 2.547ns
+   Maximum output required time after clock: 23.034ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -414,21 +941,147 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'clk100Mhz'
+  Clock period: 2.793ns (frequency: 358.038MHz)
+  Total number of paths / destination ports: 7 / 4
+-------------------------------------------------------------------------
+Delay:               2.793ns (Levels of Logic = 1)
+  Source:            Inst_Clock_divider/count_1 (FF)
+  Destination:       Inst_Clock_divider/count_1 (FF)
+  Source Clock:      clk100Mhz rising
+  Destination Clock: clk100Mhz rising
+
+  Data Path: Inst_Clock_divider/count_1 to Inst_Clock_divider/count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.525   0.834  Inst_Clock_divider/count_1 (Inst_Clock_divider/count_1)
+     LUT2:I0->O            2   0.250   0.725  Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o<1>1 (Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o)
+     FDR:R                     0.459          Inst_Clock_divider/count_0
+    ----------------------------------------
+    Total                      2.793ns (1.234ns logic, 1.559ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_Clock_divider/count_1'
+  Clock period: 20.521ns (frequency: 48.731MHz)
+  Total number of paths / destination ports: 8673545181 / 2549
+-------------------------------------------------------------------------
+Delay:               20.521ns (Levels of Logic = 15)
+  Source:            Inst_pc/s_3 (FF)
+  Destination:       Inst_reg/reg_0_25 (FF)
+  Source Clock:      Inst_Clock_divider/count_1 rising
+  Destination Clock: Inst_Clock_divider/count_1 rising
+
+  Data Path: Inst_pc/s_3 to Inst_reg/reg_0_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             23   0.525   1.788  Inst_pc/s_3 (Inst_pc/s_3)
+     LUT5:I0->O            1   0.254   0.682  instruccion<31>_SW0 (N70)
+     LUT5:I4->O          186   0.254   2.401  instruccion<31> (instruccion<24>)
+     LUT2:I1->O            4   0.254   0.804  Inst_control1/Mmux_aluop311 (Inst_control1/Mmux_aluop31)
+     LUT6:I5->O           11   0.254   1.039  Inst_control1/Mmux_aluop21 (aluop<1>)
+     LUT5:I4->O           14   0.254   1.355  Inst_alu_control/s<3>_1 (Inst_alu_control/s<3>)
+     LUT6:I3->O           16   0.235   1.290  Inst_alu/Mmux_shift_amount21_3 (Inst_alu/Mmux_shift_amount212)
+     LUT6:I4->O            4   0.250   0.912  Inst_alu/Sh81 (Inst_alu/Sh8)
+     LUT6:I4->O            2   0.250   0.726  Inst_alu/Sh40 (Inst_alu/Sh40)
+     LUT6:I5->O            1   0.254   0.682  Inst_alu/Mmux_s_mux318 (Inst_alu/Mmux_s_mux317)
+     LUT6:I5->O            1   0.254   0.000  Inst_alu/Mmux_s_mux319_G (N469)
+     MUXF7:I1->O          34   0.175   1.552  Inst_alu/Mmux_s_mux319 (salida_alu<8>)
+     RAM128X1S:A6->O       3   0.185   1.042  Inst_md_io/Inst_md/Mram_mem008 (Inst_md_io/Inst_md/hwtemp1<7>1)
+     LUT6:I2->O            4   0.254   0.804  Inst_md_io/Inst_md/dir<1>181 (Inst_md_io/Inst_md/dir<1>_mmx_out4)
+     LUT6:I5->O           17   0.254   1.209  Inst_md_io/Inst_md/Mmux_dataout1013 (Inst_md_io/Inst_md/Mmux_dataout1013)
+     LUT6:I5->O           16   0.254   0.000  Inst_mux32_lui/Mmux_s30 (escribe_reg<25>)
+     FDE:D                     0.074          Inst_reg/reg_1_25
+    ----------------------------------------
+    Total                     20.521ns (4.234ns logic, 16.287ns route)
+                                       (20.6% logic, 79.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_Clock_divider/count_1'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              2.547ns (Levels of Logic = 2)
+  Source:            reset0 (PAD)
+  Destination:       Inst_antirebote/reset (FF)
+  Destination Clock: Inst_Clock_divider/count_1 rising
+
+  Data Path: reset0 to Inst_antirebote/reset
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.910  reset0_IBUF (reset0_IBUF)
+     LUT3:I0->O            1   0.235   0.000  Inst_antirebote/reset_rstpot (Inst_antirebote/reset_rstpot)
+     FD:D                      0.074          Inst_antirebote/reset
+    ----------------------------------------
+    Total                      2.547ns (1.637ns logic, 0.910ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_Clock_divider/count_1'
+  Total number of paths / destination ports: 12943506 / 10
+-------------------------------------------------------------------------
+Offset:              23.034ns (Levels of Logic = 14)
+  Source:            Inst_pc/s_3 (FF)
+  Destination:       Red<2> (PAD)
+  Source Clock:      Inst_Clock_divider/count_1 rising
+
+  Data Path: Inst_pc/s_3 to Red<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             23   0.525   1.788  Inst_pc/s_3 (Inst_pc/s_3)
+     LUT5:I0->O            1   0.254   0.682  instruccion<31>_SW0 (N70)
+     LUT5:I4->O          186   0.254   2.401  instruccion<31> (instruccion<24>)
+     LUT2:I1->O            4   0.254   0.804  Inst_control1/Mmux_aluop311 (Inst_control1/Mmux_aluop31)
+     LUT6:I5->O           11   0.254   1.039  Inst_control1/Mmux_aluop21 (aluop<1>)
+     LUT5:I4->O           14   0.254   1.355  Inst_alu_control/s<3>_1 (Inst_alu_control/s<3>)
+     LUT6:I3->O           19   0.235   1.261  Inst_alu/Mmux_shift_amount21_1 (Inst_alu/Mmux_shift_amount21)
+     LUT5:I4->O            2   0.254   0.954  Inst_alu/Sh10011 (Inst_alu/Sh1001)
+     LUT5:I2->O            2   0.235   0.726  Inst_alu/Sh12911 (Inst_alu/Sh1291)
+     LUT6:I5->O            3   0.254   0.766  Inst_alu/Mmux_s_mux128 (Inst_alu/Mmux_s_mux128)
+     LUT6:I5->O           36   0.254   2.042  Inst_alu/Mmux_s_mux1210 (salida_alu<1>)
+     LUT6:I0->O            1   0.254   0.790  Inst_md_io/Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_117_o_SW0 (N56)
+     LUT6:I4->O            8   0.250   1.052  Inst_md_io/Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_117_o (Inst_md_io/Inst_mmioVGA/Ins_RAM/memWrite_memWrite_OR_117_o)
+     LUT4:I2->O            1   0.250   0.681  Inst_md_io/Inst_mmioVGA/Inst_Pinta_IMG/Mmux_red11 (Red_0_OBUF)
+     OBUF:I->O                 2.912          Red_0_OBUF (Red<0>)
+    ----------------------------------------
+    Total                     23.034ns (6.693ns logic, 16.341ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock Inst_Clock_divider/count_1
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+Inst_Clock_divider/count_1|   20.521|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk100Mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk100Mhz      |    2.793|         |         |         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.81 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.43 secs
  
 --> 
 
-Total memory usage is 4502248 kilobytes
+Total memory usage is 4521948 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   24 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 

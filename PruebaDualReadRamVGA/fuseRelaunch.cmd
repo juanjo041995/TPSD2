@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/GitHubRepos/TPSD2/PruebaDualReadRamVGA/test_isim_beh.exe" -prj "D:/GitHubRepos/TPSD2/PruebaDualReadRamVGA/test_beh.prj" "work.test" 

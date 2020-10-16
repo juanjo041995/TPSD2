@@ -38,7 +38,11 @@ entity mips is
 	port (
 		clk100Mhz : in std_logic;
 		reset1   : in std_logic;
-		reset0   : in std_logic);
+		reset0   : in std_logic;
+		HSync,VSync: out STD_LOGIC;
+	   Red,Green 	: out STD_LOGIC_VECTOR(2 downto 0);
+		Blue			: out STD_LOGIC_VECTOR(1 downto 0)
+		);
 end mips;
 
 architecture Behavioral of mips is
@@ -139,13 +143,17 @@ architecture Behavioral of mips is
 	END COMPONENT;
 	COMPONENT md_io
 	Port ( 
-		dir      : in  STD_LOGIC_VECTOR (31 downto 0);
-		datain   : in  STD_LOGIC_VECTOR (31 downto 0);
-		memwrite : in  STD_LOGIC;
-		memread  : in  STD_LOGIC;
-  	   tipoAcc  : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operaciï¿½n a realizar, cargar bytes, half word y word
-		clk      : in  STD_LOGIC;
-		dataout  : out  STD_LOGIC_VECTOR (31 downto 0)
+			  dir       : in  STD_LOGIC_VECTOR (31 downto 0);
+           datain    : in  STD_LOGIC_VECTOR (31 downto 0);
+           memwrite  : in  STD_LOGIC;
+           memread   : in  STD_LOGIC;
+			  tipoAcc   : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operaciï¿½n a realizar, cargar bytes, half word y word
+           clk       : in  STD_LOGIC;
+           dataout   : out  STD_LOGIC_VECTOR (31 downto 0);
+			  reset		: in STD_LOGIC;
+			  HSync,VSync: out STD_LOGIC;
+			  Red,Green 	: out STD_LOGIC_VECTOR(2 downto 0);
+			  Blue			: out STD_LOGIC_VECTOR(1 downto 0)
 		 );
 	END COMPONENT;
 	COMPONENT mux32
@@ -217,7 +225,7 @@ architecture Behavioral of mips is
 	END COMPONENT;
 
 
-	-- Definimos seï¿½ales para interconexiï¿½n
+	-- Definimos señales para interconexión
 	signal nuevo_pc : std_logic_vector(31 downto 0);
 	signal dir_ins : std_logic_vector(31 downto 0);
 	signal instruccion : std_logic_vector(31 downto 0);
@@ -262,6 +270,10 @@ architecture Behavioral of mips is
 	
 	signal reset : std_logic;
 	signal temp25 : std_logic;
+	
+	
+	signal NOTRESET0: STD_LOGIC;
+	signal NOTRESET1: STD_LOGIC;
 begin
 
 	Inst_Clock_divider : Clock_divider PORT MAP(
@@ -270,8 +282,8 @@ begin
 	);
 
 	Inst_antirebote: antirebote PORT MAP(
-		boton1 => reset1,
-		boton2 => reset0,
+		boton1 => NOTRESET0,
+		boton2 => NOTRESET1,
 		clk    => temp25,
 		reset  => reset
 	);
@@ -338,7 +350,13 @@ begin
 		memread  => memread,
 		tipoAcc  => tipoAcc,
 		clk      => temp25,
-		dataout  => salida_mem
+		dataout  => salida_mem,
+		reset		=> reset,
+		HSync		=> HSync,
+		VSync		=> VSync,
+		Red		=> Red,
+		Green		=> Green,
+		Blue		=> Blue
 	);
 	Inst_mux32_branch: mux32 PORT MAP(
 		e0  => pc_mas_4,
@@ -415,6 +433,7 @@ begin
 		regwrite    => regwrite,
 		Zero_extend => Zero_extend
 	);
-
+	NOTRESET0 <= not reset0;
+	NOTRESET1 <= not reset1;
 end Behavioral;
 

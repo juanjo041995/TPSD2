@@ -31,7 +31,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity decodificador is
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
-           csMem     : out  STD_LOGIC
+           csMem     : out  STD_LOGIC;
+			  csVGA		: out STD_LOGIC
 			  );
 end decodificador;
 
@@ -41,6 +42,9 @@ begin
 	-- memoria
 	csMem     <= '1' when ent(31 downto 16) = X"1001" else
 	             '0';
+					 
+	-- VGA
+	csVGA 	 <= '1' when ent(31 downto 16) = X"FFFF" else '0';
 
 					 
 end Behavioral;
