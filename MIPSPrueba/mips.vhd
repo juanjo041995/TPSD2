@@ -36,16 +36,17 @@ use work.general.all;
 
 entity mips is
 	port (
-		clk50mhz : in std_logic;
+		clk100Mhz : in std_logic;
 		reset1   : in std_logic;
 		reset0   : in std_logic);
 end mips;
 
 architecture Behavioral of mips is
-	COMPONENT divisorCLK is
+	COMPONENT Clock_divider is
     Port ( 
-		clk50mhz : in  STD_LOGIC;
-      clk : out  STD_LOGIC
+		clk_100Mhz : in STD_LOGIC;
+		clk_50Mhz : out  STD_LOGIC;
+      clk_25Mhz : out  STD_LOGIC
 		);
 	END COMPONENT;
 	COMPONENT JR_detect
@@ -144,7 +145,6 @@ architecture Behavioral of mips is
 		memread  : in  STD_LOGIC;
   	   tipoAcc  : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operaciï¿½n a realizar, cargar bytes, half word y word
 		clk      : in  STD_LOGIC;
-		clk50mhz : in STD_LOGIC;
 		dataout  : out  STD_LOGIC_VECTOR (31 downto 0)
 		 );
 	END COMPONENT;
@@ -244,7 +244,7 @@ architecture Behavioral of mips is
 	
 	signal sal_mult_alu : std_logic_vector(31 downto 0);
 
-	-- seï¿½ales de control
+	-- señales de control
 	signal regdst : STD_LOGIC_VECTOR (1 downto 0);
 	signal branch : std_logic;
 	signal bne : std_logic;
@@ -261,25 +261,25 @@ architecture Behavioral of mips is
 	signal jr_detect_sig : std_logic;
 	
 	signal reset : std_logic;
-	signal clk : std_logic;
+	signal temp25 : std_logic;
 begin
 
-	Inst_divisorCLK :  divisorCLK PORT MAP(
-		clk50mhz => clk50mhz,
-      clk      => clk
+	Inst_Clock_divider : Clock_divider PORT MAP(
+		clk_100Mhz => clk100Mhz,
+      clk_25Mhz   => temp25
 	);
 
 	Inst_antirebote: antirebote PORT MAP(
 		boton1 => reset1,
 		boton2 => reset0,
-		clk    => clk,
+		clk    => temp25,
 		reset  => reset
 	);
 	Inst_pc: pc PORT MAP(
 		e     => nuevo_pc,
 		s     => dir_ins,
 		reset => reset,
-		clk   => clk
+		clk   => temp25
 	);
 	Inst_suma_4: suma_4 PORT MAP(
 		e => dir_ins,
@@ -301,7 +301,7 @@ begin
 		rr1      => instruccion(25 downto 21),
 		rr2      => instruccion(20 downto 16),
 		wr       => dir_esc_reg,
-		clk      => clk,
+		clk      => temp25,
 		regwrite => regwrite,
 		reset    => reset,
 		rd1      => lee_reg1,
@@ -337,8 +337,7 @@ begin
 		memwrite => memwrite,
 		memread  => memread,
 		tipoAcc  => tipoAcc,
-		clk      => clk,
-		clk50mhz => clk50mhz,
+		clk      => temp25,
 		dataout  => salida_mem
 	);
 	Inst_mux32_branch: mux32 PORT MAP(

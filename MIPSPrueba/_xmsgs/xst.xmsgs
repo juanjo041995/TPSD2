@@ -5,82 +5,79 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 101: <arg fmt="%s" index="1">hwtemp1</arg> should be on the sensitivity list of the process
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">267</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_Clock_divider</arg>&gt; of block &lt;<arg fmt="%s" index="4">Clock_divider</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="new" >"D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 103: <arg fmt="%s" index="1">hwtemp2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">273</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_antirebote</arg>&gt; of block &lt;<arg fmt="%s" index="4">antirebote</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">267</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_divisorCLK</arg>&gt; of block &lt;<arg fmt="%s" index="4">divisorCLK</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">279</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_pc</arg>&gt; of block &lt;<arg fmt="%s" index="4">pc</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">272</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_antirebote</arg>&gt; of block &lt;<arg fmt="%s" index="4">antirebote</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">285</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_suma_4</arg>&gt; of block &lt;<arg fmt="%s" index="4">suma_4</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">278</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_pc</arg>&gt; of block &lt;<arg fmt="%s" index="4">pc</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">289</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mi</arg>&gt; of block &lt;<arg fmt="%s" index="4">mi</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_suma_4</arg>&gt; of block &lt;<arg fmt="%s" index="4">suma_4</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">293</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux5_4a1</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux5_4a1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">288</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mi</arg>&gt; of block &lt;<arg fmt="%s" index="4">mi</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">301</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_reg</arg>&gt; of block &lt;<arg fmt="%s" index="4">reg</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">292</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux5_4a1</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux5_4a1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">312</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_shift_left16</arg>&gt; of block &lt;<arg fmt="%s" index="4">shift_left16</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">300</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_reg</arg>&gt; of block &lt;<arg fmt="%s" index="4">reg</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">316</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_alu</arg>&gt; of block &lt;<arg fmt="%s" index="4">alu</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">311</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_shift_left16</arg>&gt; of block &lt;<arg fmt="%s" index="4">shift_left16</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">324</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_exten_signo_cero</arg>&gt; of block &lt;<arg fmt="%s" index="4">exten_signo_cero</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">315</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_alu</arg>&gt; of block &lt;<arg fmt="%s" index="4">alu</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">329</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_control_branch</arg>&gt; of block &lt;<arg fmt="%s" index="4">control_branch</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">323</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_exten_signo_cero</arg>&gt; of block &lt;<arg fmt="%s" index="4">exten_signo_cero</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">335</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_md_io</arg>&gt; of block &lt;<arg fmt="%s" index="4">md_io</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">328</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_control_branch</arg>&gt; of block &lt;<arg fmt="%s" index="4">control_branch</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">344</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_branch</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">334</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_md_io</arg>&gt; of block &lt;<arg fmt="%s" index="4">md_io</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">350</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_4a1_jump</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32_4a1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">344</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_branch</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">358</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_4a1_mem</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32_4a1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">350</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_4a1_jump</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32_4a1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">366</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_lui</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">358</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_4a1_mem</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32_4a1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">372</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_ALU</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">366</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_lui</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">378</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_shift_left</arg>&gt; of block &lt;<arg fmt="%s" index="4">shift_left</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">372</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_mux32_ALU</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">382</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_shift_left_jump</arg>&gt; of block &lt;<arg fmt="%s" index="4">shift_left_j</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">378</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_shift_left</arg>&gt; of block &lt;<arg fmt="%s" index="4">shift_left</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">387</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_sumador32</arg>&gt; of block &lt;<arg fmt="%s" index="4">sumador32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">382</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_shift_left_jump</arg>&gt; of block &lt;<arg fmt="%s" index="4">shift_left_j</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">392</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_alu_control</arg>&gt; of block &lt;<arg fmt="%s" index="4">alu_control</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">387</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_sumador32</arg>&gt; of block &lt;<arg fmt="%s" index="4">sumador32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">397</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_jr_detect</arg>&gt; of block &lt;<arg fmt="%s" index="4">JR_detect</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">392</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_alu_control</arg>&gt; of block &lt;<arg fmt="%s" index="4">alu_control</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">401</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_control1</arg>&gt; of block &lt;<arg fmt="%s" index="4">control1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">397</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_jr_detect</arg>&gt; of block &lt;<arg fmt="%s" index="4">JR_detect</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%s" index="2">267</arg>: Output port &lt;<arg fmt="%s" index="3">clk_50Mhz</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_Clock_divider</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd</arg>&quot; line <arg fmt="%d" index="2">401</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">Inst_control1</arg>&gt; of block &lt;<arg fmt="%s" index="4">control1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ent&lt;15:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ent&lt;15:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 </messages>

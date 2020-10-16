@@ -62,7 +62,7 @@ begin
 	hwtemp1 <= mem01(to_integer(unsigned(dir(NUM_BITS_MEMORIA_DATOS -1 +2 downto 2)))) & mem00(to_integer(unsigned(dir(NUM_BITS_MEMORIA_DATOS -1 +2 downto 2))));
 	hwtemp2 <= mem11(to_integer(unsigned(dir(NUM_BITS_MEMORIA_DATOS -1 +2 downto 2)))) & mem10(to_integer(unsigned(dir(NUM_BITS_MEMORIA_DATOS -1 +2 downto 2))));
 	
-	leer : process (dir, memread, cs, mem00, mem01, mem10, mem11, tipoAcc) is
+	leer : process (dir, memread, cs, mem00, mem01, mem10, mem11, tipoAcc,hwtemp1,hwtemp2) is
 	begin
 		if cs = '1' and memread = '1' then
 			case tipoAcc is

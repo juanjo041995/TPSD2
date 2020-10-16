@@ -37,7 +37,6 @@ entity md_io is
            memread   : in  STD_LOGIC;
 			  tipoAcc   : in STD_LOGIC_VECTOR (2 downto 0); --tipo de operaci�n a realizar, cargar bytes, half word y word
            clk       : in  STD_LOGIC;
-			  clk50mhz  : in STD_LOGIC;
            dataout   : out  STD_LOGIC_VECTOR (31 downto 0));
 end md_io;
 

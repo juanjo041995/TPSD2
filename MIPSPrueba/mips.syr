@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: mips.prj
 
@@ -162,15 +162,15 @@ Parsing architecture <Behavioral> of entity <jr_detect>.
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\exten_signo_cero.vhd" into library work
 Parsing entity <exten_signo_cero>.
 Parsing architecture <Behavioral> of entity <exten_signo_cero>.
-Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\divisorCLK.vhd" into library work
-Parsing entity <divisorCLK>.
-Parsing architecture <Behavioral> of entity <divisorclk>.
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\control_branch.vhd" into library work
 Parsing entity <control_branch>.
 Parsing architecture <Behavioral> of entity <control_branch>.
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\control1.vhd" into library work
 Parsing entity <control1>.
 Parsing architecture <Behavioral> of entity <control1>.
+Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\Clock_divider.vhd" into library work
+Parsing entity <Clock_divider>.
+Parsing architecture <Behavioral> of entity <clock_divider>.
 Parsing VHDL file "D:\GitHubRepos\TPSD2\MIPSPrueba\antirebote.vhd" into library work
 Parsing entity <antirebote>.
 Parsing architecture <Behavioral> of entity <antirebote>.
@@ -190,7 +190,7 @@ Parsing architecture <Behavioral> of entity <mips>.
 
 Elaborating entity <mips> (architecture <Behavioral>) from library <work>.
 
-Elaborating entity <divisorCLK> (architecture <Behavioral>) from library <work>.
+Elaborating entity <Clock_divider> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <antirebote> (architecture <Behavioral>) from library <work>.
 
@@ -222,8 +222,6 @@ Elaborating entity <decodificador> (architecture <Behavioral>) from library <wor
 
 Elaborating entity <md> (architecture <Behavioral>) from library <work>.
 INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 95. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:92 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 101: hwtemp1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 103: hwtemp2 should be on the sensitivity list of the process
 INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 117. Case statement is complete. others clause is never selected
 INFO:HDLCompiler:679 - "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd" Line 159. Case statement is complete. others clause is never selected
 
@@ -242,18 +240,18 @@ Elaborating entity <alu_control> (architecture <Behavioral>) from library <work>
 Elaborating entity <JR_detect> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <control1> (architecture <Behavioral>) from library <work>.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 267. All outputs of instance <Inst_divisorCLK> of block <divisorCLK> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 272. All outputs of instance <Inst_antirebote> of block <antirebote> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 278. All outputs of instance <Inst_pc> of block <pc> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 284. All outputs of instance <Inst_suma_4> of block <suma_4> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 288. All outputs of instance <Inst_mi> of block <mi> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 292. All outputs of instance <Inst_mux5_4a1> of block <mux5_4a1> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 300. All outputs of instance <Inst_reg> of block <reg> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 311. All outputs of instance <Inst_shift_left16> of block <shift_left16> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 315. All outputs of instance <Inst_alu> of block <alu> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 323. All outputs of instance <Inst_exten_signo_cero> of block <exten_signo_cero> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 328. All outputs of instance <Inst_control_branch> of block <control_branch> are unconnected in block <mips>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 334. All outputs of instance <Inst_md_io> of block <md_io> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 267. All outputs of instance <Inst_Clock_divider> of block <Clock_divider> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 273. All outputs of instance <Inst_antirebote> of block <antirebote> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 279. All outputs of instance <Inst_pc> of block <pc> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 285. All outputs of instance <Inst_suma_4> of block <suma_4> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 289. All outputs of instance <Inst_mi> of block <mi> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 293. All outputs of instance <Inst_mux5_4a1> of block <mux5_4a1> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 301. All outputs of instance <Inst_reg> of block <reg> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 312. All outputs of instance <Inst_shift_left16> of block <shift_left16> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 316. All outputs of instance <Inst_alu> of block <alu> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 324. All outputs of instance <Inst_exten_signo_cero> of block <exten_signo_cero> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 329. All outputs of instance <Inst_control_branch> of block <control_branch> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 335. All outputs of instance <Inst_md_io> of block <md_io> are unconnected in block <mips>. Underlying logic will be removed.
 WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 344. All outputs of instance <Inst_mux32_branch> of block <mux32> are unconnected in block <mips>. Underlying logic will be removed.
 WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 350. All outputs of instance <Inst_mux32_4a1_jump> of block <mux32_4a1> are unconnected in block <mips>. Underlying logic will be removed.
 WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 358. All outputs of instance <Inst_mux32_4a1_mem> of block <mux32_4a1> are unconnected in block <mips>. Underlying logic will be removed.
@@ -272,6 +270,7 @@ WARNING:Xst:2972 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 401. All outp
 
 Synthesizing Unit <mips>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd".
+INFO:Xst:3210 - "D:\GitHubRepos\TPSD2\MIPSPrueba\mips.vhd" line 267: Output port <clk_50Mhz> of the instance <Inst_Clock_divider> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <mips> synthesized.
@@ -423,13 +422,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.73 secs
+Total CPU time to Xst completion: 4.81 secs
  
 --> 
 
 Total memory usage is 4502248 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   26 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 
