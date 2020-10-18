@@ -1,7 +1,7 @@
+vhdl work "general.vhd"
 vhdl work "VGA_Sync.vhd"
 vhdl work "RAM.vhd"
 vhdl work "Pinta_IMG.vhd"
-vhdl work "general.vhd"
 vhdl work "mmioVGA.vhd"
 vhdl work "md.vhd"
 vhdl work "decodificador.vhd"

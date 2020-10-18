@@ -39,7 +39,7 @@ end mi;
 architecture Behavioral of mi is
 	-- función que carga el contenido de la ROM desde un archivo
    impure function ROM_INIC (archivo : in string) return mem_instrucciones is                                                   
-       FILE f      : text is in archivo;                       
+      FILE f      : text is in archivo;                       
        variable l  : line;                                 
        variable r  : mem_instrucciones;
 		 variable good : boolean;
@@ -52,12 +52,12 @@ architecture Behavioral of mi is
 				  hread (l, r(I));	-- convertimos a std_logic_vector
 			  end if;
 		 end loop;
-       return r;                                                  
+      return r;                                                  
    end function; 
 
 	-- creamos e inicializamos la memoria de instrucciones a partir del archivo
-	signal mi : mem_instrucciones := ROM_INIC(filename);
-
+	constant mi : mem_instrucciones := ROM_INIC(filename);
+	
 begin
 	s <= mi(to_integer(unsigned(dir)));
 end Behavioral;

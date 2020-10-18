@@ -1,0 +1,1 @@
+vhdtdtfi -prj MIPSPrueba -o D:/GitHubRepos/TPSD2/MIPSPrueba/RAM.vhi -module RAM -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work RAM.vhd 

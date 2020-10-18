@@ -41,7 +41,8 @@ entity mips is
 		reset0   : in std_logic;
 		HSync,VSync: out STD_LOGIC;
 	   Red,Green 	: out STD_LOGIC_VECTOR(2 downto 0);
-		Blue			: out STD_LOGIC_VECTOR(1 downto 0)
+		Blue			: out STD_LOGIC_VECTOR(1 downto 0);
+		LED			: out STD_LOGIC_VECTOR(7 downto 0) --cuidao
 		);
 end mips;
 
@@ -153,7 +154,8 @@ architecture Behavioral of mips is
 			  reset		: in STD_LOGIC;
 			  HSync,VSync: out STD_LOGIC;
 			  Red,Green 	: out STD_LOGIC_VECTOR(2 downto 0);
-			  Blue			: out STD_LOGIC_VECTOR(1 downto 0)
+			  Blue			: out STD_LOGIC_VECTOR(1 downto 0);
+			  LEDS : out STD_LOGIC_VECTOR( 7 downto 0) -- cuidao
 		 );
 	END COMPONENT;
 	COMPONENT mux32
@@ -356,7 +358,8 @@ begin
 		VSync		=> VSync,
 		Red		=> Red,
 		Green		=> Green,
-		Blue		=> Blue
+		Blue		=> Blue,
+		LEDS => LED
 	);
 	Inst_mux32_branch: mux32 PORT MAP(
 		e0  => pc_mas_4,

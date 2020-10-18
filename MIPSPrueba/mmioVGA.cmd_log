@@ -8,3 +8,4 @@ xst -intstyle ise -ifn "D:/GitHubRepos/TPSD2/MIPSPrueba/mmioVGA.xst" -ofn "D:/Gi
 xst -intstyle ise -ifn "D:/GitHubRepos/TPSD2/MIPSPrueba/mmioVGA.xst" -ofn "D:/GitHubRepos/TPSD2/MIPSPrueba/mmioVGA.syr" 
 xst -intstyle ise -ifn "D:/GitHubRepos/TPSD2/MIPSPrueba/mmioVGA.xst" -ofn "D:/GitHubRepos/TPSD2/MIPSPrueba/mmioVGA.syr" 
 xst -intstyle ise -ifn "D:/GitHubRepos/TPSD2/MIPSPrueba/mmioVGA.xst" -ofn "D:/GitHubRepos/TPSD2/MIPSPrueba/mmioVGA.syr" 
+vhdtdtfi -prj MIPSPrueba -o D:/GitHubRepos/TPSD2/MIPSPrueba/mmioVGA.vhi -module mmioVGA -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work VGA_Sync.vhd -lib work Pinta_IMG.vhd -lib work mmioVGA.vhd 

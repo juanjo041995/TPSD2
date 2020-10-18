@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity decodificador is
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
            csMem     : out  STD_LOGIC;
-			  csVGA		: out STD_LOGIC
+			  csVGA		: out STD_LOGIC;
+			  csOutRandom : out STD_LOGIC
 			  );
 end decodificador;
 
@@ -45,6 +46,8 @@ begin
 					 
 	-- VGA
 	csVGA 	 <= '1' when ent(31 downto 16) = X"FFFF" else '0';
+	
+	csOutRandom <= '1' when ent = X"FFFE8000" else '0';
 
 					 
 end Behavioral;

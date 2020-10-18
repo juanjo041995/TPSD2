@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : csg324
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Oct 16 17:50:48 2020
+Mapped Date    : Sun Oct 18 01:51:55 2020
 
 Design Summary
 --------------
@@ -22,21 +22,21 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,552 out of   5,720   27%
-    Number used as logic:                    1,474 out of   5,720   25%
-      Number using O6 output only:           1,355
+  Number of Slice LUTs:                      1,680 out of   5,720   29%
+    Number used as logic:                    1,603 out of   5,720   28%
+      Number using O6 output only:           1,455
       Number using O5 output only:              28
-      Number using O5 and O6:                   91
+      Number using O5 and O6:                  120
       Number used as ROM:                        0
-    Number used as Memory:                      76 out of   1,440    5%
-      Number used as Dual Port RAM:             12
-        Number using O6 output only:             8
-        Number using O5 output only:             0
-        Number using O5 and O6:                  4
-      Number used as Single Port RAM:           64
-        Number using O6 output only:            64
-        Number using O5 output only:             0
-        Number using O5 and O6:                  0
+    Number used as Memory:                      75 out of   1,440    5%
+      Number used as Dual Port RAM:             48
+        Number using O6 output only:            28
+        Number using O5 output only:             4
+        Number using O5 and O6:                 16
+      Number used as Single Port RAM:           27
+        Number using O6 output only:            21
+        Number using O5 output only:             1
+        Number using O5 and O6:                  5
       Number used as Shift Register:             0
     Number used exclusively as route-thrus:      2
       Number with same-slice register load:      0
@@ -44,13 +44,13 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   602 out of   1,430   42%
+  Number of occupied Slices:                   614 out of   1,430   42%
   Number of MUXCYs used:                       128 out of   2,860    4%
-  Number of LUT Flip Flop pairs used:        2,052
-    Number with an unused Flip Flop:           984 out of   2,052   47%
-    Number with an unused LUT:                 500 out of   2,052   24%
-    Number of fully used LUT-FF pairs:         568 out of   2,052   27%
-    Number of unique control sets:              43
+  Number of LUT Flip Flop pairs used:        2,138
+    Number with an unused Flip Flop:         1,069 out of   2,138   50%
+    Number with an unused LUT:                 458 out of   2,138   21%
+    Number of fully used LUT-FF pairs:         611 out of   2,138   28%
+    Number of unique control sets:              46
     Number of slice register sites lost
       to control set restrictions:              42 out of  11,440    1%
 
@@ -61,8 +61,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        13 out of     200    6%
-    Number of LOCed IOBs:                       13 out of      13  100%
+  Number of bonded IOBs:                        21 out of     200   10%
+    Number of LOCed IOBs:                       21 out of      21  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -89,9 +89,9 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.16
+Average Fanout of Non-Clock Nets:                4.10
 
-Peak Memory Usage:  4589 MB
+Peak Memory Usage:  4593 MB
 Total REAL time to MAP completion:  14 secs 
 Total CPU time to MAP completion:   13 secs 
 
@@ -132,15 +132,13 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   3 block(s) optimized away
+   2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
 
 Optimized Block(s):
 TYPE 		BLOCK
-LUT2 		Inst_alu/Mmux_s_mux210111_SW0
-   optimized to 1
 GND 		XST_GND
 VCC 		XST_VCC
 
@@ -160,6 +158,14 @@ Section 6 - IOB Properties
 | Green<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | Green<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | HSync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| LED<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| LED<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| LED<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| LED<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| LED<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| LED<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| LED<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| LED<7>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | Red<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | Red<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | Red<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
