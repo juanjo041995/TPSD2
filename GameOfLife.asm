@@ -32,7 +32,7 @@
 # s1 - live/dead pixel array pointer									#										
 #########################################################################################################
 .data
-	start:			.word		0x10008000
+	start:			.word		0xFFFF0000
 	live:			.word		0x10010000
 	dead:			.word		0x10010010	
 	livePixel:		.byte 		0xFF	# 16777215 (white)
