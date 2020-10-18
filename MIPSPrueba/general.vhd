@@ -17,8 +17,8 @@ package general is
 -- Estos definen el tamaño de la memoria disponible para programa y datos
 -- Recordar que el FPGA tiene relativamente poca memoria interna.
 constant NUM_BITS_MEMORIA_INSTRUCCIONES: integer := 9;
-constant NUM_BITS_MEMORIA_DATOS: integer := 4;
-constant NUM_BITS_MEMORIA_VGA: integer := 4;
+constant NUM_BITS_MEMORIA_DATOS: integer := 7;
+constant NUM_BITS_MEMORIA_VGA: integer := 2;
 -- archivo desde donde se lee el programa a cargarse en la ROM. Se lee en tiempo de sintesis del hardware
 constant filename : string := "programa.txt";
 

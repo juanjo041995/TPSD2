@@ -1,120 +1,28 @@
-#########################################################################################################
-#                            	      CONWAY'S GAME OF LIFE SIMULATION					#
-#		     	          Final Project for CS 3340.005, Fall 2018				#
-#########################################################################################################
-#                                     	      ~Description~						#
-# 	This is a simulation of Conway's Game of Life, a zero-player game. The game follows the 4 	#
-# 	rules outlined below. To "play" just type in the number of the pattern you'd like to see!	#				
-#########################################################################################################
-#                                          	 ~RULES~						#
-# 1. Any live cell with < 2 live neighbors dies, as if by underpopulation.				#
-# 2. Any live cell with 2 or 3 live neighbors lives on to the next generation.				#
-# 3. Any live cell with > 3 live neighbors dies, as if by overpopulation.				#
-# 4. Any dead cell with exactly 3 live neighbors becomes a live cell, as if by reproduction.		#
-#########################################################################################################
-#                                          	 ~SETUP~						#
-# UNIT WIDTH: 8												#
-# UNIT HEIGHT: 8											#
-# DISPLAY WIDTH: 512											#
-# DISPLAY HEIGHT: 512											#
-# BASE ADDRESS: 0x10008000 ($gp)									#
-#########################################################################################################
-#                                  ~Registers Used and What They Mean~					#		
-# a0 - x-coordinate of pixel (between 0-63). value corresponds to how many spaces to move RIGHT		#
-# a1 - y-coordinate of pixel (between 0-63). value corresponds to how many spaces to move DOWN		#
-# t1 - x-position of pixel (address)									#
-# t2 - y-position of pixel (address)									#
-# t3 - starting memory address										#
-# t5 - alive cell counter 										#
-# t8 - live pixel array											#
-# t9 - dead pixel array											#
-# s0 - user's menu selection										#
-# s1 - live/dead pixel array pointer									#										
-#########################################################################################################
-.data
-	start:			.word		0xFFFF0000
-	live:			.word		0x10010000
-	dead:			.word		0x10010010	
-	livePixel:		.byte 		0xFF	# 16777215 (white)
-	deadPixel:		.byte		0x00	# 0 (black)
-	selection:		.word		0
-	mainPrompt:		.asciiz		"Welcome to the Game of Life! Please type one of the following integers to see the resulting configuration: \n"
-	stillOps:		.asciiz		"Still Life Options: \n1. Block \n"
-	oscOps:			.asciiz		"Oscillator Options:\n2. Blinker \n3. Pentadecathlon \n4. Pulsar \n"
-	glideOps:		.asciiz		"Spaceship Options: \n5. Glider \n6. Lightweight Spaceship \n"
-	gunOps:			.asciiz		"Gun Options: \n7. Glider Gun \n"
-	methOps:		.asciiz		"Methuselah Options (patterns that eventually stabilize): \n8. R-Pentomino \n9. Acorn \n10. Quit \n"
-	errorPrompt:		.asciiz		"Invalid menu choice. Please enter an integer between 1 and 10, inclusive: \n"
 
-.text
 main:	
-	# print welcome message
-#	li $v0, 4		
-#	la $a0, mainPrompt#
-#	syscall
-#	
-#	j printOps
-	
-#	invalidInt:
-#		li $v0, 4		
-#		la $a0, errorPrompt
-#		syscall
-#	printOps:
-		# print options
-#		li $v0, 4		
-#		la $a0, stillOps
-#		syscall
-#		li $v0, 4		
-#		la $a0, oscOps
-#		syscall
-#		li $v0, 4		
-#		la $a0, glideOps
-#		syscall
-#		li $v0, 4		
-#		la $a0, gunOps
-#		syscall
-#		li $v0, 4		
-#		la $a0, methOps
-#		syscall
-#	li $v0, 5				# reads integer input from user
-#	syscall
-#	sw $v0, selection			# stores user's input in "selection"
-#	lw $s0, selection			# gets user's selection
-	
-#	blt $s0, 1, invalidInt			# invalid integer input - prompt user again
-#	bgt $s0, 10, invalidInt 
-#	beq $s0, 1, sl1
-#	beq $s0, 2, osc1
-#	beq $s0, 3, pent
-#	beq $s0, 4, pulsar
-#	beq $s0, 5, g1
-#	beq $s0, 6, lwss
-#	beq $s0, 7, g2
-#	beq $s0, 8, rpent
-#	beq $s0, 9, acorn
-#	beq $s0, 10, exit
-	
-#	lw $t3, start				# stores starting memory address
-#	li $a0, 0				# stores how many spaces want to move RIGHT (range: 0 - 63)
-#	li $a1, 0				# stores how many spaces we want to move DOWN (range: 0 - 63)
-
 ################################################## SKIP TO LINE 736 FOR ACTUAL CODE #######################################################
+	la $sp, 0x1001007C # DIRECCION FINAL DE LA MEMORIA DE DATOS
+	addi $t1,$zero,0xFF
+	addi $t2,$zero,0x00
+	#addi $t3, $zero
+	sb $t1, 0x100100A0 #DIRECCION DE BLANCO
+	sb $t2, 0x100100A1 #DIRECCION DE NEGRO
 	
 osc1:
 	subiu $sp, $sp, 4		
 	sw $ra, ($sp)				# push $ra to the stack	
 	
-	lw $t3, start				# stores starting memory address
-	li $a0, 2				# stores how many spaces want to move RIGHT (range: 0 - 63)
-	li $a1, 1				# stores how many spaces we want to move DOWN (range: 0 - 63)
+	la $t3, 0xFFFF0000				# stores starting memory address
+	li $a0, 1				# stores how many spaces want to move RIGHT (range: 0 - 63)
+	li $a1, 0				# stores how many spaces we want to move DOWN (range: 0 - 63)
 	jal createPixel
-	lw $t3, start			
-	li $a0, 2			
-	li $a1, 2			
+	la $t3, 0xFFFF0000			
+	li $a0, 1			
+	li $a1, 1			
 	jal createPixel	
-	lw $t3, start			
-	li $a0, 2			
-	li $a1, 			
+	la $t3, 0xFFFF0000			
+	li $a0, 1			
+	li $a1, 2			
 	jal createPixel
 	
 	lw $ra, ($sp)
@@ -135,40 +43,41 @@ continue:
 #	syscall  
 #CREATE PIXEL CORREGIDO	
 createPixel:
-	lw $t3, start			# stores starting memory address
+	la $t3, 0xFFFF0000			# stores starting memory address
 	sll $t1, $a0, 0 #Corregido 0 porque se utilizara byte			# calculates pixel x-position by multiplying x-position by 4, the size of a word.
 	sll $t2, $a1, 2 #Corregido direccion por 4 por la pantalla 4x4			# calculates pixel y-position by multiplying y-position by 256, the size of an entire row in this display.
 	add $t1, $t1, $t2  # CALCULO OFFSET		# add x and y positions together
 	add $t3, $t3, $t1  #OFFSET + FFFF0000		# add the positions to the starting address to find the new location of the pixel
-	lb $t0, livePixel 		            # loads a ___white____ pixel	
+	lbu $t0, 0x100100A0 		            # loads a ___white____ pixel	
 	sb $t0, ($t3)		 	# places pixel in bitmap display
 	jr $ra
-	
+# CHECK COLOR CORREGIDO	
 checkColor:
 	# Will determine the color of a neighbor 
-	lw $t3, start			# stores starting memory address
-	sll $t1, $a2, 2			# calculates neighbor's x-position
-	sll $t2, $a3, 8			# calculates neighbor's y-position
+	la $t3, 0xFFFF0000			# stores starting memory address
+	sll $t1, $a2, 0	#cambiado 2 por 8		# calculates neighbor's x-position
+	sll $t2, $a3, 2	#cambiado 8 por 2		# calculates neighbor's y-position
 	add $t1, $t1, $t2  		# add x and y positions together
 	add $t3, $t3, $t1		# add the positions to the starting address to find the neighbor's address
-	lw $v0, ($t3) 	 		# loads the color of the neighbor into $v0
+	lbu $v0, ($t3) #lw por lb	 		# loads the color of the neighbor into $v0
 	jr $ra
 	
+# CHECKSELFCOLOR CORREGIDO
 checkSelfColor:
 	# Will determine the color of the current pixel in the display
-	lw $t3, start
-	sll $t1, $a0, 2
-	sll $t2, $a1, 8
+	la $t3, 0xFFFF0000
+	sll $t1, $a0, 0
+	sll $t2, $a1, 2
 	add $t1, $t1, $t2
 	add $t3, $t3, $t1
-	lw $v1, ($t3)
+	lbu $v1, ($t3)
 	jr $ra
 	
 XYtoAddress:
 	# Will convert a pixel with XY coordinates into an address
-	lw $t3, start			# stores starting memory address
-	sll $t0, $a0, 2			# calculates x-position
-	sll $t6, $a1, 8			# calculates y-position
+	la $t3, 0xFFFF0000			# stores starting memory address
+	sll $t0, $a0, 0 #cambio			# calculates x-position
+	sll $t6, $a1, 2 #cambio			# calculates y-position
 	add $t0, $t0, $t6  		# add x and y positions together
 	add $t3, $t3, $t0		# add the positions to the starting address
 	move $v1, $t3	 	 	# loads address of pixel into $v1
@@ -182,9 +91,9 @@ updateScreen:
 	li $t7, 0					# counter for how many live pixels we've encountered in the screen
 	li $a0, 0					# initialize starting position on screen
 	li $a1, 0
-	lw $t8, live					# initialize arrays for live and dead pixels
-	lw $t9, dead
-	
+	la $t8, 0x10010000					# initialize arrays for live and dead pixels
+	la $t9, 0x10010010
+	#CHECK PIXEL ADAPTADO SIN CAMBIOS
 	checkPixel:
 		jal checkSelfColor
 		beqz $v1, black				# if the pixel is black
@@ -196,8 +105,8 @@ updateScreen:
 		j checkOOB				# cell remains alive if # of neighbors = 2 or 3, so we won't do anything in this case.
 		markDead:
 			jal XYtoAddress 
-			sw $v1, ($t9)			# store current live pixel into dead array
-			addi $t9, $t9, 4			# go to next position in array	
+			sb $v1, ($t9)			# store current live pixel into dead array
+			addi $t9, $t9, 1 #CAMBIADO 4 por 1			# go to next position in array	
 			subi $t7, $t7, 1			# one less live cell now
 			j checkOOB			# continue looping through screen.
 		
@@ -207,18 +116,18 @@ updateScreen:
 		j checkOOB				# otherwise, do nothing & continue looping.
 		markLive:
 			jal XYtoAddress
-			sw $v1, ($t8)			# store new live pixel into live array
-			addi $t8, $t8, 4			# go to next space in array			
+			sb $v1, ($t8) # sw por sb			# store new live pixel into live array
+			addi $t8, $t8, 1 # 4 por 1			# go to next space in array			
 			addi $t7, $t7, 1 		# increment live pixels
 
 	checkOOB:
 		addi $a0, $a0, 1
-		bgt $a0, 63, resetX			# if x-coordinate is over the right of the screen (bound is 63), reset it and increment y-coordinate
-		blt $a0, 64, checkPixel			# if x and y-coordinate are within bounds, continue looping through screen
+		bgt $a0, 3, resetX	#cambiado 63 por 3		# if x-coordinate is over the right of the screen (bound is 63), reset it and increment y-coordinate
+		blt $a0, 4, checkPixel			# if x and y-coordinate are within bounds, continue looping through screen
 		resetX:
 			li $a0, 0
 			addi $a1, $a1, 1
-			bgt $a1, 63, endUpdateScreen	# if y-coordinate reaches the bottom right of the screen, end
+			bgt $a1, 3, endUpdateScreen #cambiado 63 por 3	# if y-coordinate reaches the bottom right of the screen, end
 			j checkPixel
 	
 	endUpdateScreen:
@@ -230,33 +139,35 @@ updateScreen:
 nextGeneration:
 	subiu $sp, $sp, 4		
 	sw $s1, ($sp)					# push $s1 to the stack
-	la $t8, live					# reset arrays for live and dead pixels
-	la $t9, dead
-	kill:
-		lw $s1, ($t9)
+	la $t8, 0x10010000 #lw por la					# reset arrays for live and dead pixels
+	la $t9, 0x10010010#lw por la
+	kill:	
+		lbu $s1, ($t9)
 		beqz $s1, generate			# continue killing pixels until there are no more in the array
-		lw $v1, ($t9) 
-		lw $t0, deadPixel 			# loads color of dead pixel (black)
-		sw $t0, ($v1)				# colors pixel black
-		sw $zero, ($t9)
-		addi $t9, $t9, 4
+		lbu $v1, ($t9) 
+		addi $v1, $v1,0xFFFF0000 #AGREGADO
+		lbu $t0, 0x100100A1	#lb por lw		# loads color of dead pixel (black)
+		sb $t0, ($v1)				# colors pixel black
+		sb $zero, ($t9)
+		addi $t9, $t9, 1 # 1 por 4
 		j kill
 		
 	generate:
-		lw $s1, ($t8)
+		lb $s1, ($t8) #lw por lb
 		beqz $s1, endNextGen			# continue generating pixels until there are no more in the array
-		lw $v1, ($t8)
-		lw $t0, livePixel 			# loads a white pixel	
-		sw $t0, ($v1)		 		# places pixel in bitmap display
-		sw $zero, ($t8)				# clear the address of the pixel we just created
-		addi $t8, $t8, 4			# go to next pixel
+		lb $v1, ($t8)
+		addi $v1, $v1,0xFFFF0000
+		lb $t0, 0x100100A0 #lw por lb			# loads a white pixel	
+		sb $t0, ($v1) #sw por sb		 		# places pixel in bitmap display
+		sb $zero, ($t8)				# clear the address of the pixel we just created
+		addi $t8, $t8, 1 # 1 por 4			# go to next pixel
 		j generate
 	
 	endNextGen:
 		lw $s1, ($sp)
 		addiu $sp, $sp, 4			# pop $s1 from the stack
 		jr $ra
-
+#COUNTNEIGHBORS CORREGIDO
 countNeighbors:
 	# Each pixel will have 8 neighbors. We will check if each neighbor is alive or dead (black or colored).
 	# We will implement the rules of the game in accordance to how many neighbors are alive.
@@ -294,7 +205,7 @@ countNeighbors:
 	######################################## check 3: top right #########################################
 	checkOOB3:
 		addi $a2, $a0, 1		# get neighbor's x-position
-		bgt $a2, 63, checkOOB4		# if x-position is OOB on the right side of display, go to next neighbor
+		bgt $a2, 3, checkOOB4 #CAMBIADO 63 por 3		# if x-position is OOB on the right side of display, go to next neighbor
 		subi $a3, $a1, 1		# get neighbor y-position
 		blt $a3, 0, checkOOB4		# if y-position is OOB on the top of display, go to next neighbor
 		# if not OOB, check if this cell is alive or dead
@@ -313,7 +224,7 @@ countNeighbors:
 	######################################### check 5: right ############################################
 	checkOOB5:
 		addi $a2, $a0, 1
-		bgt $a2, 63, checkOOB6
+		bgt $a2, 3, checkOOB6 #CAMBIADO 63 por 3
 		move $a3, $a1
 		# if not OOB, check if this cell is alive or dead
 		jal checkColor
@@ -324,7 +235,7 @@ countNeighbors:
 		subi $a2, $a0, 1
 		blt $a2, 0, checkOOB7
 		addi $a3, $a1, 1
-		bgt $a3, 63, checkOOB7		# if neighbor's y-position is OOB on the bottom of display, go to next neighbor
+		bgt $a3, 3, checkOOB7	#CAMBIADO 63 por 3	# if neighbor's y-position is OOB on the bottom of display, go to next neighbor
 		# if not OOB, check if this cell is alive or dead
 		jal checkColor
 		sne $t6, $v0, 0 			
@@ -333,7 +244,7 @@ countNeighbors:
 	checkOOB7:
 		move $a2, $a0
 		addi $a3, $a1, 1
-		bgt $a3, 63, checkOOB8
+		bgt $a3, 3, checkOOB8 #CAMBIADO 63 por 3
 		# if not OOB, check if this cell is alive or dead
 		jal checkColor
 		sne $t6, $v0, 0 			
@@ -341,9 +252,9 @@ countNeighbors:
 	##################################### check 8: bottom right #########################################
 	checkOOB8:
 		addi $a2, $a0, 1
-		bgt $a2, 63, endCheck
+		bgt $a2, 3, endCheck #CAMBIADO 63 por 3
 		addi $a3, $a1, 1
-		bgt $a3, 63, endCheck
+		bgt $a3, 3, endCheck #CAMBIADO 63 por 3
 		# if not OOB, check if this cell is alive or dead
 		jal checkColor
 		sne $t6, $v0, 0 			
