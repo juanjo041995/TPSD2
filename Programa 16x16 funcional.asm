@@ -142,36 +142,56 @@ li $a1, 11
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 9
+li $a0, 8
 li $a1, 3
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 9
+li $a0, 8
 li $a1, 4
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 9
+li $a0, 8
 li $a1, 5
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 9
+li $a0, 8
 li $a1, 9
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 9
+li $a0, 8
 li $a1, 10
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 9
+li $a0, 8
 li $a1, 11
 jal createPixel
 
 la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 8
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 13
+jal createPixel
+
+la $t3, 0xFFFF0000
 li $a0, 10
 li $a1, 1
 jal createPixel
@@ -212,52 +232,32 @@ li $a1, 13
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 12
-li $a1, 1
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 12
-li $a1, 6
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 12
-li $a1, 8
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 12
-li $a1, 13
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 14
+li $a0, 13
 li $a1, 3
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 14
+li $a0, 13
 li $a1, 4
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 14
+li $a0, 13
 li $a1, 5
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 14
+li $a0, 13
 li $a1, 9
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 14
+li $a0, 13
 li $a1, 10
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 14
+li $a0, 13
 li $a1, 11
 jal createPixel
 
