@@ -8,73 +8,252 @@ main:
 	sb $t2, 0x10010081 #DIRECCION DE NEGRO
 	
 osc1:
-	subiu $sp, $sp, 4		
-	sw $ra, ($sp)				# push $ra to the stack	
-	
-	la $t3, 0xFFFF0000				# stores starting memory address
-	li $a0, 1				# stores how many spaces want to move RIGHT (range: 0 - 63)
-	li $a1, 2				# stores how many spaces we want to move DOWN (range: 0 - 63)
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 1			
-	li $a1, 3			
-	jal createPixel	
-	la $t3, 0xFFFF0000			
-	li $a0, 1			
-	li $a1, 4			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 3			
-	li $a1, 0			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 3			
-	li $a1, 5			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 3			
-	li $a1, 7			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 4			
-	li $a1, 0			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 4			
-	li $a1, 5			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 4			
-	li $a1, 7			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 5			
-	li $a1, 0			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 5			
-	li $a1, 5			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 5			
-	li $a1, 7			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 6			
-	li $a1, 2			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 6			
-	li $a1, 3			
-	jal createPixel
-	la $t3, 0xFFFF0000			
-	li $a0, 6			
-	li $a1, 4			
-	jal createPixel
-	
-	lw $ra, ($sp)
-	addiu $sp, $sp, 4			# pop $ra from the stack	
-	j continue 
+subiu $sp, $sp, 4
+sw $ra, ($sp)
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 3
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 4
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 5
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 9
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 10
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 11
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 3
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 3
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 3
+li $a1, 8
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 3
+li $a1, 13
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 4
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 4
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 4
+li $a1, 8
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 4
+li $a1, 13
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 8
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 13
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 6
+li $a1, 3
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 6
+li $a1, 4
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 6
+li $a1, 5
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 6
+li $a1, 9
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 6
+li $a1, 10
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 6
+li $a1, 11
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 3
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 4
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 5
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 9
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 10
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 11
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 10
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 10
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 10
+li $a1, 8
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 10
+li $a1, 13
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 11
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 11
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 11
+li $a1, 8
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 11
+li $a1, 13
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 12
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 12
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 12
+li $a1, 8
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 12
+li $a1, 13
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 14
+li $a1, 3
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 14
+li $a1, 4
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 14
+li $a1, 5
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 14
+li $a1, 9
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 14
+li $a1, 10
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 14
+li $a1, 11
+jal createPixel
+
+lw $ra, ($sp)
+addiu $sp, $sp, 4
+j continue
 	
 
 ################################################ BEGINNING OF ACTUAL CODE #########################################################	
