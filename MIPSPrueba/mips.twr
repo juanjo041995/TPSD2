@@ -34,13 +34,13 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
  Minimum period is   2.666ns.
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_Clock_divider/count_1 (SLICE_X10Y33.SR), 2 paths
+Paths for end point Inst_Clock_divider/count_1 (SLICE_X15Y31.SR), 2 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     7.811ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     7.882ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_Clock_divider/count_0 (FF)
   Destination:          Inst_Clock_divider/count_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      2.154ns (Levels of Logic = 1)
+  Data Path Delay:      2.083ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk100Mhz_BUFGP rising at 0.000ns
   Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
@@ -56,24 +56,24 @@ Slack (setup path):     7.811ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y33.AQ      Tcko                  0.476   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.AQ      Tcko                  0.430   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_0
-    SLICE_X10Y33.B2      net (fanout=2)        0.554   Inst_Clock_divider/count<0>
-    SLICE_X10Y33.BMUX    Tilo                  0.298   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.B1      net (fanout=2)        0.532   Inst_Clock_divider/count<0>
+    SLICE_X15Y31.BMUX    Tilo                  0.337   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o<1>1
-    SLICE_X10Y33.SR      net (fanout=1)        0.397   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
-    SLICE_X10Y33.CLK     Tsrck                 0.429   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.SR      net (fanout=1)        0.371   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
+    SLICE_X15Y31.CLK     Tsrck                 0.413   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_1
     -------------------------------------------------  ---------------------------
-    Total                                      2.154ns (1.203ns logic, 0.951ns route)
-                                                       (55.8% logic, 44.2% route)
+    Total                                      2.083ns (1.180ns logic, 0.903ns route)
+                                                       (56.6% logic, 43.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     8.119ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     8.166ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_Clock_divider/count_1 (FF)
   Destination:          Inst_Clock_divider/count_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      1.846ns (Levels of Logic = 1)
+  Data Path Delay:      1.799ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk100Mhz_BUFGP rising at 0.000ns
   Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
@@ -89,27 +89,27 @@ Slack (setup path):     8.119ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y33.BQ      Tcko                  0.476   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.BQ      Tcko                  0.430   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_1
-    SLICE_X10Y33.B5      net (fanout=2)        0.246   Inst_Clock_divider/count<1>
-    SLICE_X10Y33.BMUX    Tilo                  0.298   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.B5      net (fanout=2)        0.248   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.BMUX    Tilo                  0.337   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o<1>1
-    SLICE_X10Y33.SR      net (fanout=1)        0.397   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
-    SLICE_X10Y33.CLK     Tsrck                 0.429   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.SR      net (fanout=1)        0.371   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
+    SLICE_X15Y31.CLK     Tsrck                 0.413   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_1
     -------------------------------------------------  ---------------------------
-    Total                                      1.846ns (1.203ns logic, 0.643ns route)
-                                                       (65.2% logic, 34.8% route)
+    Total                                      1.799ns (1.180ns logic, 0.619ns route)
+                                                       (65.6% logic, 34.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_Clock_divider/count_0 (SLICE_X10Y33.SR), 2 paths
+Paths for end point Inst_Clock_divider/count_0 (SLICE_X15Y31.SR), 2 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     7.822ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     7.885ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_Clock_divider/count_0 (FF)
   Destination:          Inst_Clock_divider/count_0 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      2.143ns (Levels of Logic = 1)
+  Data Path Delay:      2.080ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk100Mhz_BUFGP rising at 0.000ns
   Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
@@ -125,24 +125,24 @@ Slack (setup path):     7.822ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y33.AQ      Tcko                  0.476   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.AQ      Tcko                  0.430   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_0
-    SLICE_X10Y33.B2      net (fanout=2)        0.554   Inst_Clock_divider/count<0>
-    SLICE_X10Y33.BMUX    Tilo                  0.298   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.B1      net (fanout=2)        0.532   Inst_Clock_divider/count<0>
+    SLICE_X15Y31.BMUX    Tilo                  0.337   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o<1>1
-    SLICE_X10Y33.SR      net (fanout=1)        0.397   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
-    SLICE_X10Y33.CLK     Tsrck                 0.418   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.SR      net (fanout=1)        0.371   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
+    SLICE_X15Y31.CLK     Tsrck                 0.410   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_0
     -------------------------------------------------  ---------------------------
-    Total                                      2.143ns (1.192ns logic, 0.951ns route)
-                                                       (55.6% logic, 44.4% route)
+    Total                                      2.080ns (1.177ns logic, 0.903ns route)
+                                                       (56.6% logic, 43.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     8.130ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     8.169ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_Clock_divider/count_1 (FF)
   Destination:          Inst_Clock_divider/count_0 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      1.835ns (Levels of Logic = 1)
+  Data Path Delay:      1.796ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk100Mhz_BUFGP rising at 0.000ns
   Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
@@ -158,27 +158,27 @@ Slack (setup path):     8.130ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y33.BQ      Tcko                  0.476   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.BQ      Tcko                  0.430   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_1
-    SLICE_X10Y33.B5      net (fanout=2)        0.246   Inst_Clock_divider/count<1>
-    SLICE_X10Y33.BMUX    Tilo                  0.298   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.B5      net (fanout=2)        0.248   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.BMUX    Tilo                  0.337   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o<1>1
-    SLICE_X10Y33.SR      net (fanout=1)        0.397   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
-    SLICE_X10Y33.CLK     Tsrck                 0.418   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.SR      net (fanout=1)        0.371   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
+    SLICE_X15Y31.CLK     Tsrck                 0.410   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_0
     -------------------------------------------------  ---------------------------
-    Total                                      1.835ns (1.192ns logic, 0.643ns route)
-                                                       (65.0% logic, 35.0% route)
+    Total                                      1.796ns (1.177ns logic, 0.619ns route)
+                                                       (65.5% logic, 34.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_Clock_divider/count_1 (SLICE_X10Y33.B2), 1 path
+Paths for end point Inst_Clock_divider/count_1 (SLICE_X15Y31.B1), 1 path
 --------------------------------------------------------------------------------
-Slack (setup path):     8.586ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     8.630ns (requirement - (data path - clock path skew + uncertainty))
   Source:               Inst_Clock_divider/count_0 (FF)
   Destination:          Inst_Clock_divider/count_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      1.379ns (Levels of Logic = 1)
+  Data Path Delay:      1.335ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk100Mhz_BUFGP rising at 0.000ns
   Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
@@ -194,28 +194,28 @@ Slack (setup path):     8.586ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y33.AQ      Tcko                  0.476   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.AQ      Tcko                  0.430   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_0
-    SLICE_X10Y33.B2      net (fanout=2)        0.554   Inst_Clock_divider/count<0>
-    SLICE_X10Y33.CLK     Tas                   0.349   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.B1      net (fanout=2)        0.532   Inst_Clock_divider/count<0>
+    SLICE_X15Y31.CLK     Tas                   0.373   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/Mcount_count_xor<1>11
                                                        Inst_Clock_divider/count_1
     -------------------------------------------------  ---------------------------
-    Total                                      1.379ns (0.825ns logic, 0.554ns route)
-                                                       (59.8% logic, 40.2% route)
+    Total                                      1.335ns (0.803ns logic, 0.532ns route)
+                                                       (60.1% logic, 39.9% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "clk100Mhz_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_Clock_divider/count_0 (SLICE_X10Y33.A6), 1 path
+Paths for end point Inst_Clock_divider/count_0 (SLICE_X15Y31.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.415ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.438ns (requirement - (clock path skew + uncertainty - data path))
   Source:               Inst_Clock_divider/count_0 (FF)
   Destination:          Inst_Clock_divider/count_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.415ns (Levels of Logic = 1)
+  Data Path Delay:      0.438ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk100Mhz_BUFGP rising at 10.000ns
   Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
@@ -225,25 +225,25 @@ Slack (hold path):      0.415ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y33.AQ      Tcko                  0.200   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.AQ      Tcko                  0.198   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_0
-    SLICE_X10Y33.A6      net (fanout=2)        0.025   Inst_Clock_divider/count<0>
-    SLICE_X10Y33.CLK     Tah         (-Th)    -0.190   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.A6      net (fanout=2)        0.025   Inst_Clock_divider/count<0>
+    SLICE_X15Y31.CLK     Tah         (-Th)    -0.215   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/Mcount_count_xor<0>11_INV_0
                                                        Inst_Clock_divider/count_0
     -------------------------------------------------  ---------------------------
-    Total                                      0.415ns (0.390ns logic, 0.025ns route)
-                                                       (94.0% logic, 6.0% route)
+    Total                                      0.438ns (0.413ns logic, 0.025ns route)
+                                                       (94.3% logic, 5.7% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_Clock_divider/count_1 (SLICE_X10Y33.B5), 1 path
+Paths for end point Inst_Clock_divider/count_1 (SLICE_X15Y31.B5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.470ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.490ns (requirement - (clock path skew + uncertainty - data path))
   Source:               Inst_Clock_divider/count_1 (FF)
   Destination:          Inst_Clock_divider/count_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.470ns (Levels of Logic = 1)
+  Data Path Delay:      0.490ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk100Mhz_BUFGP rising at 10.000ns
   Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
@@ -253,43 +253,72 @@ Slack (hold path):      0.470ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y33.BQ      Tcko                  0.200   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.BQ      Tcko                  0.198   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_1
-    SLICE_X10Y33.B5      net (fanout=2)        0.080   Inst_Clock_divider/count<1>
-    SLICE_X10Y33.CLK     Tah         (-Th)    -0.190   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.B5      net (fanout=2)        0.077   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.CLK     Tah         (-Th)    -0.215   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/Mcount_count_xor<1>11
                                                        Inst_Clock_divider/count_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.470ns (0.390ns logic, 0.080ns route)
-                                                       (83.0% logic, 17.0% route)
+    Total                                      0.490ns (0.413ns logic, 0.077ns route)
+                                                       (84.3% logic, 15.7% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Inst_Clock_divider/count_1 (SLICE_X10Y33.B2), 1 path
+Paths for end point Inst_Clock_divider/count_0 (SLICE_X15Y31.SR), 2 paths
 --------------------------------------------------------------------------------
-Slack (hold path):      0.634ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               Inst_Clock_divider/count_0 (FF)
-  Destination:          Inst_Clock_divider/count_1 (FF)
+Slack (hold path):      0.507ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_Clock_divider/count_1 (FF)
+  Destination:          Inst_Clock_divider/count_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.634ns (Levels of Logic = 1)
+  Data Path Delay:      0.507ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk100Mhz_BUFGP rising at 10.000ns
   Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: Inst_Clock_divider/count_0 to Inst_Clock_divider/count_1
+  Minimum Data Path at Fast Process Corner: Inst_Clock_divider/count_1 to Inst_Clock_divider/count_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y33.AQ      Tcko                  0.200   Inst_Clock_divider/count<1>
-                                                       Inst_Clock_divider/count_0
-    SLICE_X10Y33.B2      net (fanout=2)        0.244   Inst_Clock_divider/count<0>
-    SLICE_X10Y33.CLK     Tah         (-Th)    -0.190   Inst_Clock_divider/count<1>
-                                                       Inst_Clock_divider/Mcount_count_xor<1>11
+    SLICE_X15Y31.BQ      Tcko                  0.198   Inst_Clock_divider/count<1>
                                                        Inst_Clock_divider/count_1
+    SLICE_X15Y31.B5      net (fanout=2)        0.077   Inst_Clock_divider/count<1>
+    SLICE_X15Y31.BMUX    Tilo                  0.203   Inst_Clock_divider/count<1>
+                                                       Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o<1>1
+    SLICE_X15Y31.SR      net (fanout=1)        0.160   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
+    SLICE_X15Y31.CLK     Tcksr       (-Th)     0.131   Inst_Clock_divider/count<1>
+                                                       Inst_Clock_divider/count_0
     -------------------------------------------------  ---------------------------
-    Total                                      0.634ns (0.390ns logic, 0.244ns route)
-                                                       (61.5% logic, 38.5% route)
+    Total                                      0.507ns (0.270ns logic, 0.237ns route)
+                                                       (53.3% logic, 46.7% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.695ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_Clock_divider/count_0 (FF)
+  Destination:          Inst_Clock_divider/count_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.695ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk100Mhz_BUFGP rising at 10.000ns
+  Destination Clock:    clk100Mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Inst_Clock_divider/count_0 to Inst_Clock_divider/count_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y31.AQ      Tcko                  0.198   Inst_Clock_divider/count<1>
+                                                       Inst_Clock_divider/count_0
+    SLICE_X15Y31.B1      net (fanout=2)        0.265   Inst_Clock_divider/count<0>
+    SLICE_X15Y31.BMUX    Tilo                  0.203   Inst_Clock_divider/count<1>
+                                                       Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o<1>1
+    SLICE_X15Y31.SR      net (fanout=1)        0.160   Inst_Clock_divider/PWR_5_o_count[1]_equal_1_o
+    SLICE_X15Y31.CLK     Tcksr       (-Th)     0.131   Inst_Clock_divider/count<1>
+                                                       Inst_Clock_divider/count_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.695ns (0.270ns logic, 0.425ns route)
+                                                       (38.8% logic, 61.2% route)
 
 --------------------------------------------------------------------------------
 
@@ -303,20 +332,20 @@ Slack: 7.334ns (period - min period limit)
   Location pin: BUFGMUX_X3Y13.I0
   Clock network: clk100Mhz_BUFGP/IBUFG
 --------------------------------------------------------------------------------
-Slack: 9.525ns (period - min period limit)
+Slack: 9.530ns (period - min period limit)
   Period: 10.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.470ns (2127.660MHz) (Tcp)
   Physical resource: Inst_Clock_divider/count<1>/CLK
   Logical resource: Inst_Clock_divider/count_0/CK
-  Location pin: SLICE_X10Y33.CLK
+  Location pin: SLICE_X15Y31.CLK
   Clock network: clk100Mhz_BUFGP
 --------------------------------------------------------------------------------
-Slack: 9.525ns (period - min period limit)
+Slack: 9.530ns (period - min period limit)
   Period: 10.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Min period limit: 0.470ns (2127.660MHz) (Tcp)
   Physical resource: Inst_Clock_divider/count<1>/CLK
   Logical resource: Inst_Clock_divider/count_1/CK
-  Location pin: SLICE_X10Y33.CLK
+  Location pin: SLICE_X15Y31.CLK
   Clock network: clk100Mhz_BUFGP
 --------------------------------------------------------------------------------
 
@@ -333,7 +362,7 @@ Clock to Setup on destination clock clk100Mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk100Mhz      |    2.189|         |         |         |
+clk100Mhz      |    2.118|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -351,7 +380,7 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sun Oct 18 21:29:26 2020 
+Analysis completed Sun Oct 18 23:40:08 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:

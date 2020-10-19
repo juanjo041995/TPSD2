@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: mips.prj
 
@@ -426,10 +426,10 @@ Unit <decodificador> synthesized.
 
 Synthesizing Unit <md>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\md.vhd".
-    Found 128x8-bit single-port RAM <Mram_mem01> for signal <mem01>.
-    Found 128x8-bit single-port RAM <Mram_mem00> for signal <mem00>.
-    Found 128x8-bit single-port RAM <Mram_mem11> for signal <mem11>.
-    Found 128x8-bit single-port RAM <Mram_mem10> for signal <mem10>.
+    Found 1024x8-bit single-port RAM <Mram_mem01> for signal <mem01>.
+    Found 1024x8-bit single-port RAM <Mram_mem00> for signal <mem00>.
+    Found 1024x8-bit single-port RAM <Mram_mem11> for signal <mem11>.
+    Found 1024x8-bit single-port RAM <Mram_mem10> for signal <mem10>.
     Found 32-bit 4-to-1 multiplexer for signal <dir[1]_GND_25_o_wide_mux_12_OUT> created at line 75.
     Found 32-bit 4-to-1 multiplexer for signal <dir[1]_GND_25_o_wide_mux_17_OUT> created at line 86.
     Found 32-bit 4-to-1 multiplexer for signal <dir[1]_GND_25_o_wide_mux_18_OUT> created at line 99.
@@ -448,53 +448,24 @@ Unit <mmioVGA> synthesized.
 
 Synthesizing Unit <Pinta_IMG>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\Pinta_IMG.vhd".
-    Found 12-bit adder for signal <n0014> created at line 57.
+    Found 13-bit adder for signal <n0014> created at line 57.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   4 Multiplexer(s).
 Unit <Pinta_IMG> synthesized.
 
-Synthesizing Unit <div_10u_8u>.
-    Related source file is "".
-    Found 18-bit adder for signal <GND_28_o_b[7]_add_1_OUT> created at line 0.
-    Found 17-bit adder for signal <GND_28_o_b[7]_add_3_OUT> created at line 0.
-    Found 16-bit adder for signal <GND_28_o_b[7]_add_5_OUT> created at line 0.
-    Found 15-bit adder for signal <GND_28_o_b[7]_add_7_OUT> created at line 0.
-    Found 14-bit adder for signal <GND_28_o_b[7]_add_9_OUT> created at line 0.
-    Found 13-bit adder for signal <GND_28_o_b[7]_add_11_OUT> created at line 0.
-    Found 12-bit adder for signal <GND_28_o_b[7]_add_13_OUT> created at line 0.
-    Found 11-bit adder for signal <GND_28_o_b[7]_add_15_OUT> created at line 0.
-    Found 10-bit adder for signal <a[9]_b[7]_add_17_OUT[9:0]> created at line 0.
-    Found 10-bit adder for signal <a[9]_GND_28_o_add_19_OUT[9:0]> created at line 0.
-    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
-    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
-    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
-    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
-    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
-    Found 13-bit comparator lessequal for signal <BUS_0006> created at line 0
-    Found 12-bit comparator lessequal for signal <BUS_0007> created at line 0
-    Found 11-bit comparator lessequal for signal <BUS_0008> created at line 0
-    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
-    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
-    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
-    Summary:
-	inferred  10 Adder/Subtractor(s).
-	inferred  11 Comparator(s).
-	inferred  73 Multiplexer(s).
-Unit <div_10u_8u> synthesized.
-
 Synthesizing Unit <div_10u_7u>.
     Related source file is "".
-    Found 17-bit adder for signal <GND_29_o_b[6]_add_1_OUT> created at line 0.
-    Found 16-bit adder for signal <GND_29_o_b[6]_add_3_OUT> created at line 0.
-    Found 15-bit adder for signal <GND_29_o_b[6]_add_5_OUT> created at line 0.
-    Found 14-bit adder for signal <GND_29_o_b[6]_add_7_OUT> created at line 0.
-    Found 13-bit adder for signal <GND_29_o_b[6]_add_9_OUT> created at line 0.
-    Found 12-bit adder for signal <GND_29_o_b[6]_add_11_OUT> created at line 0.
-    Found 11-bit adder for signal <GND_29_o_b[6]_add_13_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_28_o_b[6]_add_1_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_28_o_b[6]_add_3_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_28_o_b[6]_add_5_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_28_o_b[6]_add_7_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_28_o_b[6]_add_9_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_28_o_b[6]_add_11_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_28_o_b[6]_add_13_OUT> created at line 0.
     Found 10-bit adder for signal <a[9]_b[6]_add_15_OUT[9:0]> created at line 0.
-    Found 10-bit adder for signal <a[9]_GND_29_o_add_17_OUT[9:0]> created at line 0.
-    Found 10-bit adder for signal <a[9]_GND_29_o_add_19_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_28_o_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_28_o_add_19_OUT[9:0]> created at line 0.
     Found 17-bit comparator lessequal for signal <BUS_0001> created at line 0
     Found 16-bit comparator lessequal for signal <BUS_0002> created at line 0
     Found 15-bit comparator lessequal for signal <BUS_0003> created at line 0
@@ -511,6 +482,35 @@ Synthesizing Unit <div_10u_7u>.
 	inferred  11 Comparator(s).
 	inferred  73 Multiplexer(s).
 Unit <div_10u_7u> synthesized.
+
+Synthesizing Unit <div_10u_6u>.
+    Related source file is "".
+    Found 16-bit adder for signal <GND_29_o_b[5]_add_1_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_29_o_b[5]_add_3_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_29_o_b[5]_add_5_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_29_o_b[5]_add_7_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_29_o_b[5]_add_9_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_29_o_b[5]_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[5]_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_29_o_add_15_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_29_o_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_29_o_add_19_OUT[9:0]> created at line 0.
+    Found 16-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_6u> synthesized.
 
 Synthesizing Unit <VGA_Sync>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\VGA_Sync.vhd".
@@ -538,17 +538,17 @@ Unit <VGA_Sync> synthesized.
 
 Synthesizing Unit <RAM>.
     Related source file is "D:\GitHubRepos\TPSD2\MIPSPrueba\RAM.vhd".
-    Found 4x8-bit dual-port RAM <Mram_mem01> for signal <mem01>.
-    Found 4x8-bit dual-port RAM <Mram_mem00> for signal <mem00>.
-    Found 4x8-bit dual-port RAM <Mram_mem11> for signal <mem11>.
-    Found 4x8-bit dual-port RAM <Mram_mem10> for signal <mem10>.
+    Found 16x8-bit dual-port RAM <Mram_mem01> for signal <mem01>.
+    Found 16x8-bit dual-port RAM <Mram_mem00> for signal <mem00>.
+    Found 16x8-bit dual-port RAM <Mram_mem11> for signal <mem11>.
+    Found 16x8-bit dual-port RAM <Mram_mem10> for signal <mem10>.
     Found 32-bit 4-to-1 multiplexer for signal <addressMIPS[1]_GND_32_o_wide_mux_41_OUT> created at line 127.
     Found 32-bit 4-to-1 multiplexer for signal <addressMIPS[1]_GND_32_o_wide_mux_46_OUT> created at line 138.
     Found 32-bit 4-to-1 multiplexer for signal <addressMIPS[1]_GND_32_o_wide_mux_47_OUT> created at line 151.
     Found 32-bit 4-to-1 multiplexer for signal <addressMIPS[1]_BUS_0229_wide_mux_52_OUT> created at line 160.
     Found 32-bit 7-to-1 multiplexer for signal <tipoAcc[2]_GND_32_o_wide_mux_53_OUT> created at line 120.
     Found 8-bit 4-to-1 multiplexer for signal <addressVGA[1]_BUS_0261_wide_mux_59_OUT> created at line 185.
-    Found 4-bit comparator not equal for signal <dir_match> created at line 70
+    Found 6-bit comparator not equal for signal <dir_match> created at line 70
     Summary:
 	inferred   4 RAM(s).
 	inferred   1 Comparator(s).
@@ -610,19 +610,18 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 9
- 128x8-bit single-port RAM                             : 4
- 4x8-bit dual-port RAM                                 : 4
+ 1024x8-bit single-port RAM                            : 4
+ 16x8-bit dual-port RAM                                : 4
  512x32-bit single-port Read Only RAM                  : 1
 # Adders/Subtractors                                   : 31
- 10-bit adder                                          : 7
+ 10-bit adder                                          : 9
  11-bit adder                                          : 2
- 12-bit adder                                          : 3
- 13-bit adder                                          : 2
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 3
  14-bit adder                                          : 2
  15-bit adder                                          : 2
  16-bit adder                                          : 2
- 17-bit adder                                          : 2
- 18-bit adder                                          : 1
+ 17-bit adder                                          : 1
  2-bit adder                                           : 1
  32-bit adder                                          : 4
  5-bit subtractor                                      : 3
@@ -633,17 +632,16 @@ Macro Statistics
  32-bit register                                       : 32
 # Comparators                                          : 31
  10-bit comparator greater                             : 4
- 10-bit comparator lessequal                           : 9
+ 10-bit comparator lessequal                           : 11
  11-bit comparator lessequal                           : 2
  12-bit comparator lessequal                           : 2
  13-bit comparator lessequal                           : 2
  14-bit comparator lessequal                           : 2
  15-bit comparator lessequal                           : 2
  16-bit comparator lessequal                           : 2
- 17-bit comparator lessequal                           : 2
- 18-bit comparator lessequal                           : 1
+ 17-bit comparator lessequal                           : 1
  32-bit comparator greater                             : 2
- 4-bit comparator not equal                            : 1
+ 6-bit comparator not equal                            : 1
 # Multiplexers                                         : 269
  1-bit 2-to-1 multiplexer                              : 152
  10-bit 2-to-1 multiplexer                             : 8
@@ -653,8 +651,9 @@ Macro Statistics
  32-bit 31-to-1 multiplexer                            : 2
  32-bit 4-to-1 multiplexer                             : 11
  32-bit 7-to-1 multiplexer                             : 2
- 4-bit 2-to-1 multiplexer                              : 14
+ 4-bit 2-to-1 multiplexer                              : 13
  5-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 33
  8-bit 4-to-1 multiplexer                              : 1
 # Logic shifters                                       : 3
@@ -681,16 +680,16 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem01> will be implemented on LUTs e
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4-word x 8-bit                      |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <addressMIPS<3:2>> |          |
+    |     addrA          | connected to signal <addressMIPS<5:2>> |          |
     |     diA            | connected to signal <_n0160>        |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 4-word x 8-bit                      |          |
-    |     addrB          | connected to signal <addressVGA<3:2>> |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <addressVGA<5:2>> |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem00> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -698,16 +697,16 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem00> will be implemented on LUTs e
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4-word x 8-bit                      |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <addressMIPS<3:2>> |          |
+    |     addrA          | connected to signal <addressMIPS<5:2>> |          |
     |     diA            | connected to signal <_n0168>        |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 4-word x 8-bit                      |          |
-    |     addrB          | connected to signal <addressVGA<3:2>> |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <addressVGA<5:2>> |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem11> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -715,16 +714,16 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem11> will be implemented on LUTs e
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4-word x 8-bit                      |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <addressMIPS<3:2>> |          |
+    |     addrA          | connected to signal <addressMIPS<5:2>> |          |
     |     diA            | connected to signal <_n0176>        |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 4-word x 8-bit                      |          |
-    |     addrB          | connected to signal <addressVGA<3:2>> |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <addressVGA<5:2>> |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -732,16 +731,16 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem10> will be implemented on LUTs e
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4-word x 8-bit                      |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <addressMIPS<3:2>> |          |
+    |     addrA          | connected to signal <addressMIPS<5:2>> |          |
     |     diA            | connected to signal <_n0184>        |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 4-word x 8-bit                      |          |
-    |     addrB          | connected to signal <addressVGA<3:2>> |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <addressVGA<5:2>> |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <RAM> synthesized (advanced).
@@ -752,10 +751,10 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem01> will be implemented on LUTs e
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <dir<8:2>>      |          |
+    |     addrA          | connected to signal <dir<11:2>>     |          |
     |     diA            | connected to signal <_n0150>        |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -764,10 +763,10 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem00> will be implemented on LUTs e
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <dir<8:2>>      |          |
+    |     addrA          | connected to signal <dir<11:2>>     |          |
     |     diA            | connected to signal <_n0158>        |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -776,10 +775,10 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem11> will be implemented on LUTs e
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <dir<8:2>>      |          |
+    |     addrA          | connected to signal <dir<11:2>>     |          |
     |     diA            | connected to signal <_n0166>        |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -788,10 +787,10 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem10> will be implemented on LUTs e
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <dir<8:2>>      |          |
+    |     addrA          | connected to signal <dir<11:2>>     |          |
     |     diA            | connected to signal <_n0174>        |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -816,32 +815,31 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 9
- 128x8-bit single-port distributed RAM                 : 4
- 4x8-bit dual-port distributed RAM                     : 4
+ 1024x8-bit single-port distributed RAM                : 4
+ 16x8-bit dual-port distributed RAM                    : 4
  512x32-bit single-port distributed Read Only RAM      : 1
 # Adders/Subtractors                                   : 29
  10-bit adder                                          : 22
  32-bit adder                                          : 2
  32-bit adder carry in                                 : 1
- 4-bit adder                                           : 1
  5-bit subtractor                                      : 3
+ 6-bit adder                                           : 1
 # Counters                                             : 1
  2-bit up counter                                      : 1
 # Registers                                            : 1068
  Flip-Flops                                            : 1068
 # Comparators                                          : 31
  10-bit comparator greater                             : 4
- 10-bit comparator lessequal                           : 9
+ 10-bit comparator lessequal                           : 11
  11-bit comparator lessequal                           : 2
  12-bit comparator lessequal                           : 2
  13-bit comparator lessequal                           : 2
  14-bit comparator lessequal                           : 2
  15-bit comparator lessequal                           : 2
  16-bit comparator lessequal                           : 2
- 17-bit comparator lessequal                           : 2
- 18-bit comparator lessequal                           : 1
+ 17-bit comparator lessequal                           : 1
  32-bit comparator greater                             : 2
- 4-bit comparator not equal                            : 1
+ 6-bit comparator not equal                            : 1
 # Multiplexers                                         : 331
  1-bit 2-to-1 multiplexer                              : 152
  1-bit 31-to-1 multiplexer                             : 64
@@ -851,8 +849,9 @@ Macro Statistics
  32-bit 2-to-1 multiplexer                             : 23
  32-bit 4-to-1 multiplexer                             : 11
  32-bit 7-to-1 multiplexer                             : 2
- 4-bit 2-to-1 multiplexer                              : 14
+ 4-bit 2-to-1 multiplexer                              : 13
  5-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 33
  8-bit 4-to-1 multiplexer                              : 1
 # Logic shifters                                       : 3
@@ -888,7 +887,7 @@ Optimizing unit <alu_parcial> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 47.
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 49.
 
 Final Macro Processing ...
 
@@ -920,32 +919,31 @@ Top Level Output File Name         : mips.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2424
+# BELS                             : 2603
 #      GND                         : 1
 #      INV                         : 5
 #      LUT1                        : 28
-#      LUT2                        : 48
-#      LUT3                        : 101
-#      LUT4                        : 206
-#      LUT5                        : 284
-#      LUT6                        : 1441
+#      LUT2                        : 59
+#      LUT3                        : 102
+#      LUT4                        : 240
+#      LUT5                        : 294
+#      LUT6                        : 1569
 #      MUXCY                       : 121
-#      MUXF7                       : 96
+#      MUXF7                       : 91
 #      VCC                         : 1
 #      XORCY                       : 92
 # FlipFlops/Latches                : 1070
-#      FD                          : 1
 #      FDC                         : 8
 #      FDCE                        : 6
 #      FDE                         : 963
 #      FDP                         : 2
 #      FDPE                        : 4
-#      FDR                         : 33
+#      FDR                         : 34
 #      FDRE                        : 52
 #      FDS                         : 1
-# RAMS                             : 64
-#      RAM128X1S                   : 32
+# RAMS                             : 160
 #      RAM16X1D                    : 32
+#      RAM256X1S                   : 128
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
@@ -961,16 +959,16 @@ Selected Device : 6slx9csg324-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1070  out of  11440     9%  
- Number of Slice LUTs:                 2241  out of   5720    39%  
-    Number used as Logic:              2113  out of   5720    36%  
-    Number used as Memory:              128  out of   1440     8%  
-       Number used as RAM:              128
+ Number of Slice LUTs:                 2873  out of   5720    50%  
+    Number used as Logic:              2297  out of   5720    40%  
+    Number used as Memory:              576  out of   1440    40%  
+       Number used as RAM:              576
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3133
-   Number with an unused Flip Flop:    2063  out of   3133    65%  
-   Number with an unused LUT:           892  out of   3133    28%  
-   Number of fully used LUT-FF pairs:   178  out of   3133     5%  
+ Number of LUT Flip Flop pairs used:   3654
+   Number with an unused Flip Flop:    2584  out of   3654    70%  
+   Number with an unused LUT:           781  out of   3654    21%  
+   Number of fully used LUT-FF pairs:   289  out of   3654     7%  
    Number of unique control sets:        39
 
 IO Utilization: 
@@ -1002,7 +1000,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 clk100Mhz                          | BUFGP                  | 2     |
-Inst_Clock_divider/count_1         | BUFG                   | 1132  |
+Inst_Clock_divider/count_1         | BUFG                   | 1228  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1013,9 +1011,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 23.428ns (Maximum Frequency: 42.685MHz)
-   Minimum input arrival time before clock: 2.547ns
-   Maximum output required time after clock: 25.644ns
+   Minimum period: 23.210ns (Maximum Frequency: 43.085MHz)
+   Minimum input arrival time before clock: 3.552ns
+   Maximum output required time after clock: 26.378ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1046,48 +1044,48 @@ Delay:               2.793ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_Clock_divider/count_1'
-  Clock period: 23.428ns (frequency: 42.685MHz)
-  Total number of paths / destination ports: 75109424220 / 2677
+  Clock period: 23.210ns (frequency: 43.085MHz)
+  Total number of paths / destination ports: 82111099541 / 3797
 -------------------------------------------------------------------------
-Delay:               23.428ns (Levels of Logic = 18)
-  Source:            Inst_pc/s_5 (FF)
-  Destination:       Inst_reg/reg_0_31 (FF)
+Delay:               23.210ns (Levels of Logic = 18)
+  Source:            Inst_pc/s_6 (FF)
+  Destination:       Inst_reg/reg_0_14 (FF)
   Source Clock:      Inst_Clock_divider/count_1 rising
   Destination Clock: Inst_Clock_divider/count_1 rising
 
-  Data Path: Inst_pc/s_5 to Inst_reg/reg_0_31
+  Data Path: Inst_pc/s_6 to Inst_reg/reg_0_14
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q            117   0.525   2.691  Inst_pc/s_5 (Inst_pc/s_5)
-     LUT6:I1->O            1   0.254   0.958  Inst_mi/Mram_s110111 (Inst_mi/Mram_s11011)
-     LUT6:I2->O            1   0.254   0.682  Inst_mi/Mram_s110115 (Inst_mi/Mram_s110114)
-     LUT5:I4->O          295   0.254   2.436  Inst_mi/Mram_s110117 (instruccion<21>)
-     LUT6:I5->O            1   0.254   1.137  Inst_reg/mux_7 (Inst_reg/mux_7)
-     LUT6:I0->O            1   0.254   0.000  Inst_reg/mux_3 (Inst_reg/mux_3)
-     MUXF7:I1->O           2   0.175   0.726  Inst_reg/mux_2_f7 (Inst_reg/GND_16_o_X_16_o_wide_mux_2_OUT<0>)
-     LUT6:I5->O           12   0.254   1.069  Inst_reg/Mmux_rd1111 (lee_reg1<0>)
-     LUT6:I5->O            7   0.254   1.018  Inst_alu/Mmux_shift_amount11_3 (Inst_alu/Mmux_shift_amount11_2)
-     LUT6:I4->O            2   0.250   1.002  Inst_alu/Sh1081 (Inst_alu/Sh108)
-     LUT6:I2->O            1   0.254   0.790  Inst_alu/Mmux_s_mux315 (Inst_alu/Mmux_s_mux314)
-     LUT5:I3->O            1   0.250   0.682  Inst_alu/Mmux_s_mux316 (Inst_alu/Mmux_s_mux315)
-     LUT6:I5->O            1   0.254   0.000  Inst_alu/Mmux_s_mux319_G (N386)
-     MUXF7:I1->O          36   0.175   1.586  Inst_alu/Mmux_s_mux319 (salida_alu<8>)
-     RAM128X1S:A6->O       4   0.185   1.080  Inst_md_io/Inst_md/Mram_mem008 (Inst_md_io/Inst_md/hwtemp1<7>1)
-     LUT6:I2->O            2   0.254   0.726  Inst_md_io/Inst_md/dir<1>181 (Inst_md_io/Inst_md/dir<1>_mmx_out4)
-     LUT6:I5->O           16   0.254   1.182  Inst_md_io/Inst_md/Mmux_dataout1013 (Inst_md_io/Inst_md/Mmux_dataout1013)
-     LUT6:I5->O            2   0.254   0.726  Inst_mux32_lui/Mmux_s442 (Inst_mux32_lui/Mmux_s441)
-     LUT5:I4->O           16   0.254   0.000  Inst_mux32_lui/Mmux_s444 (escribe_reg<29>)
-     FDE:D                     0.074          Inst_reg/reg_1_29
+     FDR:C->Q            131   0.525   2.734  Inst_pc/s_6 (Inst_pc/s_6)
+     LUT5:I0->O            1   0.254   0.682  Inst_mi/Mram_s130119_SW0 (N403)
+     LUT3:I2->O            1   0.254   0.682  Inst_mi/Mram_s130119 (Inst_mi/Mram_s130118)
+     LUT5:I4->O          294   0.254   2.436  Inst_mi/Mram_s1301110 (instruccion<22>)
+     LUT6:I5->O            1   0.254   1.137  Inst_reg/mux11_7 (Inst_reg/mux11_7)
+     LUT6:I0->O            1   0.254   0.000  Inst_reg/mux11_3 (Inst_reg/mux11_3)
+     MUXF7:I1->O           2   0.175   0.726  Inst_reg/mux11_2_f7 (Inst_reg/GND_16_o_X_16_o_wide_mux_2_OUT<1>)
+     LUT6:I5->O           12   0.254   1.069  Inst_reg/Mmux_rd1121 (lee_reg1<1>)
+     LUT6:I5->O           19   0.254   1.369  Inst_alu/Mmux_shift_amount21_2 (Inst_alu/Mmux_shift_amount211)
+     LUT4:I2->O            1   0.250   0.958  Inst_alu/Sh4511_SW0 (N175)
+     LUT6:I2->O            2   0.254   0.726  Inst_alu/Sh451 (Inst_alu/Sh45)
+     LUT6:I5->O            1   0.254   0.682  Inst_alu/Mmux_s_mux224 (Inst_alu/Mmux_s_mux223)
+     LUT6:I5->O            4   0.254   1.234  Inst_alu/Mmux_s_mux228 (salida_alu<29>)
+     LUT6:I1->O            4   0.254   0.912  Inst_md_io/Inst_decodificador/csOutRandom<31>11_SW0 (N366)
+     LUT6:I4->O           19   0.250   1.369  Inst_md_io/Inst_decodificador/csOutRandom<31>13_1 (Inst_md_io/Inst_decodificador/csOutRandom<31>13)
+     LUT6:I4->O            3   0.250   0.766  Inst_md_io/Inst_mmioVGA/Inst_RAM/Mmux_dataOutMIPS2101 (Inst_md_io/Inst_mmioVGA/Inst_RAM/Mmux_dataOutMIPS210)
+     LUT5:I4->O            1   0.254   0.000  Inst_mux32_lui/Mmux_s122_G (N573)
+     MUXF7:I1->O           2   0.175   0.726  Inst_mux32_lui/Mmux_s122 (Inst_mux32_lui/Mmux_s121)
+     LUT6:I5->O           16   0.254   0.000  Inst_mux32_lui/Mmux_s125 (escribe_reg<14>)
+     FDE:D                     0.074          Inst_reg/reg_1_14
     ----------------------------------------
-    Total                     23.428ns (4.936ns logic, 18.492ns route)
-                                       (21.1% logic, 78.9% route)
+    Total                     23.210ns (5.001ns logic, 18.209ns route)
+                                       (21.5% logic, 78.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_Clock_divider/count_1'
-  Total number of paths / destination ports: 2 / 1
+  Total number of paths / destination ports: 3 / 2
 -------------------------------------------------------------------------
-Offset:              2.547ns (Levels of Logic = 2)
+Offset:              3.552ns (Levels of Logic = 2)
   Source:            reset0 (PAD)
   Destination:       Inst_antirebote/reset (FF)
   Destination Clock: Inst_Clock_divider/count_1 rising
@@ -1096,46 +1094,46 @@ Offset:              2.547ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.328   0.910  reset0_IBUF (reset0_IBUF)
-     LUT3:I0->O            1   0.235   0.000  Inst_antirebote/reset_rstpot (Inst_antirebote/reset_rstpot)
-     FD:D                      0.074          Inst_antirebote/reset
+     IBUF:I->O             2   1.328   0.834  reset0_IBUF (reset0_IBUF)
+     LUT2:I0->O            1   0.250   0.681  Inst_antirebote/_n00041 (Inst_antirebote/_n0004)
+     FDR:R                     0.459          Inst_antirebote/reset
     ----------------------------------------
-    Total                      2.547ns (1.637ns logic, 0.910ns route)
-                                       (64.3% logic, 35.7% route)
+    Total                      3.552ns (2.037ns logic, 1.515ns route)
+                                       (57.3% logic, 42.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_Clock_divider/count_1'
-  Total number of paths / destination ports: 123167458 / 18
+  Total number of paths / destination ports: 142110050 / 18
 -------------------------------------------------------------------------
-Offset:              25.644ns (Levels of Logic = 16)
-  Source:            Inst_pc/s_5 (FF)
-  Destination:       LED<7> (PAD)
+Offset:              26.378ns (Levels of Logic = 16)
+  Source:            Inst_pc/s_6 (FF)
+  Destination:       Red<2> (PAD)
   Source Clock:      Inst_Clock_divider/count_1 rising
 
-  Data Path: Inst_pc/s_5 to LED<7>
+  Data Path: Inst_pc/s_6 to Red<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q            117   0.525   2.691  Inst_pc/s_5 (Inst_pc/s_5)
-     LUT6:I1->O            1   0.254   0.958  Inst_mi/Mram_s110111 (Inst_mi/Mram_s11011)
-     LUT6:I2->O            1   0.254   0.682  Inst_mi/Mram_s110115 (Inst_mi/Mram_s110114)
-     LUT5:I4->O          295   0.254   2.436  Inst_mi/Mram_s110117 (instruccion<21>)
+     FDR:C->Q            131   0.525   2.734  Inst_pc/s_6 (Inst_pc/s_6)
+     LUT5:I0->O            1   0.254   0.682  Inst_mi/Mram_s130119_SW0 (N403)
+     LUT3:I2->O            1   0.254   0.682  Inst_mi/Mram_s130119 (Inst_mi/Mram_s130118)
+     LUT5:I4->O          294   0.254   2.436  Inst_mi/Mram_s1301110 (instruccion<22>)
      LUT6:I5->O            1   0.254   1.137  Inst_reg/mux11_7 (Inst_reg/mux11_7)
      LUT6:I0->O            1   0.254   0.000  Inst_reg/mux11_3 (Inst_reg/mux11_3)
      MUXF7:I1->O           2   0.175   0.726  Inst_reg/mux11_2_f7 (Inst_reg/GND_16_o_X_16_o_wide_mux_2_OUT<1>)
-     LUT6:I5->O           13   0.254   1.098  Inst_reg/Mmux_rd1121 (lee_reg1<1>)
-     LUT6:I5->O           21   0.254   1.418  Inst_alu/Mmux_shift_amount21_1 (Inst_alu/Mmux_shift_amount21)
-     LUT6:I4->O            4   0.250   0.912  Inst_alu/Sh91 (Inst_alu/Sh9)
-     LUT6:I4->O            2   0.250   0.726  Inst_alu/Sh451 (Inst_alu/Sh45)
-     LUT6:I5->O            1   0.254   0.682  Inst_alu/Mmux_s_mux224 (Inst_alu/Mmux_s_mux223)
-     LUT6:I5->O           15   0.254   1.431  Inst_alu/Mmux_s_mux228 (salida_alu<29>)
-     LUT5:I1->O            2   0.254   0.834  Inst_md_io/Inst_decodificador/csOutRandom<31>12_SW0_SW0 (N270)
-     LUT6:I4->O           23   0.250   1.813  Inst_md_io/Inst_decodificador/csOutRandom<31>13 (Inst_md_io/Inst_decodificador/csOutRandom<31>1)
-     LUT6:I0->O            8   0.254   0.943  Inst_md_io/Inst_decodificador/csOutRandom<31>4 (LED_0_OBUF)
-     OBUF:I->O                 2.912          LED_7_OBUF (LED<7>)
+     LUT6:I5->O           12   0.254   1.069  Inst_reg/Mmux_rd1121 (lee_reg1<1>)
+     LUT6:I5->O           18   0.254   1.343  Inst_alu/Mmux_shift_amount21_3 (Inst_alu/Mmux_shift_amount212)
+     LUT5:I3->O            7   0.250   1.138  Inst_alu/Sh2211 (Inst_alu/Sh221)
+     LUT6:I3->O            2   0.235   0.726  Inst_alu/Sh2451 (Inst_alu/Sh245)
+     LUT6:I5->O           11   0.254   1.039  Inst_alu/Mmux_s_mux285 (Inst_alu/Mmux_s_mux284)
+     LUT5:I4->O          129   0.254   2.728  Inst_alu/Mmux_s_mux289 (salida_alu<5>)
+     LUT5:I0->O            1   0.254   0.958  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_120_o3 (Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_120_o3)
+     LUT6:I2->O            8   0.254   1.172  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_120_o5 (Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_120_o)
+     LUT3:I0->O            1   0.235   0.681  Inst_md_io/Inst_mmioVGA/Inst_Pinta_IMG/Mmux_red1 (Red_0_OBUF)
+     OBUF:I->O                 2.912          Red_0_OBUF (Red<0>)
     ----------------------------------------
-    Total                     25.644ns (7.156ns logic, 18.488ns route)
-                                       (27.9% logic, 72.1% route)
+    Total                     26.378ns (7.126ns logic, 19.252ns route)
+                                       (27.0% logic, 73.0% route)
 
 =========================================================================
 
@@ -1147,7 +1145,7 @@ Clock to Setup on destination clock Inst_Clock_divider/count_1
                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
-Inst_Clock_divider/count_1|   23.428|         |         |         |
+Inst_Clock_divider/count_1|   23.210|         |         |         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk100Mhz
@@ -1161,12 +1159,12 @@ clk100Mhz      |    2.793|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 36.00 secs
-Total CPU time to Xst completion: 35.91 secs
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 33.71 secs
  
 --> 
 
-Total memory usage is 4570760 kilobytes
+Total memory usage is 4572152 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

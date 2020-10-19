@@ -1,0 +1,13 @@
+PARAMETROS 4x4
+$SP => 0x1001007C
+XFF => 0x100100A0 dirblanco
+X00 => 0x100100A1 dirnegro
+start => 0XFFFF0000
+Shift left => 2 en createpixel y similares
+
+PARAMETROS 8x8
+$SP => 0x1001007C
+XFF => 0x100100A0 dirblanco
+X00 => 0x100100A1 dirnegro
+start => 0XFFFF0000
+Shift left => 3 en createpixel y similares
