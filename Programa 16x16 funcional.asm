@@ -6,7 +6,17 @@ main:
 	
 	sb $t1, 0x10010080 #DIRECCION DE BLANCO
 	sb $t2, 0x10010081 #DIRECCION DE NEGRO
-	
+
+clean:
+	la $t3, 0xFFFF0000
+	li $t1, 0
+		cleanLoop:
+			sb $t2, $t3
+			addi $t3, $t3, 1
+			addi $t1, $t1, 1
+			bgt $t1, 255, osc1
+			j cleanLoop
+
 osc1:
 subiu $sp, $sp, 4
 sw $ra, ($sp)
