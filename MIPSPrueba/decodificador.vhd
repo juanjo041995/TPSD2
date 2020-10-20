@@ -33,6 +33,8 @@ entity decodificador is
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
            csMem     : out  STD_LOGIC;
 			  csVGA		: out STD_LOGIC;
+			  csPause	: out STD_LOGIC;
+			  csSet		: out STD_LOGIC;
 			  csSW : out STD_LOGIC
 			  );
 end decodificador;
@@ -45,9 +47,13 @@ begin
 	             '0';
 					 
 	-- VGA
-	csVGA 	 <= '1' when ent(31 downto 16) = X"FFFF" else '0';
+	csVGA 	 <= '1' when ent(31 downto 12) = X"FFFF0" else '0';
 	
 	csSW <= '1' when ent = X"FFFF8000" else '0';
+	
+	csPause <= '1' when ent = X"FFFF7000" else '0';
+	
+	csSet <= '1' when ent = X"FFFF6000" else '0';
 
 					 
 end Behavioral;

@@ -150,7 +150,7 @@
     </transform>
     <transform xil_pn:end_ts="1602559524" xil_pn:in_ck="-8590320692090972298" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-3239470449407159120" xil_pn:start_ts="1602559516">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -160,7 +160,7 @@
     </transform>
     <transform xil_pn:end_ts="1602559538" xil_pn:in_ck="-2186116235703818705" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1602559524">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -169,7 +169,7 @@
     </transform>
     <transform xil_pn:end_ts="1602559556" xil_pn:in_ck="3920243545629775" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="6587536580693756888" xil_pn:start_ts="1602559545">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -179,7 +179,7 @@
     </transform>
     <transform xil_pn:end_ts="1602559538" xil_pn:in_ck="-2155319404532434318" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1602559534">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

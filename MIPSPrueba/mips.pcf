@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Oct 19 23:24:37 2020
+// Written by: Map P.20131013 on Tue Oct 20 17:38:08 2020
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -12,6 +12,10 @@ COMP "DPSwitch<4>" LOCATE = SITE "E18" LEVEL 1;
 COMP "DPSwitch<5>" LOCATE = SITE "E16" LEVEL 1;
 COMP "DPSwitch<6>" LOCATE = SITE "F18" LEVEL 1;
 COMP "DPSwitch<7>" LOCATE = SITE "F17" LEVEL 1;
+COMP "SW3" LOCATE = SITE "M16" LEVEL 1;
+COMP "SW4" LOCATE = SITE "L17" LEVEL 1;
+COMP "SW5" LOCATE = SITE "K17" LEVEL 1;
+COMP "SW6" LOCATE = SITE "K18" LEVEL 1;
 COMP "Blue<0>" LOCATE = SITE "B11" LEVEL 1;
 COMP "Blue<1>" LOCATE = SITE "A11" LEVEL 1;
 COMP "Green<0>" LOCATE = SITE "C10" LEVEL 1;

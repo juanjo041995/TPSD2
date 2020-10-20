@@ -42,11 +42,28 @@ entity md_io is
 			  HSync,VSync: out STD_LOGIC;
 			  Red,Green 	: out STD_LOGIC_VECTOR(2 downto 0);
 			  Blue			: out STD_LOGIC_VECTOR(1 downto 0);
+			  SW4,SW3	: in STD_LOGIC;
+			  SW5,SW6	: in STD_LOGIC;
 			  DPSwitch : in STD_LOGIC_VECTOR( 7 downto 0) -- cuidao
 			  );
 end md_io;
 
 architecture Behavioral of md_io is
+	COMPONENT setIn
+	PORT (
+				SW5,SW6 : in STD_LOGIC;
+				clk	  : in STD_LOGIC;
+				set	  : out STD_LOGIC
+	);
+	END COMPONENT;
+	
+	COMPONENT pauseIn
+	PORT (
+				SW3,SW4 : in STD_LOGIC;
+				clk	  : in STD_LOGIC;
+				pause	  : out STD_LOGIC
+	);
+	END COMPONENT;
 	COMPONENT mmioVGA
 		PORT (
 				cs				: in STD_LOGIC;
@@ -71,6 +88,8 @@ architecture Behavioral of md_io is
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
            csMem     : out  STD_LOGIC;
 			  csVGA		: out STD_LOGIC;
+			  csPause	: out STD_LOGIC;
+			  csSet		: out STD_LOGIC;
 			  csSW : out STD_LOGIC
 			);
 	END COMPONENT;
@@ -101,26 +120,45 @@ architecture Behavioral of md_io is
 	signal datosMem    : STD_LOGIC_VECTOR (31 downto 0);
 	signal datosVGA	 : STD_LOGIC_VECTOR (31 downto 0);
 	signal datosSW		 : STD_LOGIC_VECTOR(7 downto 0);
+	signal datosPause	 : STD_LOGIC;
+	signal csPause		 : STD_LOGIC;
+	signal csSet		 : STD_LOGIC;
+	signal datosSet	 : STD_LOGIC;
 	
 begin
-	dataout <= datosMem             when csMem = '1'  else
-			     X"000000" & datosSW  when csSW = '1'   else
-				  datosVGA 				  when csVGA ='1'   else
-			     (others => '0');
 	-- Multiplexor de salida
 	
-	--process(datosSW,datosMem,csMem,csVGA,datosVGA,csSW)
-	--begin
-	--	if csSW = '1' then
-	--		dataout <= datosSW;
-	--	elsif csVGA = '1' then
-	--		dataout <= datosVGA;
-	--	elsif csMem ='1' then
-	--		dataout <=datosMem;
-	--	else
-	--		dataout <=X"00000000";
-	--	end if;
---	end process;
+	process(datosSW,datosMem,csMem,csVGA,datosVGA,csSW,csPause,datosPause,datosSet,csSet)
+	begin
+		if csSW = '1' then
+			dataout <= X"000000" & datosSW;
+		elsif csVGA = '1' then
+			dataout <= datosVGA;
+		elsif csMem ='1' then
+			dataout <=datosMem;
+		elsif csPause = '1' then
+			dataout <= X"0000000" & "000" & datosPause;
+		elsif csSet = '1' then
+			dataout <= X"0000000" & "000" & datosSet;
+		else
+			dataout <=X"00000000";
+		end if;
+	end process;
+	
+	Inst_set 	  : setIn
+		PORT MAP(
+						clk => clk,
+						SW6 => SW5,
+						SW5 => SW6,
+						set => datosSet
+		);
+	Inst_Pause 	  : pauseIn
+		PORT MAP(
+						clk => clk,
+						SW3 => SW3,
+						SW4 => SW4,
+						pause => datosPause
+		);
 	Inst_dirPixel : dirPixel
 		PORT MAP (
 						cs => csSW,
@@ -131,6 +169,8 @@ begin
 		ent       => dir(31 downto 0),
       csMem     => csMem,
 		csVGA		 => csVGA,
+		csPause => csPause,
+		csSet		=> csSet,
 		csSW => csSW
 	);
 

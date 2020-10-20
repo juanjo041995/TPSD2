@@ -42,6 +42,8 @@ entity mips is
 		HSync,VSync: out STD_LOGIC;
 	   Red,Green 	: out STD_LOGIC_VECTOR(2 downto 0);
 		Blue			: out STD_LOGIC_VECTOR(1 downto 0);
+		SW3,SW4		: in STD_LOGIC;
+		SW5,SW6		: in STD_LOGIC;
 		DPSwitch			: in STD_LOGIC_VECTOR(7 downto 0) --cuidao
 		);
 end mips;
@@ -155,6 +157,8 @@ architecture Behavioral of mips is
 			  HSync,VSync: out STD_LOGIC;
 			  Red,Green 	: out STD_LOGIC_VECTOR(2 downto 0);
 			  Blue			: out STD_LOGIC_VECTOR(1 downto 0);
+			  SW3,SW4		: in STD_LOGIC;
+			  SW5,SW6		: in STD_LOGIC;
 			  DPSwitch : in STD_LOGIC_VECTOR( 7 downto 0) -- cuidao
 		 );
 	END COMPONENT;
@@ -359,7 +363,11 @@ begin
 		Red		=> Red,
 		Green		=> Green,
 		Blue		=> Blue,
-		DPSwitch => DPSwitch
+		DPSwitch => DPSwitch,
+		SW3		=> SW3,
+		SW4		=> SW4,
+		SW5		=> SW5,
+		SW6		=> SW6
 	);
 	Inst_mux32_branch: mux32 PORT MAP(
 		e0  => pc_mas_4,

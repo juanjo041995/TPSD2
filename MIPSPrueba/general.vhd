@@ -16,11 +16,11 @@ package general is
 -- cantidad de bits de direcciones de las memorias del MIPS
 -- Estos definen el tamaño de la memoria disponible para programa y datos
 -- Recordar que el FPGA tiene relativamente poca memoria interna.
-constant NUM_BITS_MEMORIA_INSTRUCCIONES: integer := 9;
+constant NUM_BITS_MEMORIA_INSTRUCCIONES: integer := 10;
 constant NUM_BITS_MEMORIA_DATOS: integer := 10;
 constant NUM_BITS_MEMORIA_VGA: integer := 6;
 -- archivo desde donde se lee el programa a cargarse en la ROM. Se lee en tiempo de sintesis del hardware
-constant filename : string := "OscilatorP3.txt";
+constant filename : string := "todoV4.txt";
 
 
 -- tipos de datos de las memorias de instrucciones y datos del MIPS
