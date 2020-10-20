@@ -148,8 +148,8 @@ begin
 	Inst_set 	  : setIn
 		PORT MAP(
 						clk => clk,
-						SW6 => SW5,
-						SW5 => SW6,
+						SW6 => SW6,
+						SW5 => SW5,
 						set => datosSet
 		);
 	Inst_Pause 	  : pauseIn
