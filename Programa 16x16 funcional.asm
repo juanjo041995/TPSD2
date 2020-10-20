@@ -11,7 +11,7 @@ clean:
 	la $t3, 0xFFFF0000
 	li $t1, 0
 		cleanLoop:
-			sb $t2, $t3
+			sb $t2, ($t3)
 			addi $t3, $t3, 1
 			addi $t1, $t1, 1
 			bgt $t1, 255, osc1
@@ -23,17 +23,122 @@ sw $ra, ($sp)
 
 la $t3, 0xFFFF0000
 li $a0, 1
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 2
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 3
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 2
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 3
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 2
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 3
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 13
+li $a1, 1
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 13
+li $a1, 2
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 13
 li $a1, 3
 jal createPixel
 
 la $t3, 0xFFFF0000
 li $a0, 1
-li $a1, 4
+li $a1, 5
 jal createPixel
 
 la $t3, 0xFFFF0000
 li $a0, 1
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 1
+li $a1, 7
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
 li $a1, 5
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 5
+li $a1, 7
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 5
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 9
+li $a1, 7
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 13
+li $a1, 5
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 13
+li $a1, 6
+jal createPixel
+
+la $t3, 0xFFFF0000
+li $a0, 13
+li $a1, 7
 jal createPixel
 
 la $t3, 0xFFFF0000
@@ -52,198 +157,33 @@ li $a1, 11
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 3
-li $a1, 1
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 3
-li $a1, 6
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 3
-li $a1, 8
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 3
-li $a1, 13
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 4
-li $a1, 1
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 4
-li $a1, 6
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 4
-li $a1, 8
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 4
-li $a1, 13
-jal createPixel
-
-la $t3, 0xFFFF0000
 li $a0, 5
-li $a1, 1
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 5
-li $a1, 6
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 5
-li $a1, 8
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 5
-li $a1, 13
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 6
-li $a1, 3
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 6
-li $a1, 4
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 6
-li $a1, 5
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 6
 li $a1, 9
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 6
+li $a0, 5
 li $a1, 10
 jal createPixel
 
 la $t3, 0xFFFF0000
-li $a0, 6
-li $a1, 11
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 8
-li $a1, 3
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 8
-li $a1, 4
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 8
-li $a1, 5
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 8
-li $a1, 9
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 8
-li $a1, 10
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 8
+li $a0, 5
 li $a1, 11
 jal createPixel
 
 la $t3, 0xFFFF0000
 li $a0, 9
-li $a1, 1
+li $a1, 9
 jal createPixel
 
 la $t3, 0xFFFF0000
 li $a0, 9
-li $a1, 6
+li $a1, 10
 jal createPixel
 
 la $t3, 0xFFFF0000
 li $a0, 9
-li $a1, 8
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 9
-li $a1, 13
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 10
-li $a1, 1
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 10
-li $a1, 6
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 10
-li $a1, 8
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 10
-li $a1, 13
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 11
-li $a1, 1
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 11
-li $a1, 6
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 11
-li $a1, 8
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 11
-li $a1, 13
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 13
-li $a1, 3
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 13
-li $a1, 4
-jal createPixel
-
-la $t3, 0xFFFF0000
-li $a0, 13
-li $a1, 5
+li $a1, 11
 jal createPixel
 
 la $t3, 0xFFFF0000
@@ -261,6 +201,12 @@ li $a0, 13
 li $a1, 11
 jal createPixel
 
+		add $t1,$zero,$zero
+		CONTADOR:
+		addi $t1,$t1,1
+		bgt $t1, 2500000,CONT
+		j CONTADOR
+CONT:
 lw $ra, ($sp)
 addiu $sp, $sp, 4
 j continue
@@ -400,13 +346,6 @@ nextGeneration:
 		j generate
 	
 	endNextGen:
-		add $t1,$zero,$zero
-		CONTADOR:
-		addi $t1,$t1,1
-		bgt $t1, 1000000,END
-		j CONTADOR
-	
-	END:
 		lw $s1, ($sp)
 		addiu $sp, $sp, 4			# pop $s1 from the stack
 		jr $ra
