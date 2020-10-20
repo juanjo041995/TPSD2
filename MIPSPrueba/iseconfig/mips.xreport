@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-10-19T16:01:46</DateModified>
+  <DateModified>2020-10-19T21:47:18</DateModified>
   <ModuleName>mips</ModuleName>
-  <SummaryTimeStamp>2020-10-18T19:34:16</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-10-19T21:41:55</SummaryTimeStamp>
   <SavedFilePath>D:/GitHubRepos/TPSD2/MIPSPrueba/iseconfig/mips.xreport</SavedFilePath>
   <ImplementationReportsDirectory>D:/GitHubRepos/TPSD2/MIPSPrueba\</ImplementationReportsDirectory>
   <DateInitialized>2020-10-16T14:32:21</DateInitialized>

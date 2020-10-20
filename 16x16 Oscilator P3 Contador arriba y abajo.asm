@@ -411,7 +411,7 @@ nextGeneration:
 		addi $t1,$t1,1
 		bgt $t1, 1000000,END
 		j CONTADOR2
-	
+		
 	END:	lw $s1, ($sp)
 		addiu $sp, $sp, 4			# pop $s1 from the stack
 		jr $ra

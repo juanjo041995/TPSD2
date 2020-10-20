@@ -42,7 +42,7 @@ entity md_io is
 			  HSync,VSync: out STD_LOGIC;
 			  Red,Green 	: out STD_LOGIC_VECTOR(2 downto 0);
 			  Blue			: out STD_LOGIC_VECTOR(1 downto 0);
-			  LEDS : out STD_LOGIC_VECTOR( 7 downto 0) -- cuidao
+			  DPSwitch : in STD_LOGIC_VECTOR( 7 downto 0) -- cuidao
 			  );
 end md_io;
 
@@ -71,7 +71,7 @@ architecture Behavioral of md_io is
     Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
            csMem     : out  STD_LOGIC;
 			  csVGA		: out STD_LOGIC;
-			  csOutRandom : out STD_LOGIC
+			  csSW : out STD_LOGIC
 			);
 	END COMPONENT;
 
@@ -87,36 +87,51 @@ architecture Behavioral of md_io is
 			);
 	END COMPONENT;
 
-
-
+	COMPONENT dirPixel
+		PORT(
+				DPSWitch : in STD_LOGIC_VECTOR(7 downto 0);
+				cs			: in STD_LOGIC;
+				dataOut	: out STD_LOGIC_VECTOR(7 downto 0)
+		);
+ END COMPONENT;
 -- Definimos se�ales para interconexi�n interna en este m�dulo
 	signal csMem       : STD_LOGIC;
 	signal csVGA		 : STD_LOGIC;
+	signal csSW			 : STD_LOGIC;
 	signal datosMem    : STD_LOGIC_VECTOR (31 downto 0);
 	signal datosVGA	 : STD_LOGIC_VECTOR (31 downto 0);
-	signal csOutRandom : STD_LOGIC;
+	signal datosSW		 : STD_LOGIC_VECTOR(7 downto 0);
 	
 begin
-
+	dataout <= datosMem             when csMem = '1'  else
+			     X"000000" & datosSW  when csSW = '1'   else
+				  datosVGA 				  when csVGA ='1'   else
+			     (others => '0');
 	-- Multiplexor de salida
-	process(datosMem,csMem,csVGA,datosVGA,csOutRandom)
-	begin
-		if csMem = '1' then
-			dataout <= datosMem;
-		elsif csVGA = '1' then
-			dataout <= datosVGA;
-		elsif csOutRandom ='1' then
-			dataOut <=X"000000" & X"FF";
-		else
-			dataout <=X"00000000";
-		end if;
-	end process;
 	
+	--process(datosSW,datosMem,csMem,csVGA,datosVGA,csSW)
+	--begin
+	--	if csSW = '1' then
+	--		dataout <= datosSW;
+	--	elsif csVGA = '1' then
+	--		dataout <= datosVGA;
+	--	elsif csMem ='1' then
+	--		dataout <=datosMem;
+	--	else
+	--		dataout <=X"00000000";
+	--	end if;
+--	end process;
+	Inst_dirPixel : dirPixel
+		PORT MAP (
+						cs => csSW,
+						dataOut => datosSW,
+						DPSwitch => DPSwitch
+		);
 	Inst_decodificador: decodificador PORT MAP(
 		ent       => dir(31 downto 0),
       csMem     => csMem,
 		csVGA		 => csVGA,
-		csOutRandom => csOutRandom
+		csSW => csSW
 	);
 
 	Inst_md: md PORT MAP(
@@ -146,13 +161,6 @@ begin
 						addressMIPS => dir(NUM_BITS_MEMORIA_VGA-1+2 downto 0),
 						tipoAcc => tipoAcc
 		);
- process(csOutRandom)
- begin
- if csOutRandom = '1' then
-	LEDS <= X"FF";
-	else
-	LEDS <= X"00";
-	end if;
-	end process;
+
 end Behavioral;
 

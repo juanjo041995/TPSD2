@@ -1,10 +1,10 @@
 ----------------------------------------------------------------------------------
--- Company: Universidad Católica
--- Engineer: Vicente González
+-- Company: 
+-- Engineer: 
 -- 
--- Create Date:    14:28:41 06/14/2017 
+-- Create Date:    22:43:14 10/19/2020 
 -- Design Name: 
--- Module Name:    decodificador - Behavioral 
+-- Module Name:    dirPixel - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,26 +29,24 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity decodificador is
-    Port ( ent       : in  STD_LOGIC_VECTOR (31 downto 0);
-           csMem     : out  STD_LOGIC;
-			  csVGA		: out STD_LOGIC;
-			  csSW : out STD_LOGIC
-			  );
-end decodificador;
+entity dirPixel is
+	PORT (
+				DPSWitch : in STD_LOGIC_VECTOR(7 downto 0);
+				cs			: in STD_LOGIC;
+				dataOut	: out STD_LOGIC_VECTOR(7 downto 0)
+	);
+end dirPixel;
 
-architecture Behavioral of decodificador is
+architecture Behavioral of dirPixel is
 
 begin
-	-- memoria
-	csMem     <= '1' when ent(31 downto 16) = X"1001" else
-	             '0';
-					 
-	-- VGA
-	csVGA 	 <= '1' when ent(31 downto 16) = X"FFFF" else '0';
-	
-	csSW <= '1' when ent = X"FFFF8000" else '0';
-
-					 
+process(cs,DPSwitch)
+begin
+	if cs='1' then
+		dataOut <= DPSwitch;
+	else
+		dataOut <= X"00";
+	end if;
+end process;
 end Behavioral;
 

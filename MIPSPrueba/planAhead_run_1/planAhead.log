@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Oct 19 20:18:16 2020
+# Process ID: 3656
+# Log file: D:/GitHubRepos/TPSD2/MIPSPrueba/planAhead_run_1/planAhead.log
+# Journal file: D:/GitHubRepos/TPSD2/MIPSPrueba/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -49 day(s)
+INFO: [Device 21-36] Loading parts and site information from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/GitHubRepos/TPSD2/MIPSPrueba/pa.fromNetlist.tcl
+# create_project -name MIPSPrueba -dir "D:/GitHubRepos/TPSD2/MIPSPrueba/planAhead_run_2" -part xc6slx9csg324-2
