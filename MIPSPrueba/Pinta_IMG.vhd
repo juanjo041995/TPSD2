@@ -54,7 +54,7 @@ architecture behavioral of Pinta_IMG is
 					xmod := x_int / 40;
 					ymod := y_int /30 ;
 					if visible = '1' then
-						offset := xmod + ymod * 16;
+						offset := xmod + ymod *16;
 						red <= dataMem (7 downto 5);
 						green <= dataMem (4 downto 2);
 						blue <= dataMem (1 downto 0);
