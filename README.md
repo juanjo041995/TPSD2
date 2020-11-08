@@ -20,8 +20,9 @@
   </p>
 </p>
 
-
+<p align="center">
 <img src="https://www.smbc-comics.com/comics/1586708147-20200412b.png" alt="Logo">
+</p>
 
 ## Tabla de Contenido
 
