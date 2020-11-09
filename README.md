@@ -30,9 +30,12 @@
   * [Diagrama de bloques](#diagrama-de-bloques)
   * [Hardware implementado](#hardware-implementado)
 * [Software](#software)
+* [Estado actual del trabajo](#estado-actual-del-trabajo)
+  * [Resultados obtenidos](#resultados-obtenidos)
+  * [Inconvenientes](#inconvenientes)
+  * [Posibles soluciones](#posibles-soluciones)
 * [Recursos utilizados](#recursos-utilizados)
 * [Integrantes](#integrantes)
-
 
 
 <!-- SOBRE EL PROYECTO -->
@@ -63,6 +66,12 @@ En el diagrama mostrado arriba existen detalles que no están siendo mostrados:
     * Al presionar el botón de clear (la contraparte de set), el estado de la celda [i,j] es tal que esta celda esté muerta (independientemente de si al momento del clear la celda ya esté muerta o no).
     * Se puede alterar los estados de las celdas tantas veces como se desee, reanudando el juego con la configuración deseada al presionar nuevamente el botón de pause.
 
+## Estado actual del trabajo
+### Resultados obtenidos
+
+### Inconvenientes
+
+### Posibles soluciones
 
 ## Recursos utilizados
 
