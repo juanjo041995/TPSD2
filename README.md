@@ -27,7 +27,7 @@
 ## Tabla de Contenido
 
 * [Hardware](#hardware)
-  * [Diagrama de bloques](#herramientas-utilizadas)
+  * [Diagrama de bloques](#diagrama-de-bloques)
   * [Hardware implementado](#hardware-implementado)
 * [Software](#software)
 * [Recursos utilizados](#recursos-utilizados)
@@ -46,17 +46,21 @@
 El objetivo de este proyecto es el proveer al estudiante de la cátedra de Probabilidad y Estadística herramientas necesarias para aplicar los conocimientos teóricos de la materia a datasets y situaciones reales, haciendo uso del poder y la simplicidad de Python con Jupyter Notebooks.
 
 
+### Hardware implementado
+
 ## Software
 
+El algoritmo, cuya implementación está basada en el programa del Juego de la Vida citado en los recursos utilizados, se resume a grandes rasgos según el siguiente diagrama:
+
+![Diagrama de flujo del algoritmo](GoL_flowchart.jpg)
 
 ## Recursos utilizados
 
+* [Mimas V2 Spartan 6 FPGA Development Board](https://numato.com/product/mimas-v2-spartan-6-fpga-development-board-with-ddr-sdram/)
 * [ISE Design Suite](https://www.xilinx.com/products/design-tools/ise-design-suite.html)
 * [Conway's Game of Life in MIPS Assembly Language](https://github.com/hackmak/GoL-MIPS)
-* [pandas](https://pandas.pydata.org/)
-* [NumPy](https://numpy.org/)
-* [SciPy](https://www.scipy.org/)
-
+* [Mimas V2 VGA Display demo code](https://github.com/numato/samplecode/tree/master/FPGA/MimasV2/mimasV2Demo/src/MimasV2VGA)
+* Diseño del MIPS por Dr. Vicente González
 
 
 ## Integrantes
