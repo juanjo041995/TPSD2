@@ -53,7 +53,7 @@ El objetivo de este proyecto es el proveer al estudiante de la cátedra de Proba
 El algoritmo, cuya implementación está basada en el programa del Juego de la Vida citado en los recursos utilizados, se resume a grandes rasgos según el siguiente diagrama:
 
 <p align="center">
-![Diagrama de flujo del algoritmo](GoL_flowchart.jpg)
+  <img src="GoL_flowchart.jpg" alt="alternate text">
 </p>
 
 
