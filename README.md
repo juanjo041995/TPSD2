@@ -43,8 +43,6 @@
 
 ![Diagrama de bloques del mmioVGA](mmioVGA_block_diagram.jpg)
 
-El objetivo de este proyecto es el proveer al estudiante de la cátedra de Probabilidad y Estadística herramientas necesarias para aplicar los conocimientos teóricos de la materia a datasets y situaciones reales, haciendo uso del poder y la simplicidad de Python con Jupyter Notebooks.
-
 
 ### Hardware implementado
 
