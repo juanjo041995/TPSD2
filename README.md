@@ -77,6 +77,7 @@ En el diagrama mostrado arriba existen detalles que no están siendo mostrados:
 
 * [Mimas V2 Spartan 6 FPGA Development Board](https://numato.com/product/mimas-v2-spartan-6-fpga-development-board-with-ddr-sdram/)
 * [ISE Design Suite](https://www.xilinx.com/products/design-tools/ise-design-suite.html)
+* [MARS (MIPS Assembler and Runtime Simulator)](http://courses.missouristate.edu/kenvollmar/mars/)
 * [Conway's Game of Life in MIPS Assembly Language](https://github.com/hackmak/GoL-MIPS)
 * [Mimas V2 VGA Display demo code](https://github.com/numato/samplecode/tree/master/FPGA/MimasV2/mimasV2Demo/src/MimasV2VGA)
 * [Diseño de sistemas digitales con VHDL](https://burjcdigital.urjc.es/handle/10115/5700)
