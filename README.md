@@ -44,9 +44,9 @@
 ## Hardware
 
 ### Diagrama de bloques
-![Diagrama de bloques principal](main_block_diagram.jpg)
+![Diagrama de bloques principal](img/main_block_diagram.jpg)
 
-![Diagrama de bloques del mmioVGA](mmioVGA_block_diagram.jpg)
+![Diagrama de bloques del mmioVGA](img/mmioVGA_block_diagram.jpg)
 
 
 ### Hardware implementado
@@ -58,7 +58,7 @@
 El algoritmo, cuya implementación está basada en el programa del Juego de la Vida citado en los recursos utilizados, se resume a grandes rasgos según el siguiente diagrama:
 
 <p align="center">
-  <img src="GoL_flowchart.jpg" alt="alternate text">
+  <img src="img/GoL_flowchart.jpg" alt="alternate text">
 </p>
 
 En el diagrama mostrado arriba existen detalles que no están siendo mostrados:
