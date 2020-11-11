@@ -30,6 +30,8 @@
   * [Diagrama de bloques](#diagrama-de-bloques)
   * [Hardware implementado](#hardware-implementado)
 * [Software](#software)
+  * [Algoritmo](#algoritmo)
+  * [Rutinas importantes](#rutinas-importantes)
 * [Estado actual del trabajo](#estado-actual-del-trabajo)
   * [Resultados obtenidos](#resultados-obtenidos)
   * [Inconvenientes](#inconvenientes)
@@ -51,6 +53,8 @@
 
 ## Software
 
+### Algoritmo
+
 El algoritmo, cuya implementación está basada en el programa del Juego de la Vida citado en los recursos utilizados, se resume a grandes rasgos según el siguiente diagrama:
 
 <p align="center">
@@ -61,10 +65,17 @@ En el diagrama mostrado arriba existen detalles que no están siendo mostrados:
 * Existen contadores que llegan hasta 1.000.000 para que el cambio entre frame y frame pueda ser apreciado por el ojo humano.
 * Si el botón de reset es presionado, el bucle vuelve al inicio (resetear contenidos de la memoria y cargar la condición inicial para que el ciclo vuelva a empezar).
 * Presionando el botón de pausa se tiene la posibilidad de alterar el estado de las celdas, tomando como base la última configuración de las celdas en el momento de pausar el juego. Esta modificación de los estados funciona de la siguiente manera:
-    * El estado de los 8 switches de la placa expresa una representación en binario del número de celda cuyo estado se quiere modificar (representando la matriz de celdas como un vector, donde la celda [i,j] es representada por el valor i*8+j).
+    * El estado de los 8 switches de la placa expresa una representación en binario del número de celda cuyo estado se quiere modificar (representando la matriz de celdas como un vector, donde la celda [i,j] es representada por el valor i*16+j).
     * Al presionar el botón de set, el estado de la celda [i,j] es tal esta celda esté viva (independientemente de si al momento del set la celda ya esté viva o no).
     * Al presionar el botón de clear (la contraparte de set), el estado de la celda [i,j] es tal que esta celda esté muerta (independientemente de si al momento del clear la celda ya esté muerta o no).
     * Se puede alterar los estados de las celdas tantas veces como se desee, reanudando el juego con la configuración deseada al presionar nuevamente el botón de pause.
+
+### Rutinas importantes
+Para la implementación del algoritmo, se hizo uso de las siguientes rutinas:
+* **createPixel**: Tiene en cuenta la posición de memoria en la que se guarda el primer elemento del vector de pixels y suma un offset según la posición [i,j] de la memoria, siendo offset=i*16+j. Esto da como resultado la posición en la memoria donde hay que guardar la información de que en la celda [i,j] existe una celda viva.
+* **checkSelfColor**: Esta rutina se encarga de verificar el estado de una celda. La función mencionada anteriormente guarda un valor positivo en la celda [i,j], mientras que esta rutina lee el estado de la misma.
+* **checkColor**: Es utilizada cuando se quiere saber el estado los vecinos de la celda [i,j].
+* **XYtoAddress**: Hace la conversión de posiciones [i,j] a i*16+j y guarda el resultado.
 
 ## Estado actual del trabajo
 ### Resultados obtenidos
