@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: mips.prj
 
@@ -919,7 +919,7 @@ Optimizing unit <alu_parcial> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 52.
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 54.
 
 Final Macro Processing ...
 
@@ -951,17 +951,17 @@ Top Level Output File Name         : mips.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2955
+# BELS                             : 3144
 #      GND                         : 1
 #      INV                         : 5
-#      LUT1                        : 29
-#      LUT2                        : 79
-#      LUT3                        : 100
-#      LUT4                        : 246
-#      LUT5                        : 397
-#      LUT6                        : 1743
+#      LUT1                        : 28
+#      LUT2                        : 77
+#      LUT3                        : 105
+#      LUT4                        : 251
+#      LUT5                        : 390
+#      LUT6                        : 1865
 #      MUXCY                       : 121
-#      MUXF7                       : 141
+#      MUXF7                       : 208
 #      VCC                         : 1
 #      XORCY                       : 92
 # FlipFlops/Latches                : 1072
@@ -991,16 +991,16 @@ Selected Device : 6slx9csg324-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1072  out of  11440     9%  
- Number of Slice LUTs:                 3175  out of   5720    55%  
-    Number used as Logic:              2599  out of   5720    45%  
+ Number of Slice LUTs:                 3297  out of   5720    57%  
+    Number used as Logic:              2721  out of   5720    47%  
     Number used as Memory:              576  out of   1440    40%  
        Number used as RAM:              576
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3956
-   Number with an unused Flip Flop:    2884  out of   3956    72%  
-   Number with an unused LUT:           781  out of   3956    19%  
-   Number of fully used LUT-FF pairs:   291  out of   3956     7%  
+ Number of LUT Flip Flop pairs used:   4092
+   Number with an unused Flip Flop:    3020  out of   4092    73%  
+   Number with an unused LUT:           795  out of   4092    19%  
+   Number of fully used LUT-FF pairs:   277  out of   4092     6%  
    Number of unique control sets:        41
 
 IO Utilization: 
@@ -1043,9 +1043,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 25.356ns (Maximum Frequency: 39.438MHz)
-   Minimum input arrival time before clock: 5.108ns
-   Maximum output required time after clock: 28.614ns
+   Minimum period: 24.882ns (Maximum Frequency: 40.190MHz)
+   Minimum input arrival time before clock: 5.041ns
+   Maximum output required time after clock: 28.738ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1076,49 +1076,47 @@ Delay:               2.793ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_Clock_divider/count_1'
-  Clock period: 25.356ns (frequency: 39.438MHz)
-  Total number of paths / destination ports: 255335765627 / 3927
+  Clock period: 24.882ns (frequency: 40.190MHz)
+  Total number of paths / destination ports: 333636237023 / 3927
 -------------------------------------------------------------------------
-Delay:               25.356ns (Levels of Logic = 19)
-  Source:            Inst_pc/s_6 (FF)
-  Destination:       Inst_reg/reg_0_14 (FF)
+Delay:               24.882ns (Levels of Logic = 17)
+  Source:            Inst_pc/s_3 (FF)
+  Destination:       Inst_reg/reg_0_31 (FF)
   Source Clock:      Inst_Clock_divider/count_1 rising
   Destination Clock: Inst_Clock_divider/count_1 rising
 
-  Data Path: Inst_pc/s_6 to Inst_reg/reg_0_14
+  Data Path: Inst_pc/s_3 to Inst_reg/reg_0_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q            261   0.525   2.887  Inst_pc/s_6 (Inst_pc/s_6)
-     LUT6:I0->O           13   0.254   1.098  Inst_mi/Mram_s1031 (Inst_mi/Mram_s103)
-     LUT5:I4->O            1   0.254   0.910  Inst_mi/Mram_s2071215_SW1 (N2111)
-     LUT5:I2->O            1   0.235   0.682  Inst_mi/Mram_s2071215 (Inst_mi/Mram_s2071214)
-     LUT6:I5->O          319   0.254   2.439  Inst_mi/Mram_s2071230 (instruccion<21>)
-     LUT6:I5->O            1   0.254   1.137  Inst_reg/mux11_7 (Inst_reg/mux11_7)
-     LUT6:I0->O            1   0.254   0.000  Inst_reg/mux11_3 (Inst_reg/mux11_3)
-     MUXF7:I1->O           2   0.175   0.726  Inst_reg/mux11_2_f7 (Inst_reg/GND_16_o_X_16_o_wide_mux_2_OUT<1>)
-     LUT6:I5->O           11   0.254   1.039  Inst_reg/Mmux_rd1121 (lee_reg1<1>)
-     LUT6:I5->O           13   0.254   1.206  Inst_alu/Mmux_shift_amount21_3 (Inst_alu/Mmux_shift_amount212)
-     LUT6:I4->O            8   0.250   0.944  Inst_alu/Sh1231 (Inst_alu/Sh123)
-     LUT5:I4->O            4   0.254   0.804  Inst_alu/Sh14711 (Inst_alu/Sh1471)
-     LUT6:I5->O            3   0.254   0.874  Inst_alu/Mmux_s_mux267 (Inst_alu/Mmux_s_mux266)
-     LUT5:I3->O           21   0.250   1.309  Inst_alu/Mmux_s_mux269_1 (Inst_alu/Mmux_s_mux269)
-     RAM64X1D:A1->SPO      4   0.235   0.804  Inst_md_io/Inst_mmioVGA/Inst_RAM/Mram_mem018 (Inst_md_io/Inst_mmioVGA/Inst_RAM/hwtemp1<7>)
-     LUT6:I5->O            4   0.254   0.804  Inst_md_io/Inst_mmioVGA/Inst_RAM/addressMIPS<1>181 (Inst_md_io/Inst_mmioVGA/Inst_RAM/addressMIPS<1>_mmx_out4)
-     LUT4:I3->O            7   0.254   0.910  Inst_mux32_lui/Mmux_s315_SW0_SW1 (N416)
-     LUT6:I5->O            1   0.254   0.681  Inst_mux32_lui/Mmux_s315_SW0 (N193)
-     MUXF7:S->O            2   0.185   0.726  Inst_mux32_lui/Mmux_s315_SW3 (N447)
-     LUT6:I5->O           16   0.254   0.000  Inst_mux32_lui/Mmux_s316 (escribe_reg<8>)
-     FDE:D                     0.074          Inst_reg/reg_1_8
+     FDR:C->Q            285   0.525   2.890  Inst_pc/s_3 (Inst_pc/s_3)
+     LUT6:I0->O            9   0.254   0.976  Inst_mi/Mram_s2511 (Inst_mi/Mram_s251)
+     LUT6:I5->O            1   0.254   0.790  Inst_mi/Mram_s2581218_SW0 (N2291)
+     LUT5:I3->O            1   0.250   0.790  Inst_mi/Mram_s2581218 (Inst_mi/Mram_s2581217)
+     LUT6:I4->O            1   0.250   0.682  Inst_mi/Mram_s2581225 (Inst_mi/Mram_s2581224)
+     LUT5:I4->O           88   0.254   2.116  Inst_mi/Mram_s2581246 (instruccion<27>)
+     LUT6:I5->O           10   0.254   1.236  Inst_control1/Mmux_aluop31 (aluop<2>)
+     LUT5:I2->O           18   0.235   1.665  Inst_alu_control/s<1>_1 (Inst_alu_control/s<1>)
+     LUT6:I1->O           20   0.254   1.286  Inst_alu/Mmux_shift_amount41_2 (Inst_alu/Mmux_shift_amount411)
+     LUT6:I5->O            4   0.254   1.032  Inst_alu/Mmux_s_mux210111 (Inst_alu/Mmux_s_mux21011)
+     LUT4:I1->O            1   0.235   0.682  Inst_alu/Mmux_s_mux317 (Inst_alu/Mmux_s_mux316)
+     LUT5:I4->O            1   0.254   0.682  Inst_alu/Mmux_s_mux318 (Inst_alu/Mmux_s_mux317)
+     LUT6:I5->O            1   0.254   0.000  Inst_alu/Mmux_s_mux319_G (N1008)
+     MUXF7:I1->O         131   0.175   2.304  Inst_alu/Mmux_s_mux319 (salida_alu<8>)
+     LUT5:I4->O            5   0.254   0.841  Inst_md_io/Inst_decodificador/csPause<31>13_SW0 (N76)
+     LUT6:I5->O           16   0.254   1.182  Inst_mux32_lui/Mmux_s244_1 (Inst_mux32_lui/Mmux_s2441)
+     LUT4:I3->O            2   0.254   0.954  Inst_mux32_lui/Mmux_s247_SW1 (N568)
+     LUT6:I3->O           16   0.235   0.000  Inst_mux32_lui/Mmux_s248 (escribe_reg<30>)
+     FDE:D                     0.074          Inst_reg/reg_1_30
     ----------------------------------------
-    Total                     25.356ns (5.376ns logic, 19.980ns route)
-                                       (21.2% logic, 78.8% route)
+    Total                     24.882ns (4.773ns logic, 20.109ns route)
+                                       (19.2% logic, 80.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_Clock_divider/count_1'
-  Total number of paths / destination ports: 474 / 254
+  Total number of paths / destination ports: 505 / 254
 -------------------------------------------------------------------------
-Offset:              5.108ns (Levels of Logic = 4)
+Offset:              5.041ns (Levels of Logic = 4)
   Source:            DPSwitch<0> (PAD)
   Destination:       Inst_reg/reg_0_0 (FF)
   Destination Clock: Inst_Clock_divider/count_1 rising
@@ -1128,49 +1126,48 @@ Offset:              5.108ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.328   1.156  DPSwitch_0_IBUF (DPSwitch_0_IBUF)
-     LUT5:I0->O            1   0.254   0.790  Inst_md_io/Inst_decodificador/csSW<31>1_SW1 (N255)
-     LUT6:I4->O            2   0.250   1.002  Inst_mux32_lui/Mmux_s19_SW1 (N87)
-     LUT6:I2->O           16   0.254   0.000  Inst_mux32_lui/Mmux_s110 (escribe_reg<0>)
+     LUT5:I0->O            1   0.254   0.790  Inst_md_io/Inst_decodificador/csSW<31>1_SW1 (N533)
+     LUT6:I4->O            2   0.250   0.954  Inst_mux32_lui/Mmux_s19_SW1 (N90)
+     LUT6:I3->O           16   0.235   0.000  Inst_mux32_lui/Mmux_s110 (escribe_reg<0>)
      FDE:D                     0.074          Inst_reg/reg_1_0
     ----------------------------------------
-    Total                      5.108ns (2.160ns logic, 2.948ns route)
-                                       (42.3% logic, 57.7% route)
+    Total                      5.041ns (2.141ns logic, 2.900ns route)
+                                       (42.5% logic, 57.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_Clock_divider/count_1'
-  Total number of paths / destination ports: 89703018 / 10
+  Total number of paths / destination ports: 102540786 / 10
 -------------------------------------------------------------------------
-Offset:              28.614ns (Levels of Logic = 18)
-  Source:            Inst_pc/s_6 (FF)
+Offset:              28.738ns (Levels of Logic = 17)
+  Source:            Inst_pc/s_3 (FF)
   Destination:       Red<2> (PAD)
   Source Clock:      Inst_Clock_divider/count_1 rising
 
-  Data Path: Inst_pc/s_6 to Red<2>
+  Data Path: Inst_pc/s_3 to Red<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q            261   0.525   2.887  Inst_pc/s_6 (Inst_pc/s_6)
-     LUT6:I0->O           13   0.254   1.098  Inst_mi/Mram_s1031 (Inst_mi/Mram_s103)
-     LUT5:I4->O            1   0.254   0.910  Inst_mi/Mram_s2071215_SW1 (N2111)
-     LUT5:I2->O            1   0.235   0.682  Inst_mi/Mram_s2071215 (Inst_mi/Mram_s2071214)
-     LUT6:I5->O          319   0.254   2.439  Inst_mi/Mram_s2071230 (instruccion<21>)
-     LUT6:I5->O            1   0.254   1.137  Inst_reg/mux25_7 (Inst_reg/mux25_7)
-     LUT6:I0->O            1   0.254   0.000  Inst_reg/mux25_3 (Inst_reg/mux25_3)
-     MUXF7:I1->O           3   0.175   0.766  Inst_reg/mux25_2_f7 (Inst_reg/GND_16_o_X_16_o_wide_mux_2_OUT<3>)
-     LUT6:I5->O            9   0.254   0.976  Inst_reg/Mmux_rd1261 (lee_reg1<3>)
-     LUT6:I5->O           17   0.254   1.209  Inst_alu/Mmux_shift_amount41_1 (Inst_alu/Mmux_shift_amount41)
-     LUT6:I5->O            4   0.254   1.032  Inst_alu/Mmux_s_mux271121 (Inst_alu/Mmux_s_mux27112)
-     LUT4:I1->O            1   0.235   0.682  Inst_alu/Mmux_s_mux308 (Inst_alu/Mmux_s_mux307)
-     LUT6:I5->O            4   0.254   0.804  Inst_alu/Mmux_s_mux3010 (Inst_alu/Mmux_s_mux309)
-     LUT5:I4->O          132   0.254   2.738  Inst_alu/Mmux_s_mux3011 (salida_alu<7>)
-     LUT5:I0->O            1   0.254   0.910  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8_SW0_SW0 (N679)
-     LUT6:I3->O            1   0.235   0.910  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8_SW0 (N675)
+     FDR:C->Q            285   0.525   2.890  Inst_pc/s_3 (Inst_pc/s_3)
+     LUT6:I0->O            9   0.254   0.976  Inst_mi/Mram_s2511 (Inst_mi/Mram_s251)
+     LUT6:I5->O            1   0.254   0.790  Inst_mi/Mram_s2581218_SW0 (N2291)
+     LUT5:I3->O            1   0.250   0.790  Inst_mi/Mram_s2581218 (Inst_mi/Mram_s2581217)
+     LUT6:I4->O            1   0.250   0.682  Inst_mi/Mram_s2581225 (Inst_mi/Mram_s2581224)
+     LUT5:I4->O           88   0.254   2.116  Inst_mi/Mram_s2581246 (instruccion<27>)
+     LUT6:I5->O           10   0.254   1.236  Inst_control1/Mmux_aluop31 (aluop<2>)
+     LUT5:I2->O           18   0.235   1.665  Inst_alu_control/s<1>_1 (Inst_alu_control/s<1>)
+     LUT6:I1->O           50   0.254   2.251  Inst_alu/Mmux_shift_amount21 (Inst_alu/shift_amount<1>)
+     LUT6:I1->O            1   0.254   0.000  Inst_alu/Sh14311_G (N1174)
+     MUXF7:I1->O           1   0.175   0.790  Inst_alu/Sh14311 (Inst_alu/Sh1431)
+     LUT6:I4->O            4   0.250   0.804  Inst_alu/Mmux_s_mux3010 (Inst_alu/Mmux_s_mux309)
+     LUT5:I4->O          133   0.254   2.741  Inst_alu/Mmux_s_mux3011 (salida_alu<7>)
+     LUT5:I0->O            1   0.254   0.910  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8_SW0_SW0 (N1045)
+     LUT6:I3->O            1   0.235   0.910  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8_SW0 (N1041)
      LUT6:I3->O            8   0.235   1.172  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8 (Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o)
      LUT3:I0->O            1   0.235   0.681  Inst_md_io/Inst_mmioVGA/Inst_Pinta_IMG/Mmux_red1 (Red_0_OBUF)
      OBUF:I->O                 2.912          Red_0_OBUF (Red<0>)
     ----------------------------------------
-    Total                     28.614ns (7.581ns logic, 21.033ns route)
-                                       (26.5% logic, 73.5% route)
+    Total                     28.738ns (7.334ns logic, 21.404ns route)
+                                       (25.5% logic, 74.5% route)
 
 =========================================================================
 
@@ -1182,7 +1179,7 @@ Clock to Setup on destination clock Inst_Clock_divider/count_1
                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
-Inst_Clock_divider/count_1|   25.356|         |         |         |
+Inst_Clock_divider/count_1|   24.882|         |         |         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk100Mhz
@@ -1196,12 +1193,12 @@ clk100Mhz      |    2.793|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 42.00 secs
-Total CPU time to Xst completion: 41.43 secs
+Total REAL time to Xst completion: 43.00 secs
+Total CPU time to Xst completion: 42.57 secs
  
 --> 
 
-Total memory usage is 4573588 kilobytes
+Total memory usage is 4573608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

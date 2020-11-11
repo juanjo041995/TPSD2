@@ -1,9 +1,0 @@
-xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.syr" 
-xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.syr" 
-xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.syr" 
-xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.syr" 
-xst -intstyle ise -ifn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.xst" -ofn "C:/Users/Juanjo/Documents/FIUNA ONLINE/SD2 online/VGAController/Clock_divider.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg324-2 "Clock_divider.ngc" Clock_divider.ngd  
-map -intstyle ise -p xc6slx9-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Clock_divider_map.ncd Clock_divider.ngd Clock_divider.pcf 
-par -w -intstyle ise -ol high -mt off Clock_divider_map.ncd Clock_divider.ncd Clock_divider.pcf 
-trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml Clock_divider.twx Clock_divider.ncd -o Clock_divider.twr Clock_divider.pcf 

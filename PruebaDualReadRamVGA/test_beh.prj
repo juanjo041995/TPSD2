@@ -1,7 +1,0 @@
-vhdl work "VGA_Sync.vhd"
-vhdl work "RAM.vhd"
-vhdl work "Pinta_IMG.vhd"
-vhdl work "mmioVGA.vhd"
-vhdl work "Clock_divider.vhd"
-vhdl work "PruebaVGARAM.vhd"
-vhdl work "test.vhd"

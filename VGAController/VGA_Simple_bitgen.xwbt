@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\Juanjo\Documents\FIUNA ONLINE\SD2 online\VGAController\VGA_Simple.ncd
-OUTFILE=C:\Users\Juanjo\Documents\FIUNA ONLINE\SD2 online\VGAController\VGA_Simple.bit
-FAMILY=Spartan6
-PART=xc6slx9-2csg324
-WORKINGDIR=C:\Users\Juanjo\Documents\FIUNA ONLINE\SD2 online\VGAController
-LICENSE=WebPack
-USER_INFO=211777280_0_0_433

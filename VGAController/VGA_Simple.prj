@@ -1,4 +1,0 @@
-vhdl work "VGA_Sync.vhd"
-vhdl work "PINTA_BARRAS.vhd"
-vhdl work "Clock_divider.vhd"
-vhdl work "VGA_Simple.vhd"

@@ -1,4 +1,0 @@
-vhdl work "VGAOut.vhd"
-vhdl work "MimasV2VGADisplay.vhd"
-vhdl work "Clock_divider.vhd"
-vhdl work "VGA1.vhd"
