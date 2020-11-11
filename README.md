@@ -76,6 +76,9 @@ Para la implementación del algoritmo, se hizo uso de las siguientes rutinas:
 * **checkSelfColor**: Esta rutina se encarga de verificar el estado de una celda. La función mencionada anteriormente guarda un valor positivo en la celda [i,j], mientras que esta rutina lee el estado de la misma.
 * **checkColor**: Es utilizada cuando se quiere saber el estado los vecinos de la celda [i,j].
 * **XYtoAddress**: Hace la conversión de posiciones [i,j] a i*16+j y guarda el resultado.
+* **updateScreen**: Itera sobre cada celda y verifica si esta tiene que vivir o morir según las condiciones del juego, las cuales son verificadas en las etiquetas *colored* (donde se verifica si la celda viva debe morir, recurriendo a la etiqueta markDead en caso necesario) y *black* (donde, si la celda está muerta, se recurre a markLive si se cumple la condición para revivirla).
+* **countNeighbors**: Cuenta la cantidad de vecinos de la celda [i,j] para verificar la condición de celda viva o muerta para el siguiente frame.
+* **nextGeneration**: Se leen los vectores guardados en *updateScreen* que tienen información sobre cuáles son las celdas que tienen que vivir en el siguiente frame y cuáles tienen que estar muertas y se guarda esta información en la memoria del VGA.
 
 ## Estado actual del trabajo
 ### Resultados obtenidos
