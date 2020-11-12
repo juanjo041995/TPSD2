@@ -46,15 +46,15 @@ end Pinta_IMG;
 architecture behavioral of Pinta_IMG is
 	begin
 			process(pxl_num,line_num,visible,datamem)
-				variable x_int, y_int,xmod,ymod : natural;
+				variable x_int, y_int,x,y : natural;
 				variable offset: natural;
 				begin
 					x_int := TO_INTEGER(unsigned(pxl_num(9 downto 0)));
 					y_int := TO_INTEGER(unsigned(line_num(9 downto 0)));
-					xmod := x_int / 40;
-					ymod := y_int /30 ;
+					x := x_int / 40;
+					y := y_int /30 ;
 					if visible = '1' then
-						offset := xmod + ymod *16;
+						offset := x + y *16;
 						red <= dataMem (7 downto 5);
 						green <= dataMem (4 downto 2);
 						blue <= dataMem (1 downto 0);
