@@ -11,6 +11,65 @@
 <msg type="info" file="MapLib" num="159" delta="old" >Net Timing constraints on signal <arg fmt="%s" index="1">clk100Mhz</arg> are pushed forward through input buffer.
 </msg>
 
+<msg type="warning" file="Pack" num="2574" delta="old" >The F7 multiplexer symbol &quot;<arg fmt="%s" index="1">Inst_mux32_lui/Mmux_s107_SW1</arg>&quot; and its I1 input driver &quot;<arg fmt="%s" index="2">Inst_control1/Mmux_memtoreg11</arg>&quot; were implemented suboptimally in the same slice component. The function generator could not be placed directly driving the F7 multiplexer. The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s207_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s137_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s217_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s147_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s227_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s157_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s167_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s247_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s177_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s257_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s187_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s87_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s197_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="2143" delta="old" >The function generator &quot;<arg fmt="%s" index="1">Inst_control1/Mmux_memtoreg11</arg>&quot; failed to merge with F7 multiplexer &quot;<arg fmt="%s" index="2">Inst_mux32_lui/Mmux_s97_SW1</arg>&quot;.  <arg fmt="%z" index="3">There are more than two MUXF7 wide function muxes.
+</arg>  The design will exhibit suboptimal timing.
+</msg>
+
 <msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
 </msg>
 

@@ -341,7 +341,8 @@ updateScreen:
 		markDead:
 			jal XYtoAddress 
 			sb $v1, ($t9)
-			beqz $v1, etiquet2			# store current live pixel into dead array
+			la $t3, 0xFFFF0000 #linea agregada
+			beq $v1,$t3, etiquet2 #beq por beqz			# store current live pixel into dead array
 		afterEtiq2:	addi $t9, $t9, 1 #CAMBIADO 4 por 1			# go to next position in array	
 			subi $t7, $t7, 1			# one less live cell now
 			j checkOOB	
@@ -354,8 +355,9 @@ updateScreen:
 		j checkOOB				# otherwise, do nothing & continue looping.
 		markLive:
 			jal XYtoAddress
-			sb $v1, ($t8) # sw por sb			# store new live pixel into live array
-			beqz $v1, etiquet1
+			sb $v1, ($t8) # sw por sb
+			la $t3, 0xFFFF0000 #linea agregada
+			beq $v1,$t3, etiquet1 #beq por beqz				# store new live pixel into live array
 		afterEtiq1: addi $t8, $t8, 1 # 4 por 1			# go to next space in array			
 			addi $t7, $t7, 1 
 			j checkOOB
@@ -389,11 +391,11 @@ nextGeneration:
 		beqz $s1, verifiq1
 		j noVerif1
 	
-	verifiq1:	bgtz $s7, addDir1
+	verifiq1:	bnez $s7, addDir1
 		j noVerif1
 	
 	addDir1:	addi $s7,$zero,0
-		addi $s1, $s1, 0xFFFF0000
+		addi $s1, $zero, 0xFFFF0000
 	
 	noVerif1:	beqz $s1, generate			# continue killing pixels until there are no more in the array
 		lbu $v1, ($t9) 
@@ -409,11 +411,11 @@ nextGeneration:
 		beqz $s1, verifiq2
 		j noVerif2
 	
-	verifiq2:	bgtz $s6, addDir2
+	verifiq2:	bnez $s6, addDir2
 		j noVerif2
 	
 	addDir2:	addi $s6,$zero,0
-		addi $s1, $s1, 0xFFFF0000
+		addi $s1, $zero, 0xFFFF0000
 
 	noVerif2:	beqz $s1, endNextGen			# continue generating pixels until there are no more in the array
 		lbu $v1, ($t8)
