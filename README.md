@@ -81,6 +81,8 @@ Para la implementación del algoritmo, se hizo uso de las siguientes rutinas:
 
 ## Estado actual del trabajo
 ### Resultados obtenidos
+Como ejemplo, puede verse un oscilador de periodo 3:
+![Estado Actual](https://im3.ezgif.com/tmp/ezgif-3-aa1e1931bf2c.gif)
 
 ### Inconvenientes
 Como se explicó en la sección anterior, el proyecto pudo concluirse satisfactoriamente.
