@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Reading design: mips.prj
 
@@ -951,15 +951,15 @@ Top Level Output File Name         : mips.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3055
+# BELS                             : 3054
 #      GND                         : 1
 #      INV                         : 21
 #      LUT1                        : 28
 #      LUT2                        : 74
-#      LUT3                        : 125
+#      LUT3                        : 127
 #      LUT4                        : 301
-#      LUT5                        : 336
-#      LUT6                        : 1812
+#      LUT5                        : 335
+#      LUT6                        : 1810
 #      MUXCY                       : 121
 #      MUXF7                       : 143
 #      VCC                         : 1
@@ -991,16 +991,16 @@ Selected Device : 6slx9csg324-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1072  out of  11440     9%  
- Number of Slice LUTs:                 3273  out of   5720    57%  
-    Number used as Logic:              2697  out of   5720    47%  
+ Number of Slice LUTs:                 3272  out of   5720    57%  
+    Number used as Logic:              2696  out of   5720    47%  
     Number used as Memory:              576  out of   1440    40%  
        Number used as RAM:              576
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:   4058
    Number with an unused Flip Flop:    2986  out of   4058    73%  
-   Number with an unused LUT:           785  out of   4058    19%  
-   Number of fully used LUT-FF pairs:   287  out of   4058     7%  
+   Number with an unused LUT:           786  out of   4058    19%  
+   Number of fully used LUT-FF pairs:   286  out of   4058     7%  
    Number of unique control sets:        41
 
 IO Utilization: 
@@ -1077,7 +1077,7 @@ Delay:               2.793ns (Levels of Logic = 1)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_Clock_divider/count_1'
   Clock period: 25.365ns (frequency: 39.425MHz)
-  Total number of paths / destination ports: 441561314622 / 3927
+  Total number of paths / destination ports: 441561314609 / 3927
 -------------------------------------------------------------------------
 Delay:               25.365ns (Levels of Logic = 19)
   Source:            Inst_pc/s_2 (FF)
@@ -1095,16 +1095,16 @@ Delay:               25.365ns (Levels of Logic = 19)
      LUT6:I5->O            1   0.254   0.682  Inst_mi/Mram_s2141219 (Inst_mi/Mram_s2141218)
      LUT6:I5->O          319   0.254   2.439  Inst_mi/Mram_s2141246 (instruccion<21>)
      LUT6:I5->O            1   0.254   1.137  Inst_reg/mux11_91 (Inst_reg/mux11_91)
-     LUT6:I0->O            1   0.254   0.000  Inst_reg/mux11_2_f7_G (N711)
+     LUT6:I0->O            1   0.254   0.000  Inst_reg/mux11_2_f7_G (N713)
      MUXF7:I1->O           2   0.175   0.726  Inst_reg/mux11_2_f7 (Inst_reg/GND_16_o_X_16_o_wide_mux_2_OUT<1>)
      LUT6:I5->O           12   0.254   1.069  Inst_reg/Mmux_rd1121 (lee_reg1<1>)
      LUT6:I5->O           14   0.254   1.235  Inst_alu/Mmux_shift_amount21_3 (Inst_alu/Mmux_shift_amount212)
      LUT6:I4->O            9   0.250   1.084  Inst_alu/Sh1201 (Inst_alu/Sh120)
      LUT4:I2->O            1   0.250   0.682  Inst_alu/Mmux_s_mux317 (Inst_alu/Mmux_s_mux316)
      LUT5:I4->O            1   0.254   0.682  Inst_alu/Mmux_s_mux318 (Inst_alu/Mmux_s_mux317)
-     LUT6:I5->O            1   0.254   0.000  Inst_alu/Mmux_s_mux319_G (N873)
+     LUT6:I5->O            1   0.254   0.000  Inst_alu/Mmux_s_mux319_G (N875)
      MUXF7:I1->O         136   0.175   2.320  Inst_alu/Mmux_s_mux319 (salida_alu<8>)
-     LUT4:I3->O            1   0.254   0.682  Inst_alu/zero<31>6_SW0 (N351)
+     LUT4:I3->O            1   0.254   0.682  Inst_alu/zero<31>6_SW0 (N353)
      LUT6:I5->O            1   0.254   0.682  Inst_alu/zero<31>7 (Inst_alu/zero<31>6)
      LUT6:I5->O            2   0.254   0.726  Inst_alu/zero<31>8 (cero)
      LUT6:I5->O           16   0.254   1.182  Inst_mux32_branch/sel_INV_347_o1 (Inst_mux32_branch/sel_INV_347_o)
@@ -1128,9 +1128,9 @@ Offset:              5.348ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   1.328   1.221  DPSwitch_0_IBUF (DPSwitch_0_IBUF)
-     LUT6:I0->O            1   0.254   0.000  Inst_md_io/Inst_decodificador/csSW<31>1_SW3_G (N891)
-     MUXF7:I1->O           1   0.175   0.790  Inst_md_io/Inst_decodificador/csSW<31>1_SW3 (N588)
-     LUT6:I4->O            2   0.250   1.002  Inst_mux32_lui/Mmux_s19_SW1 (N77)
+     LUT6:I0->O            1   0.254   0.000  Inst_md_io/Inst_decodificador/csSW<31>1_SW3_G (N893)
+     MUXF7:I1->O           1   0.175   0.790  Inst_md_io/Inst_decodificador/csSW<31>1_SW3 (N590)
+     LUT6:I4->O            2   0.250   1.002  Inst_mux32_lui/Mmux_s19_SW1 (N79)
      LUT6:I2->O           16   0.254   0.000  Inst_mux32_lui/Mmux_s110 (escribe_reg<0>)
      FDE:D                     0.074          Inst_reg/reg_1_0
     ----------------------------------------
@@ -1156,7 +1156,7 @@ Offset:              28.581ns (Levels of Logic = 18)
      LUT6:I5->O            1   0.254   0.682  Inst_mi/Mram_s2141219 (Inst_mi/Mram_s2141218)
      LUT6:I5->O          319   0.254   2.439  Inst_mi/Mram_s2141246 (instruccion<21>)
      LUT6:I5->O            1   0.254   1.137  Inst_reg/mux11_91 (Inst_reg/mux11_91)
-     LUT6:I0->O            1   0.254   0.000  Inst_reg/mux11_2_f7_G (N711)
+     LUT6:I0->O            1   0.254   0.000  Inst_reg/mux11_2_f7_G (N713)
      MUXF7:I1->O           2   0.175   0.726  Inst_reg/mux11_2_f7 (Inst_reg/GND_16_o_X_16_o_wide_mux_2_OUT<1>)
      LUT6:I5->O           12   0.254   1.069  Inst_reg/Mmux_rd1121 (lee_reg1<1>)
      LUT6:I5->O           16   0.254   1.290  Inst_alu/Mmux_shift_amount21_1 (Inst_alu/Mmux_shift_amount21)
@@ -1164,8 +1164,8 @@ Offset:              28.581ns (Levels of Logic = 18)
      LUT4:I2->O            1   0.250   0.682  Inst_alu/Mmux_s_mux308 (Inst_alu/Mmux_s_mux307)
      LUT6:I5->O            4   0.254   0.804  Inst_alu/Mmux_s_mux3010 (Inst_alu/Mmux_s_mux309)
      LUT5:I4->O          133   0.254   2.741  Inst_alu/Mmux_s_mux3011 (salida_alu<7>)
-     LUT5:I0->O            1   0.254   0.910  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8_SW0_SW0 (N912)
-     LUT6:I3->O            1   0.235   0.910  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8_SW0 (N908)
+     LUT5:I0->O            1   0.254   0.910  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8_SW0_SW0 (N914)
+     LUT6:I3->O            1   0.235   0.910  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8_SW0 (N910)
      LUT6:I3->O            8   0.235   1.172  Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o8 (Inst_md_io/Inst_mmioVGA/Inst_RAM/memWrite_memWrite_OR_141_o)
      LUT3:I0->O            1   0.235   0.681  Inst_md_io/Inst_mmioVGA/Inst_Pinta_IMG/Mmux_red1 (Red_0_OBUF)
      OBUF:I->O                 2.912          Red_0_OBUF (Red<0>)
@@ -1197,12 +1197,12 @@ clk100Mhz      |    2.793|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 50.00 secs
-Total CPU time to Xst completion: 50.50 secs
+Total REAL time to Xst completion: 51.00 secs
+Total CPU time to Xst completion: 50.88 secs
  
 --> 
 
-Total memory usage is 4573600 kilobytes
+Total memory usage is 4573680 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
