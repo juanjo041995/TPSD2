@@ -35,7 +35,6 @@
 * [Estado actual del trabajo](#estado-actual-del-trabajo)
   * [Resultados obtenidos](#resultados-obtenidos)
   * [Inconvenientes](#inconvenientes)
-  * [Posibles soluciones](#posibles-soluciones)
 * [Recursos utilizados](#recursos-utilizados)
 * [Integrantes](#integrantes)
 
@@ -84,8 +83,7 @@ Para la implementación del algoritmo, se hizo uso de las siguientes rutinas:
 ### Resultados obtenidos
 
 ### Inconvenientes
-
-### Posibles soluciones
+Como se explicó en la sección anterior, el proyecto pudo concluirse satisfactoriamente.
 
 ## Recursos utilizados
 
