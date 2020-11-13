@@ -8,16 +8,6 @@
 
   <p align="center">
     TRABAJO PRÁCTICO
-    <br />
-    <a href="https://eaula.ing.una.py/course/view.php?id=34"><strong>Visitar Aula Virtual »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/pyefiuna/Laboratorio">Ver Demo</a>
-    ·
-    <a href="https://github.com/pyefiuna/Laboratorio/issues">Reportar errores</a>
-    ·
-    <a href="https://github.com/pyefiuna/Laboratorio/issues">Hacer pedidos</a>
-  </p>
 </p>
 
 <p align="center">
@@ -50,6 +40,83 @@
 
 ### Hardware implementado
 
+El objetivo de este proyecto es el diseño e implementación del MIPS de simple ciclo que debe ejecutar el programa del Juego de la Vida de Conway, este juego debe mostrarse por VGA, en este caso se ha elegido una matriz de 16x16 pixeles por limitaciones de memoria, la condición inicial puede cargarse por software, pero además se tienen botones de interacción con el juego, que son el botón de pausa, los 8 interruptores que sirven para elegir un pixel en específico de los 256 (16x16) disponibles, y un botón de Set que sirve para cambiar de estado el pixel indicado por los interruptores.  
+Para el diseño del MIPS se ha utilizado la descripción ya realizada por el Dr. Vicente González, este diseño solo fue modificado para funcionar con el modelo de FPGA que disponemos que es el FPGA Mimas V2 Spartan 6. También se han quitado los periféricos que no serían útiles y se han agregado los necesarios para este proyecto.
+
+#### Clocks
+La entrada de clock del MIPS y del VGA es de frecuencia de 25 MHz, se utiliza un módulo de división de clock para reducir de la frecuencia de 100MHz del clock de la placa a 25 MHz.
+
+![clocks1](img/hw_1.png)  
+![clocks2](img/hw_2.png)
+
+#### Hardware agregado
+* VGA y el mapeado en memoria, esto incluye:
+    * Un bloque de sincronización.
+    * Un bloque de Imagen.
+    * Un bloque de Memoria dual Port.
+* Los botones de Pausa
+* Los botones de Set
+* Los interruptores
+
+#### VGA y el mapeado en memoria
+##### Bloque de sincronización:
+Para el control del monitor, la información de cada píxel de la pantalla se va enviando consecutivamente al ir barriendo toda la superficie por líneas horizontales y verticales. Cada píxel se compone de tres colores: rojo, verde y azul.  
+La resolución que se ha decidido implementar fue 640x480, para esta resolución se utilizan los siguientes parámetros para las señales correspondientes.
+
+<img src="img/hw_3.png" width="854">  
+<img src="img/hw_4.png" width="854">  
+
+##### Bloque de sincronización VGASync:
+Esta implementación se ha basado en el diseño de muestra del Mimas V2 para VGA que se cita en la referencia.  
+Este diseño tiene de entradas el clock, y reset, y de salidas hSync, vSync, Video_on, pixel_x, pixel_y.  
+El reset es activo a nivel bajo.
+
+![VGASync1](img/hw_5.png)
+
+Luego se definen las constantes que también se mencionaron en la tabla anterior para la resolución correspondiente, y se definen los contadores de pixeles.
+
+![VGASync2](img/hw_6.png)
+
+Luego se definen las condiciones donde los contadores se reinician, y también en que rango de estos contadores se activan las señales de VSync, HSync y video_on. Por último, se convierte los contadores de enteros a STD_LOGIC_VECTOR para asignarlos a las salidas.
+
+![VGASync3](img/hw_7.png)  
+![VGASync3](img/hw_8.png)
+
+##### Bloque de Imagen Pinta_IMG:
+
+El Bloque de imagen recibe los buses pixel_x y pixel_y y la señal video_on, a partir de pixel_x y pixel_y calcula la dirección de memoria y utiliza esta dirección para leer el dato correspondiente de la memoria y este dato es asignado a las señales Red, Green, Blue.  
+Como se menciona previamente, por limitaciones de memoria, se ha decidido utilizar 16 x 16 pixeles, es decir se agrupan los pixeles del 640x480 de tal forma que quede 16x16, y estos 16x16 pixeles se mapean a una memoria, es por ello que a los contadores pxl_num y line_num se convierten a entero y luego se los divide por 40 y 30 respectivamente, luego se calcula el offset para convertirlo en una dirección de memoria, como el tamaño de una línea abarca 16 pixeles, el offset se calcula haciendo x + y*16.
+
+![Pinta1](img/hw_9.png)  
+![Pinta2](img/hw_10.png)
+
+##### Bloque de Memoria Dual Port RAM:
+El bloque de memoria RAM para el VGA en una RAM Dual Port, pero solo tiene lectura dual, no escritura.  
+La implementación de esta memoria es idéntica a la memoria de datos implementada por el Profesor, pero con cambios de variables adecuados, ya que esta implementación permite que se reconozcan instrucciones como lb, lh, sb,sh, lhu y lbu.  
+Lo que se ha añadido a esta descripción es el segmento correspondiente a la lectura del VGA.
+
+![Dual1](img/hw_11.png)  
+![Dual2](img/hw_12.png)  
+
+Estos 3 bloques se interconectan para formar el bloque mmioVGA, que en conjunto logran que se pueda mostrar por VGA una imagen cargada a la memoria del VGA por el MIPS, esto se puede apreciar en el diagrama de bloques mostrado anteriormente.
+
+##### Botones de pausa y botones de set
+Los botones de pausa y set se han implementado de la misma forma, un botón para activar una señal y otro botón para desactivarlo, optamos por este método debido a que los botones que dispone la placa alcanzaban para todos los botones necesarios para el proyecto.
+
+![pause](img/hw_13.png)
+![set](img/hw_14.png)
+
+##### Interruptores
+Los 8 interruptores que dispone la placa se han utilizado para definir una dirección única de memoria, de tal forma que cada pixel de la pantalla de 16x16 pueda representarse con las combinaciones de posiciones de los interruptores.
+
+![switches](img/hw_15.png)
+
+##### Decodificador
+El MIPS accede a la memoria adecuada gracias al decodificador que activa cada memoria o periférico para ser escrito o leído.  
+Esta decodificación se da en función a la dirección de memoria a la que se quiere acceder, de acuerdo a ella, se activa la señal para la memoria o periférico correspondiente.
+
+![deco](img/hw_16.png)
+
 ## Software
 
 ### Algoritmo
@@ -81,8 +148,19 @@ Para la implementación del algoritmo, se hizo uso de las siguientes rutinas:
 
 ## Estado actual del trabajo
 ### Resultados obtenidos
-Como ejemplo, puede verse un oscilador de periodo 3:  
-![Estado Actual](https://im3.ezgif.com/tmp/ezgif-3-aa1e1931bf2c.gif)
+Como ejemplo, puede verse un oscilador de periodo 3:
+
+<p align="center">
+  <img src="img/simple_demo.gif" alt="animated"/>
+</p>
+
+Una demostración más completa, en la que se incluye la demostración del funcionamiento desde la configuración inicial hasta las funcionalidades de pausa, set y resume se encuentra en el siguiente GIF:
+
+<p align="center">
+  <img src="img/full_demo.gif" alt="animated"/>
+</p>
+
+La calidad de la grabación puede variar por tratarse de un GIF de reducida calidad, pero la grabación original se encuentra en el repositorio con el nombre de demo.mp4
 
 ### Inconvenientes
 Como se explicó en la sección anterior, el proyecto pudo concluirse satisfactoriamente.
