@@ -73,7 +73,7 @@ La entrada de clock del MIPS y del VGA es de frecuencia de 25 MHz, se utiliza un
 Para el control del monitor, la información de cada píxel de la pantalla se va enviando consecutivamente al ir barriendo toda la superficie por líneas horizontales y verticales. Cada píxel se compone de tres colores: rojo, verde y azul.  
 La resolución que se ha decidido implementar fue 640x480, para esta resolución se utilizan los siguientes parámetros para las señales correspondientes.
 
-![VGAmem1](img/hw_3.png | width=854)  
+<img src="img/hw_3.png" width="854">  
 ![VGAmem2](img/hw_4.png)
 
 ##### Bloque de sincronización VGASync:
