@@ -8,16 +8,6 @@
 
   <p align="center">
     TRABAJO PRÁCTICO
-    <br />
-    <a href="https://eaula.ing.una.py/course/view.php?id=34"><strong>Visitar Aula Virtual »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/pyefiuna/Laboratorio">Ver Demo</a>
-    ·
-    <a href="https://github.com/pyefiuna/Laboratorio/issues">Reportar errores</a>
-    ·
-    <a href="https://github.com/pyefiuna/Laboratorio/issues">Hacer pedidos</a>
-  </p>
 </p>
 
 <p align="center">
