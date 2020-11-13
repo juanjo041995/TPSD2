@@ -158,8 +158,15 @@ Para la implementación del algoritmo, se hizo uso de las siguientes rutinas:
 
 ## Estado actual del trabajo
 ### Resultados obtenidos
-Como ejemplo, puede verse un oscilador de periodo 3:  
-![Estado Actual](https://im3.ezgif.com/tmp/ezgif-3-aa1e1931bf2c.gif)
+Como ejemplo, puede verse un oscilador de periodo 3:
+
+![Estado Actual](img/simple_demo.gif)
+
+Una demostración más completa, en la que se incluye la demostración del funcionamiento desde la configuración inicial hasta las funcionalidades de pausa, set y resume se encuentra en el siguiente GIF:
+
+![Estado Actual 2](img/full_demo.gif)
+
+La calidad de la grabación puede variar por tratarse de un GIF de reducida calidad, pero la grabación original se encuentra en el repositorio con el nombre de demo.mp4
 
 ### Inconvenientes
 Como se explicó en la sección anterior, el proyecto pudo concluirse satisfactoriamente.
