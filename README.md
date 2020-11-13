@@ -74,7 +74,7 @@ Para el control del monitor, la información de cada píxel de la pantalla se va
 La resolución que se ha decidido implementar fue 640x480, para esta resolución se utilizan los siguientes parámetros para las señales correspondientes.
 
 <img src="img/hw_3.png" width="854">  
-![VGAmem2](img/hw_4.png)
+<img src="img/hw_4.png" width="854">  
 
 ##### Bloque de sincronización VGASync:
 Esta implementación se ha basado en el diseño de muestra del Mimas V2 para VGA que se cita en la referencia.  
