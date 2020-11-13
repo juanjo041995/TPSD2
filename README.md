@@ -160,11 +160,15 @@ Para la implementación del algoritmo, se hizo uso de las siguientes rutinas:
 ### Resultados obtenidos
 Como ejemplo, puede verse un oscilador de periodo 3:
 
+<p align="center">
 ![Estado Actual](img/simple_demo.gif)
+</p>
 
 Una demostración más completa, en la que se incluye la demostración del funcionamiento desde la configuración inicial hasta las funcionalidades de pausa, set y resume se encuentra en el siguiente GIF:
 
+<p align="center">
 ![Estado Actual 2](img/full_demo.gif)
+</p>
 
 La calidad de la grabación puede variar por tratarse de un GIF de reducida calidad, pero la grabación original se encuentra en el repositorio con el nombre de demo.mp4
 
